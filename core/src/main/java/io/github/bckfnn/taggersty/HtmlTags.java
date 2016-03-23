@@ -96,10 +96,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{html} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void html(String attr1, String value1, String attr2, String value2) {
         tag("html", attr1, value1, attr2, value2);
@@ -153,10 +153,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{head} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void head(String attr1, String value1, String attr2, String value2) {
         tag("head", attr1, value1, attr2, value2);
@@ -210,10 +210,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{meta} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void meta(String attr1, String value1, String attr2, String value2) {
         tag("meta", attr1, value1, attr2, value2);
@@ -267,10 +267,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{title} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void title(String attr1, String value1, String attr2, String value2) {
         tag("title", attr1, value1, attr2, value2);
@@ -324,10 +324,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{script} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void script(String attr1, String value1, String attr2, String value2) {
         tag("script", attr1, value1, attr2, value2);
@@ -381,10 +381,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{link} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void link(String attr1, String value1, String attr2, String value2) {
         tag("link", attr1, value1, attr2, value2);
@@ -438,10 +438,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{body} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void body(String attr1, String value1, String attr2, String value2) {
         tag("body", attr1, value1, attr2, value2);
@@ -495,10 +495,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{div} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void div(String attr1, String value1, String attr2, String value2) {
         tag("div", attr1, value1, attr2, value2);
@@ -552,10 +552,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{h1} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void h1(String attr1, String value1, String attr2, String value2) {
         tag("h1", attr1, value1, attr2, value2);
@@ -609,10 +609,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{h2} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void h2(String attr1, String value1, String attr2, String value2) {
         tag("h2", attr1, value1, attr2, value2);
@@ -666,10 +666,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{h3} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void h3(String attr1, String value1, String attr2, String value2) {
         tag("h3", attr1, value1, attr2, value2);
@@ -723,10 +723,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{h4} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void h4(String attr1, String value1, String attr2, String value2) {
         tag("h4", attr1, value1, attr2, value2);
@@ -780,10 +780,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{h5} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void h5(String attr1, String value1, String attr2, String value2) {
         tag("h5", attr1, value1, attr2, value2);
@@ -837,10 +837,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{ul} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void ul(String attr1, String value1, String attr2, String value2) {
         tag("ul", attr1, value1, attr2, value2);
@@ -894,10 +894,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{li} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void li(String attr1, String value1, String attr2, String value2) {
         tag("li", attr1, value1, attr2, value2);
@@ -951,10 +951,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{ol} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void ol(String attr1, String value1, String attr2, String value2) {
         tag("ol", attr1, value1, attr2, value2);
@@ -1008,10 +1008,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{table} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void table(String attr1, String value1, String attr2, String value2) {
         tag("table", attr1, value1, attr2, value2);
@@ -1065,10 +1065,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{tr} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void tr(String attr1, String value1, String attr2, String value2) {
         tag("tr", attr1, value1, attr2, value2);
@@ -1122,10 +1122,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{th} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void th(String attr1, String value1, String attr2, String value2) {
         tag("th", attr1, value1, attr2, value2);
@@ -1179,10 +1179,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{td} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void td(String attr1, String value1, String attr2, String value2) {
         tag("td", attr1, value1, attr2, value2);
@@ -1236,10 +1236,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{col} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void col(String attr1, String value1, String attr2, String value2) {
         tag("col", attr1, value1, attr2, value2);
@@ -1293,10 +1293,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{thead} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void thead(String attr1, String value1, String attr2, String value2) {
         tag("thead", attr1, value1, attr2, value2);
@@ -1350,10 +1350,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{tbody} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void tbody(String attr1, String value1, String attr2, String value2) {
         tag("tbody", attr1, value1, attr2, value2);
@@ -1407,10 +1407,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{tfoot} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void tfoot(String attr1, String value1, String attr2, String value2) {
         tag("tfoot", attr1, value1, attr2, value2);
@@ -1464,10 +1464,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{form} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void form(String attr1, String value1, String attr2, String value2) {
         tag("form", attr1, value1, attr2, value2);
@@ -1521,10 +1521,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{input} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void input(String attr1, String value1, String attr2, String value2) {
         tag("input", attr1, value1, attr2, value2);
@@ -1578,10 +1578,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{select} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void select(String attr1, String value1, String attr2, String value2) {
         tag("select", attr1, value1, attr2, value2);
@@ -1635,10 +1635,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{option} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void option(String attr1, String value1, String attr2, String value2) {
         tag("option", attr1, value1, attr2, value2);
@@ -1692,10 +1692,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{textarea} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void textarea(String attr1, String value1, String attr2, String value2) {
         tag("textarea", attr1, value1, attr2, value2);
@@ -1749,10 +1749,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{button} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void button(String attr1, String value1, String attr2, String value2) {
         tag("button", attr1, value1, attr2, value2);
@@ -1806,10 +1806,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{label} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void label(String attr1, String value1, String attr2, String value2) {
         tag("label", attr1, value1, attr2, value2);
@@ -1863,10 +1863,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{p} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void p(String attr1, String value1, String attr2, String value2) {
         tag("p", attr1, value1, attr2, value2);
@@ -1920,10 +1920,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{i} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void i(String attr1, String value1, String attr2, String value2) {
         tag("i", attr1, value1, attr2, value2);
@@ -1977,10 +1977,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{a} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void a(String attr1, String value1, String attr2, String value2) {
         tag("a", attr1, value1, attr2, value2);
@@ -2034,10 +2034,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{span} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void span(String attr1, String value1, String attr2, String value2) {
         tag("span", attr1, value1, attr2, value2);
@@ -2091,10 +2091,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{img} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void img(String attr1, String value1, String attr2, String value2) {
         tag("img", attr1, value1, attr2, value2);
@@ -2148,10 +2148,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{br} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void br(String attr1, String value1, String attr2, String value2) {
         tag("br", attr1, value1, attr2, value2);
@@ -2205,10 +2205,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{small} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void small(String attr1, String value1, String attr2, String value2) {
         tag("small", attr1, value1, attr2, value2);
@@ -2262,10 +2262,10 @@ public class HtmlTags extends Tags {
 
     /**
      * Create en empty a @code{strong} tag
-     * @param attr name1 of the attribute.
-     * @param value value1 of the attribute.
-     * @param attr name2 of the attribute.
-     * @param value value2 of the attribute.
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
      */
     public void strong(String attr1, String value1, String attr2, String value2) {
         tag("strong", attr1, value1, attr2, value2);
@@ -2300,6 +2300,5 @@ public class HtmlTags extends Tags {
     public void strong(String attr1, String value1, String attr2, String value2, Generator body) {
         tag("strong", attr1, value1, attr2, value2, body);
     }
-
 
 }

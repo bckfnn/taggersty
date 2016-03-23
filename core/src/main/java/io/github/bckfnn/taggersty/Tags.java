@@ -35,7 +35,7 @@ public class Tags {
     private boolean suppressWhiteSpace = false;
     protected State state = State.EMPTY;
     protected TagsOutput output;
-    protected Filter filter = new CommonsLangFilter();
+    protected Filter filter = new StandardFilter();
 
     private int indent = 0;
     private boolean autoNewline = true;
@@ -65,6 +65,10 @@ public class Tags {
         this.output = output;
     }
 
+    public void tag(String name, Generator body) {
+        tag(name, null, null, null, null, body);
+    }
+    
     public void tag(String name) {
         tag(name, null, null, null, null, null);
     }
@@ -241,10 +245,10 @@ public class Tags {
             System.out.println();
             System.out.println("    /**");
             System.out.println("     * Create en empty a @code{" + n + "} tag");
-            System.out.println("     * @param attr name1 of the attribute.");
-            System.out.println("     * @param value value1 of the attribute.");
-            System.out.println("     * @param attr name2 of the attribute.");
-            System.out.println("     * @param value value2 of the attribute.");
+            System.out.println("     * @param attr1 name of the attribute.");
+            System.out.println("     * @param value1 value of the attribute.");
+            System.out.println("     * @param attr2 name of the attribute.");
+            System.out.println("     * @param value2 value of the attribute.");
             System.out.println("     */");
             System.out.println("    public void " + m +"(String attr1, String value1, String attr2, String value2) {");
             System.out.println("        tag(\"" + ns + n + "\", attr1, value1, attr2, value2);");

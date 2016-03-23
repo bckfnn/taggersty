@@ -21,6 +21,7 @@ import org.junit.Test;
 import io.github.bckfnn.taggersty.CommonsLangFilter;
 import io.github.bckfnn.taggersty.CoverityEscapersFilter;
 import io.github.bckfnn.taggersty.HtmlTags;
+import io.github.bckfnn.taggersty.StringBuilderOutput;
 import io.github.bckfnn.taggersty.Tags;
 import io.github.bckfnn.taggersty.TagsOutput;
 
@@ -121,22 +122,5 @@ public class HtmlTest {
         Assert.assertEquals("<div attr=\"&lt;script&gt;alert(1);&lt;/script&gt;\"/>", out.toString());
     }
 
-    static class StringBuilderOutput implements TagsOutput {
-        private StringBuilder sb = new StringBuilder();
 
-        @Override
-        public void write(String s) {
-            sb.append(s);
-        }
-
-        @Override
-        public void write(char c) {
-            sb.append(c);
-        }
-
-        @Override
-        public String toString() {
-            return sb.toString();
-        }
-    }
 }
