@@ -38,21 +38,8 @@ public class StandardFilter implements Filter {
 
     @Override
     public String encodeAttribute(String content) {
-        return replace(content, c -> {
-            switch (c) {
-            case '&':
-                return "&amp;";
-            case '<':
-                return "&lt;";
-            case '>':
-                return "&gt;";
-            case '"':
-                return "&quot;";
-            case '\'':
-                return "&#39;";
-            }
-            return null;
-        });    }
+        return encodeContent(content); 
+    }
 
     @Override
     public String encodeJavascript(String content) {
