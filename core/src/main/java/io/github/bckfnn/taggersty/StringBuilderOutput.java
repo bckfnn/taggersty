@@ -15,6 +15,9 @@
  */
 package io.github.bckfnn.taggersty;
 
+/**
+ * An <code>TagsOutput</code> implementation that append the output to a StringBuffer.
+ */
 public class StringBuilderOutput implements TagsOutput {
     private StringBuilder sb = new StringBuilder(1024*9);
 

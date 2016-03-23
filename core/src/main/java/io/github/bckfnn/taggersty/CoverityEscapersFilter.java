@@ -17,6 +17,9 @@ package io.github.bckfnn.taggersty;
 
 import com.coverity.security.Escape;
 
+/**
+ * A XSS filter that uses the coverty escapers dependency.
+ */
 public class CoverityEscapersFilter implements Filter {
 
     @Override

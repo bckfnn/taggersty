@@ -15,6 +15,9 @@
  */
 package io.github.bckfnn.taggersty;
 
+/**
+ * A XSS filter that implements the escapes with any dependecies.
+ */
 public class StandardFilter implements Filter {
 
     @Override

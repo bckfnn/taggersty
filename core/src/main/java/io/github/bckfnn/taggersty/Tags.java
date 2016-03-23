@@ -15,30 +15,48 @@
  */
 package io.github.bckfnn.taggersty;
 
+/**
+ * Implementation class of th tag emiiter system.
+ */
 public class Tags {
-
+    /** marker value for signalling that a tag should suppress white space. */
+    
     public static final String _suppress = "suppress";
-    //public final String _suppress = _suppress;
-
 
     @FunctionalInterface
     public interface Generator {
         public void gen() throws Exception;
     }
 
+    /** the current state of output. */
     enum State {
+        /** assigned while writing attributes. */
         ATTR,
+        /** assigned after the starttag '>' before emitting any content. */
         EMPTY,
+        /** assigned after emitting some content in a tag. */
         CONTENT,
     }
 
+    /** assigned while supprissing white space for a tag. */
     private boolean suppressWhiteSpace = false;
-    protected State state = State.EMPTY;
-    protected TagsOutput output;
-    protected Filter filter = new StandardFilter();
+    
+    /** current state **/
+    private State state = State.EMPTY;
+    
+    /** the output */
+    private  TagsOutput output;
+    
+    /** the filter class.*/
+    private  Filter filter = new StandardFilter();
 
+    /** Current indent */
     private int indent = 0;
+    
+    /*** emit newline bewteen tags */
     private boolean autoNewline = true;
+    
+    /*** emit indenting spaces before tags */
     private boolean autoIndent = true;
 
     public Tags(TagsOutput output) {

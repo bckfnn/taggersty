@@ -15,8 +15,20 @@
  */
 package io.github.bckfnn.taggersty;
 
+/**
+ * Output interface for taggersty.
+ */
 public interface TagsOutput {
 
+    /**
+     * Emit a String.
+     * @param s the value
+     */
     public void write(String s);
+    
+    /**
+     * Emit a single character.
+     * @param c the value
+     */
     public void write(char c);
 }

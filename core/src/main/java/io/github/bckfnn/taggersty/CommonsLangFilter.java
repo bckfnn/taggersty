@@ -17,6 +17,9 @@ package io.github.bckfnn.taggersty;
 
 import org.apache.commons.lang3.StringEscapeUtils;
 
+/**
+ * A XSS filter that uses the apache commons lang dependency.
+ */
 public class CommonsLangFilter implements Filter {
 
     @Override
