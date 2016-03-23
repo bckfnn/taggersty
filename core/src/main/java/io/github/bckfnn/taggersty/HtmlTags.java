@@ -37,6 +37,11 @@ public class HtmlTags extends Tags {
         super(output);
     }
 
+    public HtmlTags filter(Filter filter) {
+        super.setFilter(filter);
+        return this;
+    }
+
     public static void run(TagsOutput output, Consumer<HtmlTags> g) {
         g.accept(new HtmlTags(output));
     }

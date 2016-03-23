@@ -18,6 +18,8 @@ package io.github.bckfnn.taggersty.test;
 import org.junit.Assert;
 import org.junit.Test;
 
+import io.github.bckfnn.taggersty.CommonsLangFilter;
+import io.github.bckfnn.taggersty.CoverityEscapersFilter;
 import io.github.bckfnn.taggersty.HtmlTags;
 import io.github.bckfnn.taggersty.Tags;
 import io.github.bckfnn.taggersty.TagsOutput;
@@ -73,6 +75,50 @@ public class HtmlTest {
         };
         g.render(out);
         Assert.assertTrue(out.toString().length()  > 0);
+    }
+
+    @Test
+    public void testCoverity1() {
+        StringBuilderOutput out = new StringBuilderOutput();
+
+        HtmlTags g = new HtmlTags(out).filter(new CoverityEscapersFilter());
+        g.setAutoIndent(false);
+        g.setAutoNewline(false);
+        g.div(() -> g.text("<script>alert(1);</script>"));
+        Assert.assertEquals("<div>&lt;script&gt;alert(1);&lt;/script&gt;</div>", out.toString());
+    }
+
+    @Test
+    public void testCoverity2() {
+        StringBuilderOutput out = new StringBuilderOutput();
+
+        HtmlTags g = new HtmlTags(out).filter(new CoverityEscapersFilter());
+        g.setAutoIndent(false);
+        g.setAutoNewline(false);
+        g.div("attr", "<script>alert(1);</script>");
+        Assert.assertEquals("<div attr=\"&lt;script&gt;alert(1);&lt;&#x2F;script&gt;\"/>", out.toString());
+    }
+
+    @Test
+    public void testCommonsLang1() {
+        StringBuilderOutput out = new StringBuilderOutput();
+
+        HtmlTags g = new HtmlTags(out).filter(new CommonsLangFilter());
+        g.setAutoIndent(false);
+        g.setAutoNewline(false);
+        g.div(() -> g.text("<script>alert(1);</script>"));
+        Assert.assertEquals("<div>&lt;script&gt;alert(1);&lt;/script&gt;</div>", out.toString());
+    }
+
+    @Test
+    public void testCommonsLang2() {
+        StringBuilderOutput out = new StringBuilderOutput();
+
+        HtmlTags g = new HtmlTags(out).filter(new CommonsLangFilter());
+        g.setAutoIndent(false);
+        g.setAutoNewline(false);
+        g.div("attr", "<script>alert(1);</script>");
+        Assert.assertEquals("<div attr=\"&lt;script&gt;alert(1);&lt;/script&gt;\"/>", out.toString());
     }
 
     static class StringBuilderOutput implements TagsOutput {

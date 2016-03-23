@@ -57,6 +57,10 @@ public class Tags {
         suppressWhiteSpace = value;
     }
 
+    public void setFilter(Filter filter) {
+        this.filter = filter;
+    }
+
     public void output(TagsOutput output) {
         this.output = output;
     }
