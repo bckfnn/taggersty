@@ -31,4 +31,10 @@ public interface TagsOutput {
      * @param c the value
      */
     public void write(char c);
+    
+    /**
+     * Close the output.
+     */
+    public void close();
+    
 }

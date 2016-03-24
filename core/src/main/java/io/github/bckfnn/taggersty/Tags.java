@@ -16,7 +16,7 @@
 package io.github.bckfnn.taggersty;
 
 /**
- * Implementation class of th tag emiiter system.
+ * Implementation class of the tag emiiter system.
  */
 public class Tags {
     /** marker value for signalling that a tag should suppress white space. */
@@ -59,45 +59,94 @@ public class Tags {
     /*** emit indenting spaces before tags */
     private boolean autoIndent = true;
 
+    /**
+     * Constructor.
+     * @param output the output handler
+     */
     public Tags(TagsOutput output) {
         this.output = output;
     }
 
+    /**
+     * Enable automatic newline after start and end tags.
+     * @param autoNewline the value to set.
+     */
     public void setAutoNewline(boolean autoNewline) {
         this.autoNewline = autoNewline;
     }
 
+    /**
+     * Enable automatic indentation.
+     * @param autoIndent the value to set.
+     */
     public void setAutoIndent(boolean autoIndent) {
         this.autoIndent = autoIndent;
     }
 
-    public void suppressWhiteSpace(boolean value) {
-        suppressWhiteSpace = value;
-    }
-
+    /**
+     * Set a encoding filter.
+     * @param filter the filter to use.
+     */
     public void setFilter(Filter filter) {
         this.filter = filter;
     }
 
+    /**
+     * Set the output handler.
+     * @param output the handler to set.
+     */
     public void output(TagsOutput output) {
         this.output = output;
     }
 
+    /**
+     * Emit <code>name</code> tag without attributes and with the specified body.
+     * @param name name the of the tag
+     * @param body body of the tag.
+     */
     public void tag(String name, Generator body) {
         tag(name, null, null, null, null, body);
     }
     
+    /**
+     * Emit an empty <code>name</code> tag without attributes and without a body.
+     * @param name name the of the tag
+     */
     public void tag(String name) {
         tag(name, null, null, null, null, null);
     }
+    
+    /**
+     * Emit an empty <code>name</code> tag with a single attribute and no body.
+     * @param name name the of the tag
+     * @param attr1 name of the attribute
+     * @param value1 value of the attribute
+     */
     public void tag(String name, String attr1, String value1) {
         tag(name, attr1, value1, null, null, null);
     };
 
+    /**
+     * Emit an empty <code>name</code> tag with a two attributes and no body.
+     * @param name name the of the tag
+     * @param attr1 name of the first attribute
+     * @param value1 value of the first attribute
+     * @param attr2 name of the second attribute
+     * @param value2 value of the second attribute
+     */
     public void tag(String name, String attr1, String value1, String attr2, String value2) {
         tag(name, attr1, value1, attr2, value2, null);
     };
 
+    /**
+     * Emit a <code>name</code> tag with up to two attributes and body.
+     * @param name name the of the tag
+     * @param attr1 name of the first attribute
+     * @param value1 value of the first attribute
+     * @param attr2 name of the second attribute
+     * @param value2 value of the second attribute
+     * @param body body of the tag.
+     */
     public void tag(String name, String attr1, String value1, String attr2, String value2, Generator body) {
         closeTag();
 
@@ -145,6 +194,11 @@ public class Tags {
         autoNewline();
     };
 
+    /**
+     * Emit an proberly encoded attribute
+     * @param name name of the attribute
+     * @param value value of the attribute
+     */
     public void attr(String name, String value) {
         append(' ');
         append(name);
@@ -156,66 +210,88 @@ public class Tags {
         }
     }
 
+    /**
+     * Emit an attribute without value.
+     * @param name name of the attribute
+     */
     public void attr(String name) {
         attr(name, null);
     }
 
-    public void text(String body) {
+    /**
+     * Emit proberly encoded text content.
+     * @param content value of the content, or null of the content can be empty. 
+     */
+    public void text(String content) {
         closeTag();
         state = State.CONTENT;
         autoIndent();
-        if (body != null) {
-            append(filter.encodeContent(body));
+        if (content != null) {
+            append(filter.encodeContent(content));
         }
         autoNewline();
     }
 
-    public void textUnescaped(String body) {
+    /**
+     * Emit raw unencoded text content.
+     * @param content value of the content, or null of the content can be empty.
+     * It is very important that the content is safe to emit and that it does not contant user input that can cause XSS attacks. 
+     */
+    public void textUnescaped(String content) {
         closeTag();
         autoIndent();
-        if (body != null) {
-            append(body);
+        if (content != null) {
+            append(content);
         }
         autoNewline();
     }
 
-    /*
-    public void textDirect(String body) {
-        if (state == State.ATTR) {
-            append('>');
-        }
-        if (body != null) {
-            append(Utils.escapeXml(body));
-        }
-        state = State.CONTENT;
-    }
-    */
-
+    /**
+     * Emit a comment.
+     * @param comment the comment to emit.
+     */
     public void comment(String comment) {
         closeTag();
         autoIndent();
-        append("<!-- " + comment + " -->");
+        append("<!-- " + filter.encodeContent(comment) + " -->");
         autoNewline();
     }
 
+    /**
+     * Close the output.
+     */
     public void close() {
-
+        output.close();
     }
 
+    /** 
+     * Append a single character to the out. 
+     * @param ch the character.
+     */
     private void append(char ch) {
         output.write(ch);
     }
 
+    /**
+     * Append a string to the output. 
+     * @param str the string.
+     */
     private void append(String str) {
         output.write(str);
     }
 
+    /**
+     * Append a newline if autoNewline is enabled.
+     */
     private void autoNewline() {
         if (autoNewline && !suppressWhiteSpace) {
             append(System.lineSeparator());
         }
     }
 
+    /**
+     * Indent the nes tag if autoIndent and autoNewline is enabled.
+     */
     private void autoIndent() {
         if (autoIndent && autoNewline && !suppressWhiteSpace) {
             for (int i = 0; i < indent; i++) {
@@ -224,6 +300,9 @@ public class Tags {
         }
     }
 
+    /**
+     * Emit a close '>' is needed.
+     */
     protected void closeTag() {
         if (state == State.ATTR) {
             append('>');
@@ -232,6 +311,11 @@ public class Tags {
         }
     }
 
+    /**
+     * Generate java source code for the specified tags that can be added to a class and used as dsl for tag generation. 
+     * @param ns thr namespace to use for the tags.
+     * @param tags the array of tags to generate java source code for.
+     */
     public static void generate(String ns, String[] tags) {
         if (ns != null) {
             ns = ns + ":";

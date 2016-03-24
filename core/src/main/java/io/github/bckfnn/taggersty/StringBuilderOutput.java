@@ -35,4 +35,9 @@ public class StringBuilderOutput implements TagsOutput {
     public String toString() {
         return sb.toString();
     }
+    
+    @Override
+    public void close() {
+        // Empty
+    }
 }
