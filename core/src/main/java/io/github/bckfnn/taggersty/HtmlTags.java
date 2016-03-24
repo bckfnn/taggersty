@@ -70,354 +70,799 @@ public class HtmlTags extends Tags {
      */
     public static void main(String[] args) {
         Tags.generate(null, new String[] {
-                "html", "head", "meta", "title", "script", "link",
-                "body", "div", "h1", "h2", "h3", "h4", "h5",
-                "ul", "li", "ol", "table", "tr", "th", "td", "col", "thead", "tbody", "tfoot",
-                "form", "input", "select", "option", "textarea", "button",
-                "label", "p", "i", "a", "span", "img", "br", "small", "strong",
+                "a - hyperlink",
+                "abbr - abbreviation",
+                "address - contact information",
+                "area - image-map hyperlink",
+                "article - article",
+                "aside - tangential content",
+                "audio - audio stream",
+                "b - offset text conventionally styled in bold",
+                "base - base URL",
+                "bdi - BiDi isolate",
+                "bdo - BiDi override",
+                "blockquote - block quotation",
+                "body - document body",
+                "br - line break",
+                "button - button",
+                "canvas - canvas for dynamic graphics",
+                "caption - table title",
+                "cite - cited title of a work",
+                "code - code fragment",
+                "col - table column",
+                "colgroup - table column group",
+                "command - command",
+                "datalist - predefined options for other controls",
+                "dd - description or value",
+                "del - deleted text",
+                "details - control for additional on-demand information",
+                "dfn - defining instance",
+                "div - generic flow container",
+                "dl - description list",
+                "dt - term or name",
+                "em - emphatic stress",
+                "embed - integration point for plugins",
+                "fieldset - set of related form controls",
+                "figcaption - figure caption",
+                "figure - figure with optional caption",
+                "footer - footer",
+                "form - user-submittable form",
+                "h1 - heading",
+                "h2 - heading",
+                "h3 - heading",
+                "h4 - heading",
+                "h5 - heading",
+                "h6 - heading",
+                "head - document metadata container",
+                "header - header",
+                "hgroup - heading group",
+                "hr - thematic break",
+                "html - root element",
+                "i - offset text conventionally styled in italic",
+                "iframe - nested browsing context (inline frame)",
+                "img - image",
+                "input - input control",
+                "ins - inserted text",
+                "kbd - user input",
+                "keygen - key-pair generator/input control",
+                "label - caption for a form control",
+                "legend - title or explanatory caption",
+                "li - list item",
+                "link - inter-document relationship metadata",
+                "map - image-map definition",
+                "mark - marked (highlighted) text",
+                "menu - list of commands",
+                "meta - metadata",
+                "meter - scalar gauge",
+                "nav - group of navigational links",
+                "noscript - fallback content for script",
+                "object - generic external content",
+                "ol - ordered list",
+                "optgroup - group of options",
+                "option - option",
+                "output - result of a calculation in a form",
+                "p - paragraph",
+                "param - initialization parameters for plugins",
+                "pre - preformatted text",
+                "progress - progress indicator",
+                "q - quoted text",
+                "rp - ruby parenthesis",
+                "rt - ruby text",
+                "ruby - ruby annotation",
+                "s - struck text",
+                "samp - (sample) output",
+                "script - embedded script",
+                "section - section",
+                "select - option-selection form control",
+                "small - small print",
+                "source - media source",
+                "span - generic span",
+                "strong - strong importance",
+                "style - style (presentation) information",
+                "sub - subscript",
+                "summary - summary, caption, or legend for a details control",
+                "sup - superscript",
+                "table - table",
+                "tbody - table row group",
+                "td - table cell",
+                "textarea - text input area",
+                "tfoot - table footer row group",
+                "th - table header cell",
+                "thead - table heading group",
+                "time - date and/or time",
+                "title - document title",
+                "tr - table row",
+                "track - supplementary media track",
+                "u - offset text conventionally styled with an underline",
+                "ul - unordered list",
+                "var - variable or placeholder text",
+                "video - video",
+                "wbr - line-break opportunity",
         });
     }
 
     /**
-     * Create en empty a @code{html} tag
+     * Create en empty a @code{a} tag
      */
-    public void html() {
-        tag("html");
+    public void a() {
+        tag("a");
     }
 
     /**
-     * Create en empty a @code{html} tag
+     * Create en empty a @code{a} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void html(String attr, String value) {
-        tag("html", attr, value);
+    public void a(String attr, String value) {
+        tag("a", attr, value);
     }
 
     /**
-     * Create en empty a @code{html} tag
+     * Create en empty a @code{a} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void html(String attr1, String value1, String attr2, String value2) {
-        tag("html", attr1, value1, attr2, value2);
+    public void a(String attr1, String value1, String attr2, String value2) {
+        tag("a", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{html} tag with zero attribute
+     * Create a @code{a} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void html(Generator body) {
-        tag("html", null, null, null, null, body);
+    public void a(Generator body) {
+        tag("a", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{html} tag with one attribute
+     * Create a @code{a} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void html(String attr, String value, Generator body) {
-        tag("html", attr, value, null, null, body);
+    public void a(String attr, String value, Generator body) {
+        tag("a", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{html} tag with one attribute
+     * Create a @code{a} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void html(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("html", attr1, value1, attr2, value2, body);
+    public void a(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("a", attr1, value1, attr2, value2, body);
     }
 
     /**
-     * Create en empty a @code{head} tag
+     * Create en empty a @code{abbr} tag
      */
-    public void head() {
-        tag("head");
+    public void abbr() {
+        tag("abbr");
     }
 
     /**
-     * Create en empty a @code{head} tag
+     * Create en empty a @code{abbr} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void head(String attr, String value) {
-        tag("head", attr, value);
+    public void abbr(String attr, String value) {
+        tag("abbr", attr, value);
     }
 
     /**
-     * Create en empty a @code{head} tag
+     * Create en empty a @code{abbr} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void head(String attr1, String value1, String attr2, String value2) {
-        tag("head", attr1, value1, attr2, value2);
+    public void abbr(String attr1, String value1, String attr2, String value2) {
+        tag("abbr", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{head} tag with zero attribute
+     * Create a @code{abbr} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void head(Generator body) {
-        tag("head", null, null, null, null, body);
+    public void abbr(Generator body) {
+        tag("abbr", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{head} tag with one attribute
+     * Create a @code{abbr} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void head(String attr, String value, Generator body) {
-        tag("head", attr, value, null, null, body);
+    public void abbr(String attr, String value, Generator body) {
+        tag("abbr", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{head} tag with one attribute
+     * Create a @code{abbr} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void head(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("head", attr1, value1, attr2, value2, body);
+    public void abbr(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("abbr", attr1, value1, attr2, value2, body);
     }
 
     /**
-     * Create en empty a @code{meta} tag
+     * Create en empty a @code{address} tag
      */
-    public void meta() {
-        tag("meta");
+    public void address() {
+        tag("address");
     }
 
     /**
-     * Create en empty a @code{meta} tag
+     * Create en empty a @code{address} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void meta(String attr, String value) {
-        tag("meta", attr, value);
+    public void address(String attr, String value) {
+        tag("address", attr, value);
     }
 
     /**
-     * Create en empty a @code{meta} tag
+     * Create en empty a @code{address} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void meta(String attr1, String value1, String attr2, String value2) {
-        tag("meta", attr1, value1, attr2, value2);
+    public void address(String attr1, String value1, String attr2, String value2) {
+        tag("address", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{meta} tag with zero attribute
+     * Create a @code{address} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void meta(Generator body) {
-        tag("meta", null, null, null, null, body);
+    public void address(Generator body) {
+        tag("address", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{meta} tag with one attribute
+     * Create a @code{address} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void meta(String attr, String value, Generator body) {
-        tag("meta", attr, value, null, null, body);
+    public void address(String attr, String value, Generator body) {
+        tag("address", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{meta} tag with one attribute
+     * Create a @code{address} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void meta(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("meta", attr1, value1, attr2, value2, body);
+    public void address(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("address", attr1, value1, attr2, value2, body);
     }
 
     /**
-     * Create en empty a @code{title} tag
+     * Create en empty a @code{area} tag
      */
-    public void title() {
-        tag("title");
+    public void area() {
+        tag("area");
     }
 
     /**
-     * Create en empty a @code{title} tag
+     * Create en empty a @code{area} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void title(String attr, String value) {
-        tag("title", attr, value);
+    public void area(String attr, String value) {
+        tag("area", attr, value);
     }
 
     /**
-     * Create en empty a @code{title} tag
+     * Create en empty a @code{area} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void title(String attr1, String value1, String attr2, String value2) {
-        tag("title", attr1, value1, attr2, value2);
+    public void area(String attr1, String value1, String attr2, String value2) {
+        tag("area", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{title} tag with zero attribute
+     * Create a @code{area} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void title(Generator body) {
-        tag("title", null, null, null, null, body);
+    public void area(Generator body) {
+        tag("area", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{title} tag with one attribute
+     * Create a @code{area} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void title(String attr, String value, Generator body) {
-        tag("title", attr, value, null, null, body);
+    public void area(String attr, String value, Generator body) {
+        tag("area", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{title} tag with one attribute
+     * Create a @code{area} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void title(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("title", attr1, value1, attr2, value2, body);
+    public void area(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("area", attr1, value1, attr2, value2, body);
     }
 
     /**
-     * Create en empty a @code{script} tag
+     * Create en empty a @code{article} tag
      */
-    public void script() {
-        tag("script");
+    public void article() {
+        tag("article");
     }
 
     /**
-     * Create en empty a @code{script} tag
+     * Create en empty a @code{article} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void script(String attr, String value) {
-        tag("script", attr, value);
+    public void article(String attr, String value) {
+        tag("article", attr, value);
     }
 
     /**
-     * Create en empty a @code{script} tag
+     * Create en empty a @code{article} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void script(String attr1, String value1, String attr2, String value2) {
-        tag("script", attr1, value1, attr2, value2);
+    public void article(String attr1, String value1, String attr2, String value2) {
+        tag("article", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{script} tag with zero attribute
+     * Create a @code{article} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void script(Generator body) {
-        tag("script", null, null, null, null, body);
+    public void article(Generator body) {
+        tag("article", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{script} tag with one attribute
+     * Create a @code{article} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void script(String attr, String value, Generator body) {
-        tag("script", attr, value, null, null, body);
+    public void article(String attr, String value, Generator body) {
+        tag("article", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{script} tag with one attribute
+     * Create a @code{article} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void script(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("script", attr1, value1, attr2, value2, body);
+    public void article(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("article", attr1, value1, attr2, value2, body);
     }
 
     /**
-     * Create en empty a @code{link} tag
+     * Create en empty a @code{aside} tag
      */
-    public void link() {
-        tag("link");
+    public void aside() {
+        tag("aside");
     }
 
     /**
-     * Create en empty a @code{link} tag
+     * Create en empty a @code{aside} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void link(String attr, String value) {
-        tag("link", attr, value);
+    public void aside(String attr, String value) {
+        tag("aside", attr, value);
     }
 
     /**
-     * Create en empty a @code{link} tag
+     * Create en empty a @code{aside} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void link(String attr1, String value1, String attr2, String value2) {
-        tag("link", attr1, value1, attr2, value2);
+    public void aside(String attr1, String value1, String attr2, String value2) {
+        tag("aside", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{link} tag with zero attribute
+     * Create a @code{aside} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void link(Generator body) {
-        tag("link", null, null, null, null, body);
+    public void aside(Generator body) {
+        tag("aside", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{link} tag with one attribute
+     * Create a @code{aside} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void link(String attr, String value, Generator body) {
-        tag("link", attr, value, null, null, body);
+    public void aside(String attr, String value, Generator body) {
+        tag("aside", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{link} tag with one attribute
+     * Create a @code{aside} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void link(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("link", attr1, value1, attr2, value2, body);
+    public void aside(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("aside", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{audio} tag
+     */
+    public void audio() {
+        tag("audio");
+    }
+
+    /**
+     * Create en empty a @code{audio} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void audio(String attr, String value) {
+        tag("audio", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{audio} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void audio(String attr1, String value1, String attr2, String value2) {
+        tag("audio", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{audio} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void audio(Generator body) {
+        tag("audio", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{audio} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void audio(String attr, String value, Generator body) {
+        tag("audio", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{audio} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void audio(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("audio", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{b} tag
+     */
+    public void b() {
+        tag("b");
+    }
+
+    /**
+     * Create en empty a @code{b} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void b(String attr, String value) {
+        tag("b", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{b} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void b(String attr1, String value1, String attr2, String value2) {
+        tag("b", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{b} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void b(Generator body) {
+        tag("b", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{b} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void b(String attr, String value, Generator body) {
+        tag("b", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{b} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void b(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("b", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{base} tag
+     */
+    public void base() {
+        tag("base");
+    }
+
+    /**
+     * Create en empty a @code{base} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void base(String attr, String value) {
+        tag("base", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{base} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void base(String attr1, String value1, String attr2, String value2) {
+        tag("base", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{base} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void base(Generator body) {
+        tag("base", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{base} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void base(String attr, String value, Generator body) {
+        tag("base", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{base} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void base(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("base", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{bdi} tag
+     */
+    public void bdi() {
+        tag("bdi");
+    }
+
+    /**
+     * Create en empty a @code{bdi} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void bdi(String attr, String value) {
+        tag("bdi", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{bdi} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void bdi(String attr1, String value1, String attr2, String value2) {
+        tag("bdi", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{bdi} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void bdi(Generator body) {
+        tag("bdi", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{bdi} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void bdi(String attr, String value, Generator body) {
+        tag("bdi", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{bdi} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void bdi(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("bdi", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{bdo} tag
+     */
+    public void bdo() {
+        tag("bdo");
+    }
+
+    /**
+     * Create en empty a @code{bdo} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void bdo(String attr, String value) {
+        tag("bdo", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{bdo} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void bdo(String attr1, String value1, String attr2, String value2) {
+        tag("bdo", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{bdo} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void bdo(Generator body) {
+        tag("bdo", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{bdo} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void bdo(String attr, String value, Generator body) {
+        tag("bdo", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{bdo} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void bdo(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("bdo", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{blockquote} tag
+     */
+    public void blockquote() {
+        tag("blockquote");
+    }
+
+    /**
+     * Create en empty a @code{blockquote} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void blockquote(String attr, String value) {
+        tag("blockquote", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{blockquote} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void blockquote(String attr1, String value1, String attr2, String value2) {
+        tag("blockquote", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{blockquote} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void blockquote(Generator body) {
+        tag("blockquote", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{blockquote} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void blockquote(String attr, String value, Generator body) {
+        tag("blockquote", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{blockquote} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void blockquote(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("blockquote", attr1, value1, attr2, value2, body);
     }
 
     /**
@@ -478,6 +923,804 @@ public class HtmlTags extends Tags {
     }
 
     /**
+     * Create en empty a @code{br} tag
+     */
+    public void br() {
+        tag("br");
+    }
+
+    /**
+     * Create en empty a @code{br} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void br(String attr, String value) {
+        tag("br", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{br} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void br(String attr1, String value1, String attr2, String value2) {
+        tag("br", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{br} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void br(Generator body) {
+        tag("br", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{br} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void br(String attr, String value, Generator body) {
+        tag("br", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{br} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void br(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("br", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{button} tag
+     */
+    public void button() {
+        tag("button");
+    }
+
+    /**
+     * Create en empty a @code{button} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void button(String attr, String value) {
+        tag("button", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{button} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void button(String attr1, String value1, String attr2, String value2) {
+        tag("button", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{button} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void button(Generator body) {
+        tag("button", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{button} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void button(String attr, String value, Generator body) {
+        tag("button", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{button} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void button(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("button", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{canvas} tag
+     */
+    public void canvas() {
+        tag("canvas");
+    }
+
+    /**
+     * Create en empty a @code{canvas} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void canvas(String attr, String value) {
+        tag("canvas", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{canvas} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void canvas(String attr1, String value1, String attr2, String value2) {
+        tag("canvas", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{canvas} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void canvas(Generator body) {
+        tag("canvas", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{canvas} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void canvas(String attr, String value, Generator body) {
+        tag("canvas", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{canvas} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void canvas(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("canvas", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{caption} tag
+     */
+    public void caption() {
+        tag("caption");
+    }
+
+    /**
+     * Create en empty a @code{caption} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void caption(String attr, String value) {
+        tag("caption", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{caption} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void caption(String attr1, String value1, String attr2, String value2) {
+        tag("caption", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{caption} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void caption(Generator body) {
+        tag("caption", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{caption} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void caption(String attr, String value, Generator body) {
+        tag("caption", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{caption} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void caption(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("caption", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{cite} tag
+     */
+    public void cite() {
+        tag("cite");
+    }
+
+    /**
+     * Create en empty a @code{cite} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void cite(String attr, String value) {
+        tag("cite", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{cite} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void cite(String attr1, String value1, String attr2, String value2) {
+        tag("cite", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{cite} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void cite(Generator body) {
+        tag("cite", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{cite} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void cite(String attr, String value, Generator body) {
+        tag("cite", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{cite} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void cite(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("cite", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{code} tag
+     */
+    public void code() {
+        tag("code");
+    }
+
+    /**
+     * Create en empty a @code{code} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void code(String attr, String value) {
+        tag("code", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{code} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void code(String attr1, String value1, String attr2, String value2) {
+        tag("code", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{code} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void code(Generator body) {
+        tag("code", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{code} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void code(String attr, String value, Generator body) {
+        tag("code", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{code} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void code(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("code", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{col} tag
+     */
+    public void col() {
+        tag("col");
+    }
+
+    /**
+     * Create en empty a @code{col} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void col(String attr, String value) {
+        tag("col", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{col} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void col(String attr1, String value1, String attr2, String value2) {
+        tag("col", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{col} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void col(Generator body) {
+        tag("col", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{col} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void col(String attr, String value, Generator body) {
+        tag("col", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{col} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void col(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("col", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{colgroup} tag
+     */
+    public void colgroup() {
+        tag("colgroup");
+    }
+
+    /**
+     * Create en empty a @code{colgroup} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void colgroup(String attr, String value) {
+        tag("colgroup", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{colgroup} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void colgroup(String attr1, String value1, String attr2, String value2) {
+        tag("colgroup", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{colgroup} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void colgroup(Generator body) {
+        tag("colgroup", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{colgroup} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void colgroup(String attr, String value, Generator body) {
+        tag("colgroup", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{colgroup} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void colgroup(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("colgroup", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{command} tag
+     */
+    public void command() {
+        tag("command");
+    }
+
+    /**
+     * Create en empty a @code{command} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void command(String attr, String value) {
+        tag("command", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{command} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void command(String attr1, String value1, String attr2, String value2) {
+        tag("command", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{command} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void command(Generator body) {
+        tag("command", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{command} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void command(String attr, String value, Generator body) {
+        tag("command", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{command} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void command(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("command", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{datalist} tag
+     */
+    public void datalist() {
+        tag("datalist");
+    }
+
+    /**
+     * Create en empty a @code{datalist} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void datalist(String attr, String value) {
+        tag("datalist", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{datalist} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void datalist(String attr1, String value1, String attr2, String value2) {
+        tag("datalist", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{datalist} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void datalist(Generator body) {
+        tag("datalist", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{datalist} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void datalist(String attr, String value, Generator body) {
+        tag("datalist", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{datalist} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void datalist(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("datalist", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{dd} tag
+     */
+    public void dd() {
+        tag("dd");
+    }
+
+    /**
+     * Create en empty a @code{dd} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void dd(String attr, String value) {
+        tag("dd", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{dd} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void dd(String attr1, String value1, String attr2, String value2) {
+        tag("dd", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{dd} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void dd(Generator body) {
+        tag("dd", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{dd} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void dd(String attr, String value, Generator body) {
+        tag("dd", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{dd} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void dd(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("dd", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{del} tag
+     */
+    public void del() {
+        tag("del");
+    }
+
+    /**
+     * Create en empty a @code{del} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void del(String attr, String value) {
+        tag("del", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{del} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void del(String attr1, String value1, String attr2, String value2) {
+        tag("del", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{del} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void del(Generator body) {
+        tag("del", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{del} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void del(String attr, String value, Generator body) {
+        tag("del", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{del} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void del(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("del", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{details} tag
+     */
+    public void details() {
+        tag("details");
+    }
+
+    /**
+     * Create en empty a @code{details} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void details(String attr, String value) {
+        tag("details", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{details} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void details(String attr1, String value1, String attr2, String value2) {
+        tag("details", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{details} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void details(Generator body) {
+        tag("details", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{details} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void details(String attr, String value, Generator body) {
+        tag("details", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{details} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void details(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("details", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{dfn} tag
+     */
+    public void dfn() {
+        tag("dfn");
+    }
+
+    /**
+     * Create en empty a @code{dfn} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void dfn(String attr, String value) {
+        tag("dfn", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{dfn} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void dfn(String attr1, String value1, String attr2, String value2) {
+        tag("dfn", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{dfn} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void dfn(Generator body) {
+        tag("dfn", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{dfn} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void dfn(String attr, String value, Generator body) {
+        tag("dfn", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{dfn} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void dfn(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("dfn", attr1, value1, attr2, value2, body);
+    }
+
+    /**
      * Create en empty a @code{div} tag
      */
     public void div() {
@@ -532,6 +1775,519 @@ public class HtmlTags extends Tags {
      */
     public void div(String attr1, String value1, String attr2, String value2, Generator body) {
         tag("div", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{dl} tag
+     */
+    public void dl() {
+        tag("dl");
+    }
+
+    /**
+     * Create en empty a @code{dl} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void dl(String attr, String value) {
+        tag("dl", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{dl} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void dl(String attr1, String value1, String attr2, String value2) {
+        tag("dl", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{dl} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void dl(Generator body) {
+        tag("dl", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{dl} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void dl(String attr, String value, Generator body) {
+        tag("dl", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{dl} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void dl(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("dl", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{dt} tag
+     */
+    public void dt() {
+        tag("dt");
+    }
+
+    /**
+     * Create en empty a @code{dt} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void dt(String attr, String value) {
+        tag("dt", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{dt} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void dt(String attr1, String value1, String attr2, String value2) {
+        tag("dt", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{dt} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void dt(Generator body) {
+        tag("dt", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{dt} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void dt(String attr, String value, Generator body) {
+        tag("dt", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{dt} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void dt(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("dt", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{em} tag
+     */
+    public void em() {
+        tag("em");
+    }
+
+    /**
+     * Create en empty a @code{em} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void em(String attr, String value) {
+        tag("em", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{em} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void em(String attr1, String value1, String attr2, String value2) {
+        tag("em", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{em} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void em(Generator body) {
+        tag("em", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{em} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void em(String attr, String value, Generator body) {
+        tag("em", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{em} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void em(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("em", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{embed} tag
+     */
+    public void embed() {
+        tag("embed");
+    }
+
+    /**
+     * Create en empty a @code{embed} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void embed(String attr, String value) {
+        tag("embed", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{embed} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void embed(String attr1, String value1, String attr2, String value2) {
+        tag("embed", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{embed} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void embed(Generator body) {
+        tag("embed", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{embed} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void embed(String attr, String value, Generator body) {
+        tag("embed", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{embed} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void embed(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("embed", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{fieldset} tag
+     */
+    public void fieldset() {
+        tag("fieldset");
+    }
+
+    /**
+     * Create en empty a @code{fieldset} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void fieldset(String attr, String value) {
+        tag("fieldset", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{fieldset} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void fieldset(String attr1, String value1, String attr2, String value2) {
+        tag("fieldset", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{fieldset} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void fieldset(Generator body) {
+        tag("fieldset", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{fieldset} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void fieldset(String attr, String value, Generator body) {
+        tag("fieldset", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{fieldset} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void fieldset(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("fieldset", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{figcaption} tag
+     */
+    public void figcaption() {
+        tag("figcaption");
+    }
+
+    /**
+     * Create en empty a @code{figcaption} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void figcaption(String attr, String value) {
+        tag("figcaption", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{figcaption} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void figcaption(String attr1, String value1, String attr2, String value2) {
+        tag("figcaption", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{figcaption} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void figcaption(Generator body) {
+        tag("figcaption", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{figcaption} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void figcaption(String attr, String value, Generator body) {
+        tag("figcaption", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{figcaption} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void figcaption(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("figcaption", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{figure} tag
+     */
+    public void figure() {
+        tag("figure");
+    }
+
+    /**
+     * Create en empty a @code{figure} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void figure(String attr, String value) {
+        tag("figure", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{figure} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void figure(String attr1, String value1, String attr2, String value2) {
+        tag("figure", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{figure} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void figure(Generator body) {
+        tag("figure", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{figure} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void figure(String attr, String value, Generator body) {
+        tag("figure", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{figure} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void figure(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("figure", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{footer} tag
+     */
+    public void footer() {
+        tag("footer");
+    }
+
+    /**
+     * Create en empty a @code{footer} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void footer(String attr, String value) {
+        tag("footer", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{footer} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void footer(String attr1, String value1, String attr2, String value2) {
+        tag("footer", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{footer} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void footer(Generator body) {
+        tag("footer", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{footer} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void footer(String attr, String value, Generator body) {
+        tag("footer", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{footer} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void footer(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("footer", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{form} tag
+     */
+    public void form() {
+        tag("form");
+    }
+
+    /**
+     * Create en empty a @code{form} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void form(String attr, String value) {
+        tag("form", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{form} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void form(String attr1, String value1, String attr2, String value2) {
+        tag("form", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{form} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void form(Generator body) {
+        tag("form", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{form} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void form(String attr, String value, Generator body) {
+        tag("form", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{form} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void form(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("form", attr1, value1, attr2, value2, body);
     }
 
     /**
@@ -820,1086 +2576,345 @@ public class HtmlTags extends Tags {
     }
 
     /**
-     * Create en empty a @code{ul} tag
+     * Create en empty a @code{h6} tag
      */
-    public void ul() {
-        tag("ul");
+    public void h6() {
+        tag("h6");
     }
 
     /**
-     * Create en empty a @code{ul} tag
+     * Create en empty a @code{h6} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void ul(String attr, String value) {
-        tag("ul", attr, value);
+    public void h6(String attr, String value) {
+        tag("h6", attr, value);
     }
 
     /**
-     * Create en empty a @code{ul} tag
+     * Create en empty a @code{h6} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void ul(String attr1, String value1, String attr2, String value2) {
-        tag("ul", attr1, value1, attr2, value2);
+    public void h6(String attr1, String value1, String attr2, String value2) {
+        tag("h6", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{ul} tag with zero attribute
+     * Create a @code{h6} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void ul(Generator body) {
-        tag("ul", null, null, null, null, body);
+    public void h6(Generator body) {
+        tag("h6", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{ul} tag with one attribute
+     * Create a @code{h6} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void ul(String attr, String value, Generator body) {
-        tag("ul", attr, value, null, null, body);
+    public void h6(String attr, String value, Generator body) {
+        tag("h6", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{ul} tag with one attribute
+     * Create a @code{h6} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void ul(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("ul", attr1, value1, attr2, value2, body);
+    public void h6(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("h6", attr1, value1, attr2, value2, body);
     }
 
     /**
-     * Create en empty a @code{li} tag
+     * Create en empty a @code{head} tag
      */
-    public void li() {
-        tag("li");
+    public void head() {
+        tag("head");
     }
 
     /**
-     * Create en empty a @code{li} tag
+     * Create en empty a @code{head} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void li(String attr, String value) {
-        tag("li", attr, value);
+    public void head(String attr, String value) {
+        tag("head", attr, value);
     }
 
     /**
-     * Create en empty a @code{li} tag
+     * Create en empty a @code{head} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void li(String attr1, String value1, String attr2, String value2) {
-        tag("li", attr1, value1, attr2, value2);
+    public void head(String attr1, String value1, String attr2, String value2) {
+        tag("head", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{li} tag with zero attribute
+     * Create a @code{head} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void li(Generator body) {
-        tag("li", null, null, null, null, body);
+    public void head(Generator body) {
+        tag("head", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{li} tag with one attribute
+     * Create a @code{head} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void li(String attr, String value, Generator body) {
-        tag("li", attr, value, null, null, body);
+    public void head(String attr, String value, Generator body) {
+        tag("head", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{li} tag with one attribute
+     * Create a @code{head} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void li(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("li", attr1, value1, attr2, value2, body);
+    public void head(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("head", attr1, value1, attr2, value2, body);
     }
 
     /**
-     * Create en empty a @code{ol} tag
+     * Create en empty a @code{header} tag
      */
-    public void ol() {
-        tag("ol");
+    public void header() {
+        tag("header");
     }
 
     /**
-     * Create en empty a @code{ol} tag
+     * Create en empty a @code{header} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void ol(String attr, String value) {
-        tag("ol", attr, value);
+    public void header(String attr, String value) {
+        tag("header", attr, value);
     }
 
     /**
-     * Create en empty a @code{ol} tag
+     * Create en empty a @code{header} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void ol(String attr1, String value1, String attr2, String value2) {
-        tag("ol", attr1, value1, attr2, value2);
+    public void header(String attr1, String value1, String attr2, String value2) {
+        tag("header", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{ol} tag with zero attribute
+     * Create a @code{header} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void ol(Generator body) {
-        tag("ol", null, null, null, null, body);
+    public void header(Generator body) {
+        tag("header", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{ol} tag with one attribute
+     * Create a @code{header} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void ol(String attr, String value, Generator body) {
-        tag("ol", attr, value, null, null, body);
+    public void header(String attr, String value, Generator body) {
+        tag("header", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{ol} tag with one attribute
+     * Create a @code{header} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void ol(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("ol", attr1, value1, attr2, value2, body);
+    public void header(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("header", attr1, value1, attr2, value2, body);
     }
 
     /**
-     * Create en empty a @code{table} tag
+     * Create en empty a @code{hgroup} tag
      */
-    public void table() {
-        tag("table");
+    public void hgroup() {
+        tag("hgroup");
     }
 
     /**
-     * Create en empty a @code{table} tag
+     * Create en empty a @code{hgroup} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void table(String attr, String value) {
-        tag("table", attr, value);
+    public void hgroup(String attr, String value) {
+        tag("hgroup", attr, value);
     }
 
     /**
-     * Create en empty a @code{table} tag
+     * Create en empty a @code{hgroup} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void table(String attr1, String value1, String attr2, String value2) {
-        tag("table", attr1, value1, attr2, value2);
+    public void hgroup(String attr1, String value1, String attr2, String value2) {
+        tag("hgroup", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{table} tag with zero attribute
+     * Create a @code{hgroup} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void table(Generator body) {
-        tag("table", null, null, null, null, body);
+    public void hgroup(Generator body) {
+        tag("hgroup", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{table} tag with one attribute
+     * Create a @code{hgroup} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void table(String attr, String value, Generator body) {
-        tag("table", attr, value, null, null, body);
+    public void hgroup(String attr, String value, Generator body) {
+        tag("hgroup", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{table} tag with one attribute
+     * Create a @code{hgroup} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void table(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("table", attr1, value1, attr2, value2, body);
+    public void hgroup(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("hgroup", attr1, value1, attr2, value2, body);
     }
 
     /**
-     * Create en empty a @code{tr} tag
+     * Create en empty a @code{hr} tag
      */
-    public void tr() {
-        tag("tr");
+    public void hr() {
+        tag("hr");
     }
 
     /**
-     * Create en empty a @code{tr} tag
+     * Create en empty a @code{hr} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void tr(String attr, String value) {
-        tag("tr", attr, value);
+    public void hr(String attr, String value) {
+        tag("hr", attr, value);
     }
 
     /**
-     * Create en empty a @code{tr} tag
+     * Create en empty a @code{hr} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void tr(String attr1, String value1, String attr2, String value2) {
-        tag("tr", attr1, value1, attr2, value2);
+    public void hr(String attr1, String value1, String attr2, String value2) {
+        tag("hr", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{tr} tag with zero attribute
+     * Create a @code{hr} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void tr(Generator body) {
-        tag("tr", null, null, null, null, body);
+    public void hr(Generator body) {
+        tag("hr", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{tr} tag with one attribute
+     * Create a @code{hr} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void tr(String attr, String value, Generator body) {
-        tag("tr", attr, value, null, null, body);
+    public void hr(String attr, String value, Generator body) {
+        tag("hr", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{tr} tag with one attribute
+     * Create a @code{hr} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void tr(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("tr", attr1, value1, attr2, value2, body);
+    public void hr(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("hr", attr1, value1, attr2, value2, body);
     }
 
     /**
-     * Create en empty a @code{th} tag
+     * Create en empty a @code{html} tag
      */
-    public void th() {
-        tag("th");
+    public void html() {
+        tag("html");
     }
 
     /**
-     * Create en empty a @code{th} tag
+     * Create en empty a @code{html} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void th(String attr, String value) {
-        tag("th", attr, value);
+    public void html(String attr, String value) {
+        tag("html", attr, value);
     }
 
     /**
-     * Create en empty a @code{th} tag
+     * Create en empty a @code{html} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void th(String attr1, String value1, String attr2, String value2) {
-        tag("th", attr1, value1, attr2, value2);
+    public void html(String attr1, String value1, String attr2, String value2) {
+        tag("html", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{th} tag with zero attribute
+     * Create a @code{html} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void th(Generator body) {
-        tag("th", null, null, null, null, body);
+    public void html(Generator body) {
+        tag("html", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{th} tag with one attribute
+     * Create a @code{html} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void th(String attr, String value, Generator body) {
-        tag("th", attr, value, null, null, body);
+    public void html(String attr, String value, Generator body) {
+        tag("html", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{th} tag with one attribute
+     * Create a @code{html} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void th(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("th", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{td} tag
-     */
-    public void td() {
-        tag("td");
-    }
-
-    /**
-     * Create en empty a @code{td} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void td(String attr, String value) {
-        tag("td", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{td} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void td(String attr1, String value1, String attr2, String value2) {
-        tag("td", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{td} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void td(Generator body) {
-        tag("td", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{td} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void td(String attr, String value, Generator body) {
-        tag("td", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{td} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void td(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("td", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{col} tag
-     */
-    public void col() {
-        tag("col");
-    }
-
-    /**
-     * Create en empty a @code{col} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void col(String attr, String value) {
-        tag("col", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{col} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void col(String attr1, String value1, String attr2, String value2) {
-        tag("col", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{col} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void col(Generator body) {
-        tag("col", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{col} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void col(String attr, String value, Generator body) {
-        tag("col", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{col} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void col(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("col", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{thead} tag
-     */
-    public void thead() {
-        tag("thead");
-    }
-
-    /**
-     * Create en empty a @code{thead} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void thead(String attr, String value) {
-        tag("thead", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{thead} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void thead(String attr1, String value1, String attr2, String value2) {
-        tag("thead", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{thead} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void thead(Generator body) {
-        tag("thead", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{thead} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void thead(String attr, String value, Generator body) {
-        tag("thead", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{thead} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void thead(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("thead", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{tbody} tag
-     */
-    public void tbody() {
-        tag("tbody");
-    }
-
-    /**
-     * Create en empty a @code{tbody} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void tbody(String attr, String value) {
-        tag("tbody", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{tbody} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void tbody(String attr1, String value1, String attr2, String value2) {
-        tag("tbody", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{tbody} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void tbody(Generator body) {
-        tag("tbody", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{tbody} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void tbody(String attr, String value, Generator body) {
-        tag("tbody", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{tbody} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void tbody(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("tbody", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{tfoot} tag
-     */
-    public void tfoot() {
-        tag("tfoot");
-    }
-
-    /**
-     * Create en empty a @code{tfoot} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void tfoot(String attr, String value) {
-        tag("tfoot", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{tfoot} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void tfoot(String attr1, String value1, String attr2, String value2) {
-        tag("tfoot", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{tfoot} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void tfoot(Generator body) {
-        tag("tfoot", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{tfoot} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void tfoot(String attr, String value, Generator body) {
-        tag("tfoot", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{tfoot} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void tfoot(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("tfoot", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{form} tag
-     */
-    public void form() {
-        tag("form");
-    }
-
-    /**
-     * Create en empty a @code{form} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void form(String attr, String value) {
-        tag("form", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{form} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void form(String attr1, String value1, String attr2, String value2) {
-        tag("form", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{form} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void form(Generator body) {
-        tag("form", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{form} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void form(String attr, String value, Generator body) {
-        tag("form", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{form} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void form(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("form", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{input} tag
-     */
-    public void input() {
-        tag("input");
-    }
-
-    /**
-     * Create en empty a @code{input} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void input(String attr, String value) {
-        tag("input", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{input} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void input(String attr1, String value1, String attr2, String value2) {
-        tag("input", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{input} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void input(Generator body) {
-        tag("input", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{input} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void input(String attr, String value, Generator body) {
-        tag("input", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{input} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void input(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("input", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{select} tag
-     */
-    public void select() {
-        tag("select");
-    }
-
-    /**
-     * Create en empty a @code{select} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void select(String attr, String value) {
-        tag("select", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{select} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void select(String attr1, String value1, String attr2, String value2) {
-        tag("select", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{select} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void select(Generator body) {
-        tag("select", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{select} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void select(String attr, String value, Generator body) {
-        tag("select", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{select} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void select(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("select", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{option} tag
-     */
-    public void option() {
-        tag("option");
-    }
-
-    /**
-     * Create en empty a @code{option} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void option(String attr, String value) {
-        tag("option", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{option} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void option(String attr1, String value1, String attr2, String value2) {
-        tag("option", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{option} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void option(Generator body) {
-        tag("option", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{option} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void option(String attr, String value, Generator body) {
-        tag("option", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{option} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void option(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("option", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{textarea} tag
-     */
-    public void textarea() {
-        tag("textarea");
-    }
-
-    /**
-     * Create en empty a @code{textarea} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void textarea(String attr, String value) {
-        tag("textarea", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{textarea} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void textarea(String attr1, String value1, String attr2, String value2) {
-        tag("textarea", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{textarea} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void textarea(Generator body) {
-        tag("textarea", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{textarea} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void textarea(String attr, String value, Generator body) {
-        tag("textarea", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{textarea} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void textarea(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("textarea", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{button} tag
-     */
-    public void button() {
-        tag("button");
-    }
-
-    /**
-     * Create en empty a @code{button} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void button(String attr, String value) {
-        tag("button", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{button} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void button(String attr1, String value1, String attr2, String value2) {
-        tag("button", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{button} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void button(Generator body) {
-        tag("button", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{button} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void button(String attr, String value, Generator body) {
-        tag("button", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{button} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void button(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("button", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{label} tag
-     */
-    public void label() {
-        tag("label");
-    }
-
-    /**
-     * Create en empty a @code{label} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void label(String attr, String value) {
-        tag("label", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{label} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void label(String attr1, String value1, String attr2, String value2) {
-        tag("label", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{label} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void label(Generator body) {
-        tag("label", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{label} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void label(String attr, String value, Generator body) {
-        tag("label", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{label} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void label(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("label", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{p} tag
-     */
-    public void p() {
-        tag("p");
-    }
-
-    /**
-     * Create en empty a @code{p} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void p(String attr, String value) {
-        tag("p", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{p} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void p(String attr1, String value1, String attr2, String value2) {
-        tag("p", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{p} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void p(Generator body) {
-        tag("p", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{p} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void p(String attr, String value, Generator body) {
-        tag("p", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{p} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void p(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("p", attr1, value1, attr2, value2, body);
+    public void html(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("html", attr1, value1, attr2, value2, body);
     }
 
     /**
@@ -1960,117 +2975,60 @@ public class HtmlTags extends Tags {
     }
 
     /**
-     * Create en empty a @code{a} tag
+     * Create en empty a @code{iframe} tag
      */
-    public void a() {
-        tag("a");
+    public void iframe() {
+        tag("iframe");
     }
 
     /**
-     * Create en empty a @code{a} tag
+     * Create en empty a @code{iframe} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void a(String attr, String value) {
-        tag("a", attr, value);
+    public void iframe(String attr, String value) {
+        tag("iframe", attr, value);
     }
 
     /**
-     * Create en empty a @code{a} tag
+     * Create en empty a @code{iframe} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void a(String attr1, String value1, String attr2, String value2) {
-        tag("a", attr1, value1, attr2, value2);
+    public void iframe(String attr1, String value1, String attr2, String value2) {
+        tag("iframe", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{a} tag with zero attribute
+     * Create a @code{iframe} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void a(Generator body) {
-        tag("a", null, null, null, null, body);
+    public void iframe(Generator body) {
+        tag("iframe", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{a} tag with one attribute
+     * Create a @code{iframe} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void a(String attr, String value, Generator body) {
-        tag("a", attr, value, null, null, body);
+    public void iframe(String attr, String value, Generator body) {
+        tag("iframe", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{a} tag with one attribute
+     * Create a @code{iframe} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void a(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("a", attr1, value1, attr2, value2, body);
-    }
-
-    /**
-     * Create en empty a @code{span} tag
-     */
-    public void span() {
-        tag("span");
-    }
-
-    /**
-     * Create en empty a @code{span} tag
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     */
-    public void span(String attr, String value) {
-        tag("span", attr, value);
-    }
-
-    /**
-     * Create en empty a @code{span} tag
-     * @param attr1 name of the attribute.
-     * @param value1 value of the attribute.
-     * @param attr2 name of the attribute.
-     * @param value2 value of the attribute.
-     */
-    public void span(String attr1, String value1, String attr2, String value2) {
-        tag("span", attr1, value1, attr2, value2);
-    }
-
-    /**
-     * Create a @code{span} tag with zero attribute
-     * @param body the body generator for the tag.
-     */
-    public void span(Generator body) {
-        tag("span", null, null, null, null, body);
-    }
-
-    /**
-     * Create a @code{span} tag with one attribute
-     * @param attr name of the attribute.
-     * @param value value of the attribute.
-     * @param body the body generator for the tag.
-     */
-    public void span(String attr, String value, Generator body) {
-        tag("span", attr, value, null, null, body);
-    }
-
-    /**
-     * Create a @code{span} tag with one attribute
-     * @param attr1 name of the first attribute.
-     * @param value1 value of the first attribute.
-     * @param attr2 name of the second attribute.
-     * @param value2 value of the second attribute.
-     * @param body the body generator for the tag.
-     */
-    public void span(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("span", attr1, value1, attr2, value2, body);
+    public void iframe(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("iframe", attr1, value1, attr2, value2, body);
     }
 
     /**
@@ -2131,60 +3089,1884 @@ public class HtmlTags extends Tags {
     }
 
     /**
-     * Create en empty a @code{br} tag
+     * Create en empty a @code{input} tag
      */
-    public void br() {
-        tag("br");
+    public void input() {
+        tag("input");
     }
 
     /**
-     * Create en empty a @code{br} tag
+     * Create en empty a @code{input} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
-    public void br(String attr, String value) {
-        tag("br", attr, value);
+    public void input(String attr, String value) {
+        tag("input", attr, value);
     }
 
     /**
-     * Create en empty a @code{br} tag
+     * Create en empty a @code{input} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
-    public void br(String attr1, String value1, String attr2, String value2) {
-        tag("br", attr1, value1, attr2, value2);
+    public void input(String attr1, String value1, String attr2, String value2) {
+        tag("input", attr1, value1, attr2, value2);
     }
 
     /**
-     * Create a @code{br} tag with zero attribute
+     * Create a @code{input} tag with zero attribute
      * @param body the body generator for the tag.
      */
-    public void br(Generator body) {
-        tag("br", null, null, null, null, body);
+    public void input(Generator body) {
+        tag("input", null, null, null, null, body);
     }
 
     /**
-     * Create a @code{br} tag with one attribute
+     * Create a @code{input} tag with one attribute
      * @param attr name of the attribute.
      * @param value value of the attribute.
      * @param body the body generator for the tag.
      */
-    public void br(String attr, String value, Generator body) {
-        tag("br", attr, value, null, null, body);
+    public void input(String attr, String value, Generator body) {
+        tag("input", attr, value, null, null, body);
     }
 
     /**
-     * Create a @code{br} tag with one attribute
+     * Create a @code{input} tag with one attribute
      * @param attr1 name of the first attribute.
      * @param value1 value of the first attribute.
      * @param attr2 name of the second attribute.
      * @param value2 value of the second attribute.
      * @param body the body generator for the tag.
      */
-    public void br(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("br", attr1, value1, attr2, value2, body);
+    public void input(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("input", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{ins} tag
+     */
+    public void ins() {
+        tag("ins");
+    }
+
+    /**
+     * Create en empty a @code{ins} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void ins(String attr, String value) {
+        tag("ins", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{ins} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void ins(String attr1, String value1, String attr2, String value2) {
+        tag("ins", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{ins} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void ins(Generator body) {
+        tag("ins", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{ins} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void ins(String attr, String value, Generator body) {
+        tag("ins", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{ins} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void ins(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("ins", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{kbd} tag
+     */
+    public void kbd() {
+        tag("kbd");
+    }
+
+    /**
+     * Create en empty a @code{kbd} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void kbd(String attr, String value) {
+        tag("kbd", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{kbd} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void kbd(String attr1, String value1, String attr2, String value2) {
+        tag("kbd", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{kbd} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void kbd(Generator body) {
+        tag("kbd", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{kbd} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void kbd(String attr, String value, Generator body) {
+        tag("kbd", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{kbd} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void kbd(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("kbd", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{keygen} tag
+     */
+    public void keygen() {
+        tag("keygen");
+    }
+
+    /**
+     * Create en empty a @code{keygen} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void keygen(String attr, String value) {
+        tag("keygen", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{keygen} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void keygen(String attr1, String value1, String attr2, String value2) {
+        tag("keygen", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{keygen} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void keygen(Generator body) {
+        tag("keygen", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{keygen} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void keygen(String attr, String value, Generator body) {
+        tag("keygen", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{keygen} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void keygen(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("keygen", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{label} tag
+     */
+    public void label() {
+        tag("label");
+    }
+
+    /**
+     * Create en empty a @code{label} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void label(String attr, String value) {
+        tag("label", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{label} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void label(String attr1, String value1, String attr2, String value2) {
+        tag("label", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{label} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void label(Generator body) {
+        tag("label", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{label} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void label(String attr, String value, Generator body) {
+        tag("label", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{label} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void label(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("label", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{legend} tag
+     */
+    public void legend() {
+        tag("legend");
+    }
+
+    /**
+     * Create en empty a @code{legend} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void legend(String attr, String value) {
+        tag("legend", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{legend} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void legend(String attr1, String value1, String attr2, String value2) {
+        tag("legend", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{legend} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void legend(Generator body) {
+        tag("legend", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{legend} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void legend(String attr, String value, Generator body) {
+        tag("legend", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{legend} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void legend(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("legend", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{li} tag
+     */
+    public void li() {
+        tag("li");
+    }
+
+    /**
+     * Create en empty a @code{li} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void li(String attr, String value) {
+        tag("li", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{li} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void li(String attr1, String value1, String attr2, String value2) {
+        tag("li", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{li} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void li(Generator body) {
+        tag("li", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{li} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void li(String attr, String value, Generator body) {
+        tag("li", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{li} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void li(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("li", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{link} tag
+     */
+    public void link() {
+        tag("link");
+    }
+
+    /**
+     * Create en empty a @code{link} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void link(String attr, String value) {
+        tag("link", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{link} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void link(String attr1, String value1, String attr2, String value2) {
+        tag("link", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{link} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void link(Generator body) {
+        tag("link", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{link} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void link(String attr, String value, Generator body) {
+        tag("link", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{link} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void link(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("link", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{map} tag
+     */
+    public void map() {
+        tag("map");
+    }
+
+    /**
+     * Create en empty a @code{map} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void map(String attr, String value) {
+        tag("map", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{map} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void map(String attr1, String value1, String attr2, String value2) {
+        tag("map", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{map} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void map(Generator body) {
+        tag("map", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{map} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void map(String attr, String value, Generator body) {
+        tag("map", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{map} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void map(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("map", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{mark} tag
+     */
+    public void mark() {
+        tag("mark");
+    }
+
+    /**
+     * Create en empty a @code{mark} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void mark(String attr, String value) {
+        tag("mark", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{mark} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void mark(String attr1, String value1, String attr2, String value2) {
+        tag("mark", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{mark} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void mark(Generator body) {
+        tag("mark", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{mark} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void mark(String attr, String value, Generator body) {
+        tag("mark", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{mark} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void mark(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("mark", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{menu} tag
+     */
+    public void menu() {
+        tag("menu");
+    }
+
+    /**
+     * Create en empty a @code{menu} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void menu(String attr, String value) {
+        tag("menu", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{menu} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void menu(String attr1, String value1, String attr2, String value2) {
+        tag("menu", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{menu} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void menu(Generator body) {
+        tag("menu", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{menu} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void menu(String attr, String value, Generator body) {
+        tag("menu", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{menu} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void menu(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("menu", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{meta} tag
+     */
+    public void meta() {
+        tag("meta");
+    }
+
+    /**
+     * Create en empty a @code{meta} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void meta(String attr, String value) {
+        tag("meta", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{meta} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void meta(String attr1, String value1, String attr2, String value2) {
+        tag("meta", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{meta} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void meta(Generator body) {
+        tag("meta", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{meta} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void meta(String attr, String value, Generator body) {
+        tag("meta", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{meta} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void meta(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("meta", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{meter} tag
+     */
+    public void meter() {
+        tag("meter");
+    }
+
+    /**
+     * Create en empty a @code{meter} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void meter(String attr, String value) {
+        tag("meter", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{meter} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void meter(String attr1, String value1, String attr2, String value2) {
+        tag("meter", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{meter} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void meter(Generator body) {
+        tag("meter", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{meter} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void meter(String attr, String value, Generator body) {
+        tag("meter", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{meter} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void meter(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("meter", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{nav} tag
+     */
+    public void nav() {
+        tag("nav");
+    }
+
+    /**
+     * Create en empty a @code{nav} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void nav(String attr, String value) {
+        tag("nav", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{nav} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void nav(String attr1, String value1, String attr2, String value2) {
+        tag("nav", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{nav} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void nav(Generator body) {
+        tag("nav", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{nav} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void nav(String attr, String value, Generator body) {
+        tag("nav", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{nav} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void nav(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("nav", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{noscript} tag
+     */
+    public void noscript() {
+        tag("noscript");
+    }
+
+    /**
+     * Create en empty a @code{noscript} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void noscript(String attr, String value) {
+        tag("noscript", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{noscript} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void noscript(String attr1, String value1, String attr2, String value2) {
+        tag("noscript", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{noscript} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void noscript(Generator body) {
+        tag("noscript", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{noscript} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void noscript(String attr, String value, Generator body) {
+        tag("noscript", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{noscript} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void noscript(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("noscript", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{object} tag
+     */
+    public void object() {
+        tag("object");
+    }
+
+    /**
+     * Create en empty a @code{object} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void object(String attr, String value) {
+        tag("object", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{object} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void object(String attr1, String value1, String attr2, String value2) {
+        tag("object", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{object} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void object(Generator body) {
+        tag("object", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{object} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void object(String attr, String value, Generator body) {
+        tag("object", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{object} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void object(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("object", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{ol} tag
+     */
+    public void ol() {
+        tag("ol");
+    }
+
+    /**
+     * Create en empty a @code{ol} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void ol(String attr, String value) {
+        tag("ol", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{ol} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void ol(String attr1, String value1, String attr2, String value2) {
+        tag("ol", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{ol} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void ol(Generator body) {
+        tag("ol", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{ol} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void ol(String attr, String value, Generator body) {
+        tag("ol", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{ol} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void ol(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("ol", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{optgroup} tag
+     */
+    public void optgroup() {
+        tag("optgroup");
+    }
+
+    /**
+     * Create en empty a @code{optgroup} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void optgroup(String attr, String value) {
+        tag("optgroup", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{optgroup} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void optgroup(String attr1, String value1, String attr2, String value2) {
+        tag("optgroup", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{optgroup} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void optgroup(Generator body) {
+        tag("optgroup", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{optgroup} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void optgroup(String attr, String value, Generator body) {
+        tag("optgroup", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{optgroup} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void optgroup(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("optgroup", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{option} tag
+     */
+    public void option() {
+        tag("option");
+    }
+
+    /**
+     * Create en empty a @code{option} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void option(String attr, String value) {
+        tag("option", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{option} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void option(String attr1, String value1, String attr2, String value2) {
+        tag("option", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{option} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void option(Generator body) {
+        tag("option", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{option} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void option(String attr, String value, Generator body) {
+        tag("option", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{option} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void option(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("option", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{output} tag
+     */
+    public void output() {
+        tag("output");
+    }
+
+    /**
+     * Create en empty a @code{output} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void output(String attr, String value) {
+        tag("output", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{output} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void output(String attr1, String value1, String attr2, String value2) {
+        tag("output", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{output} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void output(Generator body) {
+        tag("output", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{output} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void output(String attr, String value, Generator body) {
+        tag("output", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{output} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void output(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("output", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{p} tag
+     */
+    public void p() {
+        tag("p");
+    }
+
+    /**
+     * Create en empty a @code{p} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void p(String attr, String value) {
+        tag("p", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{p} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void p(String attr1, String value1, String attr2, String value2) {
+        tag("p", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{p} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void p(Generator body) {
+        tag("p", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{p} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void p(String attr, String value, Generator body) {
+        tag("p", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{p} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void p(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("p", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{param} tag
+     */
+    public void param() {
+        tag("param");
+    }
+
+    /**
+     * Create en empty a @code{param} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void param(String attr, String value) {
+        tag("param", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{param} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void param(String attr1, String value1, String attr2, String value2) {
+        tag("param", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{param} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void param(Generator body) {
+        tag("param", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{param} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void param(String attr, String value, Generator body) {
+        tag("param", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{param} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void param(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("param", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{pre} tag
+     */
+    public void pre() {
+        tag("pre");
+    }
+
+    /**
+     * Create en empty a @code{pre} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void pre(String attr, String value) {
+        tag("pre", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{pre} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void pre(String attr1, String value1, String attr2, String value2) {
+        tag("pre", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{pre} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void pre(Generator body) {
+        tag("pre", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{pre} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void pre(String attr, String value, Generator body) {
+        tag("pre", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{pre} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void pre(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("pre", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{progress} tag
+     */
+    public void progress() {
+        tag("progress");
+    }
+
+    /**
+     * Create en empty a @code{progress} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void progress(String attr, String value) {
+        tag("progress", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{progress} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void progress(String attr1, String value1, String attr2, String value2) {
+        tag("progress", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{progress} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void progress(Generator body) {
+        tag("progress", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{progress} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void progress(String attr, String value, Generator body) {
+        tag("progress", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{progress} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void progress(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("progress", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{q} tag
+     */
+    public void q() {
+        tag("q");
+    }
+
+    /**
+     * Create en empty a @code{q} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void q(String attr, String value) {
+        tag("q", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{q} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void q(String attr1, String value1, String attr2, String value2) {
+        tag("q", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{q} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void q(Generator body) {
+        tag("q", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{q} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void q(String attr, String value, Generator body) {
+        tag("q", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{q} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void q(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("q", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{rp} tag
+     */
+    public void rp() {
+        tag("rp");
+    }
+
+    /**
+     * Create en empty a @code{rp} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void rp(String attr, String value) {
+        tag("rp", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{rp} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void rp(String attr1, String value1, String attr2, String value2) {
+        tag("rp", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{rp} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void rp(Generator body) {
+        tag("rp", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{rp} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void rp(String attr, String value, Generator body) {
+        tag("rp", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{rp} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void rp(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("rp", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{rt} tag
+     */
+    public void rt() {
+        tag("rt");
+    }
+
+    /**
+     * Create en empty a @code{rt} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void rt(String attr, String value) {
+        tag("rt", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{rt} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void rt(String attr1, String value1, String attr2, String value2) {
+        tag("rt", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{rt} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void rt(Generator body) {
+        tag("rt", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{rt} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void rt(String attr, String value, Generator body) {
+        tag("rt", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{rt} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void rt(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("rt", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{ruby} tag
+     */
+    public void ruby() {
+        tag("ruby");
+    }
+
+    /**
+     * Create en empty a @code{ruby} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void ruby(String attr, String value) {
+        tag("ruby", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{ruby} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void ruby(String attr1, String value1, String attr2, String value2) {
+        tag("ruby", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{ruby} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void ruby(Generator body) {
+        tag("ruby", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{ruby} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void ruby(String attr, String value, Generator body) {
+        tag("ruby", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{ruby} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void ruby(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("ruby", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{s} tag
+     */
+    public void s() {
+        tag("s");
+    }
+
+    /**
+     * Create en empty a @code{s} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void s(String attr, String value) {
+        tag("s", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{s} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void s(String attr1, String value1, String attr2, String value2) {
+        tag("s", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{s} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void s(Generator body) {
+        tag("s", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{s} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void s(String attr, String value, Generator body) {
+        tag("s", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{s} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void s(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("s", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{samp} tag
+     */
+    public void samp() {
+        tag("samp");
+    }
+
+    /**
+     * Create en empty a @code{samp} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void samp(String attr, String value) {
+        tag("samp", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{samp} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void samp(String attr1, String value1, String attr2, String value2) {
+        tag("samp", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{samp} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void samp(Generator body) {
+        tag("samp", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{samp} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void samp(String attr, String value, Generator body) {
+        tag("samp", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{samp} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void samp(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("samp", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{script} tag
+     */
+    public void script() {
+        tag("script");
+    }
+
+    /**
+     * Create en empty a @code{script} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void script(String attr, String value) {
+        tag("script", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{script} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void script(String attr1, String value1, String attr2, String value2) {
+        tag("script", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{script} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void script(Generator body) {
+        tag("script", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{script} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void script(String attr, String value, Generator body) {
+        tag("script", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{script} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void script(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("script", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{section} tag
+     */
+    public void section() {
+        tag("section");
+    }
+
+    /**
+     * Create en empty a @code{section} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void section(String attr, String value) {
+        tag("section", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{section} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void section(String attr1, String value1, String attr2, String value2) {
+        tag("section", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{section} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void section(Generator body) {
+        tag("section", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{section} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void section(String attr, String value, Generator body) {
+        tag("section", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{section} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void section(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("section", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{select} tag
+     */
+    public void select() {
+        tag("select");
+    }
+
+    /**
+     * Create en empty a @code{select} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void select(String attr, String value) {
+        tag("select", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{select} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void select(String attr1, String value1, String attr2, String value2) {
+        tag("select", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{select} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void select(Generator body) {
+        tag("select", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{select} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void select(String attr, String value, Generator body) {
+        tag("select", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{select} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void select(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("select", attr1, value1, attr2, value2, body);
     }
 
     /**
@@ -2245,6 +5027,120 @@ public class HtmlTags extends Tags {
     }
 
     /**
+     * Create en empty a @code{source} tag
+     */
+    public void source() {
+        tag("source");
+    }
+
+    /**
+     * Create en empty a @code{source} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void source(String attr, String value) {
+        tag("source", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{source} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void source(String attr1, String value1, String attr2, String value2) {
+        tag("source", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{source} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void source(Generator body) {
+        tag("source", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{source} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void source(String attr, String value, Generator body) {
+        tag("source", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{source} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void source(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("source", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{span} tag
+     */
+    public void span() {
+        tag("span");
+    }
+
+    /**
+     * Create en empty a @code{span} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void span(String attr, String value) {
+        tag("span", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{span} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void span(String attr1, String value1, String attr2, String value2) {
+        tag("span", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{span} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void span(Generator body) {
+        tag("span", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{span} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void span(String attr, String value, Generator body) {
+        tag("span", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{span} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void span(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("span", attr1, value1, attr2, value2, body);
+    }
+
+    /**
      * Create en empty a @code{strong} tag
      */
     public void strong() {
@@ -2299,6 +5195,1146 @@ public class HtmlTags extends Tags {
      */
     public void strong(String attr1, String value1, String attr2, String value2, Generator body) {
         tag("strong", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{style} tag
+     */
+    public void style() {
+        tag("style");
+    }
+
+    /**
+     * Create en empty a @code{style} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void style(String attr, String value) {
+        tag("style", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{style} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void style(String attr1, String value1, String attr2, String value2) {
+        tag("style", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{style} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void style(Generator body) {
+        tag("style", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{style} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void style(String attr, String value, Generator body) {
+        tag("style", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{style} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void style(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("style", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{sub} tag
+     */
+    public void sub() {
+        tag("sub");
+    }
+
+    /**
+     * Create en empty a @code{sub} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void sub(String attr, String value) {
+        tag("sub", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{sub} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void sub(String attr1, String value1, String attr2, String value2) {
+        tag("sub", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{sub} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void sub(Generator body) {
+        tag("sub", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{sub} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void sub(String attr, String value, Generator body) {
+        tag("sub", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{sub} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void sub(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("sub", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{summary} tag
+     */
+    public void summary() {
+        tag("summary");
+    }
+
+    /**
+     * Create en empty a @code{summary} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void summary(String attr, String value) {
+        tag("summary", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{summary} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void summary(String attr1, String value1, String attr2, String value2) {
+        tag("summary", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{summary} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void summary(Generator body) {
+        tag("summary", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{summary} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void summary(String attr, String value, Generator body) {
+        tag("summary", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{summary} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void summary(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("summary", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{sup} tag
+     */
+    public void sup() {
+        tag("sup");
+    }
+
+    /**
+     * Create en empty a @code{sup} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void sup(String attr, String value) {
+        tag("sup", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{sup} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void sup(String attr1, String value1, String attr2, String value2) {
+        tag("sup", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{sup} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void sup(Generator body) {
+        tag("sup", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{sup} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void sup(String attr, String value, Generator body) {
+        tag("sup", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{sup} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void sup(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("sup", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{table} tag
+     */
+    public void table() {
+        tag("table");
+    }
+
+    /**
+     * Create en empty a @code{table} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void table(String attr, String value) {
+        tag("table", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{table} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void table(String attr1, String value1, String attr2, String value2) {
+        tag("table", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{table} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void table(Generator body) {
+        tag("table", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{table} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void table(String attr, String value, Generator body) {
+        tag("table", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{table} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void table(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("table", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{tbody} tag
+     */
+    public void tbody() {
+        tag("tbody");
+    }
+
+    /**
+     * Create en empty a @code{tbody} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void tbody(String attr, String value) {
+        tag("tbody", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{tbody} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void tbody(String attr1, String value1, String attr2, String value2) {
+        tag("tbody", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{tbody} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void tbody(Generator body) {
+        tag("tbody", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{tbody} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void tbody(String attr, String value, Generator body) {
+        tag("tbody", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{tbody} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void tbody(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("tbody", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{td} tag
+     */
+    public void td() {
+        tag("td");
+    }
+
+    /**
+     * Create en empty a @code{td} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void td(String attr, String value) {
+        tag("td", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{td} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void td(String attr1, String value1, String attr2, String value2) {
+        tag("td", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{td} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void td(Generator body) {
+        tag("td", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{td} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void td(String attr, String value, Generator body) {
+        tag("td", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{td} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void td(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("td", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{textarea} tag
+     */
+    public void textarea() {
+        tag("textarea");
+    }
+
+    /**
+     * Create en empty a @code{textarea} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void textarea(String attr, String value) {
+        tag("textarea", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{textarea} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void textarea(String attr1, String value1, String attr2, String value2) {
+        tag("textarea", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{textarea} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void textarea(Generator body) {
+        tag("textarea", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{textarea} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void textarea(String attr, String value, Generator body) {
+        tag("textarea", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{textarea} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void textarea(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("textarea", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{tfoot} tag
+     */
+    public void tfoot() {
+        tag("tfoot");
+    }
+
+    /**
+     * Create en empty a @code{tfoot} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void tfoot(String attr, String value) {
+        tag("tfoot", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{tfoot} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void tfoot(String attr1, String value1, String attr2, String value2) {
+        tag("tfoot", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{tfoot} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void tfoot(Generator body) {
+        tag("tfoot", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{tfoot} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void tfoot(String attr, String value, Generator body) {
+        tag("tfoot", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{tfoot} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void tfoot(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("tfoot", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{th} tag
+     */
+    public void th() {
+        tag("th");
+    }
+
+    /**
+     * Create en empty a @code{th} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void th(String attr, String value) {
+        tag("th", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{th} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void th(String attr1, String value1, String attr2, String value2) {
+        tag("th", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{th} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void th(Generator body) {
+        tag("th", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{th} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void th(String attr, String value, Generator body) {
+        tag("th", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{th} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void th(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("th", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{thead} tag
+     */
+    public void thead() {
+        tag("thead");
+    }
+
+    /**
+     * Create en empty a @code{thead} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void thead(String attr, String value) {
+        tag("thead", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{thead} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void thead(String attr1, String value1, String attr2, String value2) {
+        tag("thead", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{thead} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void thead(Generator body) {
+        tag("thead", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{thead} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void thead(String attr, String value, Generator body) {
+        tag("thead", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{thead} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void thead(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("thead", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{time} tag
+     */
+    public void time() {
+        tag("time");
+    }
+
+    /**
+     * Create en empty a @code{time} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void time(String attr, String value) {
+        tag("time", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{time} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void time(String attr1, String value1, String attr2, String value2) {
+        tag("time", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{time} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void time(Generator body) {
+        tag("time", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{time} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void time(String attr, String value, Generator body) {
+        tag("time", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{time} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void time(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("time", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{title} tag
+     */
+    public void title() {
+        tag("title");
+    }
+
+    /**
+     * Create en empty a @code{title} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void title(String attr, String value) {
+        tag("title", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{title} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void title(String attr1, String value1, String attr2, String value2) {
+        tag("title", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{title} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void title(Generator body) {
+        tag("title", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{title} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void title(String attr, String value, Generator body) {
+        tag("title", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{title} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void title(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("title", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{tr} tag
+     */
+    public void tr() {
+        tag("tr");
+    }
+
+    /**
+     * Create en empty a @code{tr} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void tr(String attr, String value) {
+        tag("tr", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{tr} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void tr(String attr1, String value1, String attr2, String value2) {
+        tag("tr", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{tr} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void tr(Generator body) {
+        tag("tr", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{tr} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void tr(String attr, String value, Generator body) {
+        tag("tr", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{tr} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void tr(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("tr", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{track} tag
+     */
+    public void track() {
+        tag("track");
+    }
+
+    /**
+     * Create en empty a @code{track} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void track(String attr, String value) {
+        tag("track", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{track} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void track(String attr1, String value1, String attr2, String value2) {
+        tag("track", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{track} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void track(Generator body) {
+        tag("track", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{track} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void track(String attr, String value, Generator body) {
+        tag("track", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{track} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void track(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("track", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{u} tag
+     */
+    public void u() {
+        tag("u");
+    }
+
+    /**
+     * Create en empty a @code{u} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void u(String attr, String value) {
+        tag("u", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{u} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void u(String attr1, String value1, String attr2, String value2) {
+        tag("u", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{u} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void u(Generator body) {
+        tag("u", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{u} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void u(String attr, String value, Generator body) {
+        tag("u", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{u} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void u(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("u", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{ul} tag
+     */
+    public void ul() {
+        tag("ul");
+    }
+
+    /**
+     * Create en empty a @code{ul} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void ul(String attr, String value) {
+        tag("ul", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{ul} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void ul(String attr1, String value1, String attr2, String value2) {
+        tag("ul", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{ul} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void ul(Generator body) {
+        tag("ul", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{ul} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void ul(String attr, String value, Generator body) {
+        tag("ul", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{ul} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void ul(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("ul", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{var} tag
+     */
+    public void var() {
+        tag("var");
+    }
+
+    /**
+     * Create en empty a @code{var} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void var(String attr, String value) {
+        tag("var", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{var} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void var(String attr1, String value1, String attr2, String value2) {
+        tag("var", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{var} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void var(Generator body) {
+        tag("var", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{var} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void var(String attr, String value, Generator body) {
+        tag("var", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{var} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void var(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("var", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{video} tag
+     */
+    public void video() {
+        tag("video");
+    }
+
+    /**
+     * Create en empty a @code{video} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void video(String attr, String value) {
+        tag("video", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{video} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void video(String attr1, String value1, String attr2, String value2) {
+        tag("video", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{video} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void video(Generator body) {
+        tag("video", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{video} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void video(String attr, String value, Generator body) {
+        tag("video", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{video} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void video(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("video", attr1, value1, attr2, value2, body);
+    }
+
+    /**
+     * Create en empty a @code{wbr} tag
+     */
+    public void wbr() {
+        tag("wbr");
+    }
+
+    /**
+     * Create en empty a @code{wbr} tag
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     */
+    public void wbr(String attr, String value) {
+        tag("wbr", attr, value);
+    }
+
+    /**
+     * Create en empty a @code{wbr} tag
+     * @param attr1 name of the attribute.
+     * @param value1 value of the attribute.
+     * @param attr2 name of the attribute.
+     * @param value2 value of the attribute.
+     */
+    public void wbr(String attr1, String value1, String attr2, String value2) {
+        tag("wbr", attr1, value1, attr2, value2);
+    }
+
+    /**
+     * Create a @code{wbr} tag with zero attribute
+     * @param body the body generator for the tag.
+     */
+    public void wbr(Generator body) {
+        tag("wbr", null, null, null, null, body);
+    }
+
+    /**
+     * Create a @code{wbr} tag with one attribute
+     * @param attr name of the attribute.
+     * @param value value of the attribute.
+     * @param body the body generator for the tag.
+     */
+    public void wbr(String attr, String value, Generator body) {
+        tag("wbr", attr, value, null, null, body);
+    }
+
+    /**
+     * Create a @code{wbr} tag with one attribute
+     * @param attr1 name of the first attribute.
+     * @param value1 value of the first attribute.
+     * @param attr2 name of the second attribute.
+     * @param value2 value of the second attribute.
+     * @param body the body generator for the tag.
+     */
+    public void wbr(String attr1, String value1, String attr2, String value2, Generator body) {
+        tag("wbr", attr1, value1, attr2, value2, body);
     }
 
 }

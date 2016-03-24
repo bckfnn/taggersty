@@ -324,6 +324,9 @@ public class Tags {
         for (String n : tags) {
             StringBuilder m = new StringBuilder();
             boolean first = true;
+            if (n.contains(" - ")) {
+                n = n.substring(0, n.indexOf(" - "));
+            }
             for (String p : n.split("-")) {
                 m.append(first ? p : Character.toUpperCase(p.charAt(0)) + p.substring(1));
                 first = false;

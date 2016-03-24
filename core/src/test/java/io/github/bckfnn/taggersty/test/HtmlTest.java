@@ -23,7 +23,6 @@ import io.github.bckfnn.taggersty.CoverityEscapersFilter;
 import io.github.bckfnn.taggersty.HtmlTags;
 import io.github.bckfnn.taggersty.StringBuilderOutput;
 import io.github.bckfnn.taggersty.Tags;
-import io.github.bckfnn.taggersty.TagsOutput;
 
 public class HtmlTest {
 
