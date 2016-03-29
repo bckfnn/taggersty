@@ -104,7 +104,7 @@ public class Tags {
      * @param name name the of the tag
      * @param body body of the tag.
      */
-    public void tag(String name, Generator body) {
+    public void tag(char[] name, Generator body) {
         tag(name, null, null, null, null, body);
     }
 
@@ -112,7 +112,7 @@ public class Tags {
      * Emit an empty <code>name</code> tag without attributes and without a body.
      * @param name name the of the tag
      */
-    public void tag(String name) {
+    public void tag(char[] name) {
         tag(name, null, null, null, null, null);
     }
 
@@ -122,7 +122,7 @@ public class Tags {
      * @param attr1 name of the attribute
      * @param value1 value of the attribute
      */
-    public void tag(String name, String attr1, String value1) {
+    public void tag(char[] name, String attr1, String value1) {
         tag(name, attr1, value1, null, null, null);
     };
 
@@ -134,7 +134,7 @@ public class Tags {
      * @param attr2 name of the second attribute
      * @param value2 value of the second attribute
      */
-    public void tag(String name, String attr1, String value1, String attr2, String value2) {
+    public void tag(char[] name, String attr1, String value1, String attr2, String value2) {
         tag(name, attr1, value1, attr2, value2, null);
     };
 
@@ -147,12 +147,12 @@ public class Tags {
      * @param value2 value of the second attribute
      * @param body body of the tag.
      */
-    public void tag(String name, String attr1, String value1, String attr2, String value2, Generator body) {
+    public void tag(char[] name, String attr1, String value1, String attr2, String value2, Generator body) {
         closeTag();
 
         autoIndent();
-        append('<');
-        append(name);
+        output.write('<');
+        output.write(name);
         if (attr1 != null) {
             if (attr1 == Tags._suppress) {
                 suppressWhiteSpace = true;
@@ -175,16 +175,20 @@ public class Tags {
             }
 
             if (state == State.ATTR) {
-                append("/>");
+                output.write('/');
+                output.write('>');
             } else {
                 autoIndent();
+                output.write('<');
+                output.write('/');
 
-                append("</");
-                append(name);
-                append('>');
+                output.write(name);
+                output.write('>');
+
             }
         } else {
-            append("/>");
+            output.write('/');
+            output.write('>');
         }
         if (attr1 == _suppress) {
             suppressWhiteSpace = false;
@@ -200,13 +204,13 @@ public class Tags {
      * @param value value of the attribute
      */
     public void attr(String name, String value) {
-        append(' ');
-        append(name);
+        output.write(' ');
+        output.write(name);
         if (value != null) {
-            append('=');
-            append('"');
-            append(filter.encodeAttribute(value));
-            append('"');
+            output.write('=');
+            output.write('"');
+            output.write(filter.encodeAttribute(value));
+            output.write('"');
         }
     }
 
@@ -227,7 +231,7 @@ public class Tags {
         state = State.CONTENT;
         autoIndent();
         if (content != null) {
-            append(filter.encodeContent(content));
+            output.write(filter.encodeContent(content));
         }
         autoNewline();
     }
@@ -242,7 +246,7 @@ public class Tags {
         state = State.CONTENT;
         autoIndent();
         if (content != null) {
-            append(content);
+            output.write(content);
         }
         autoNewline();
     }
@@ -255,7 +259,7 @@ public class Tags {
         closeTag();
         state = State.CONTENT;
         suppressWhiteSpace = true;
-        append("<![CDATA[");
+        output.write("<![CDATA[");
         if (body!= null) {
             try {
                 body.gen();
@@ -263,7 +267,7 @@ public class Tags {
                 throw new RuntimeException(exc);
             }
         }
-        append("]]>");
+        output.write("]]>");
         suppressWhiteSpace = false;
         state = State.CONTENT;
     }
@@ -276,7 +280,7 @@ public class Tags {
         closeTag();
         state = State.CONTENT;
         suppressWhiteSpace = true;
-        append("/*<![CDATA[*/");
+        output.write("/*<![CDATA[*/");
         if (body!= null) {
             try {
                 body.gen();
@@ -284,7 +288,7 @@ public class Tags {
                 throw new RuntimeException(exc);
             }
         }
-        append("/*]]>*/");
+        output.write("/*]]>*/");
         suppressWhiteSpace = false;
         state = State.CONTENT;
     }
@@ -296,7 +300,7 @@ public class Tags {
     public void comment(String comment) {
         closeTag();
         autoIndent();
-        append("<!-- " + filter.encodeContent(comment) + " -->");
+        output.write("<!-- " + filter.encodeContent(comment) + " -->");
         autoNewline();
     }
 
@@ -307,28 +311,13 @@ public class Tags {
         output.close();
     }
 
-    /**
-     * Append a single character to the out.
-     * @param ch the character.
-     */
-    private void append(char ch) {
-        output.write(ch);
-    }
-
-    /**
-     * Append a string to the output.
-     * @param str the string.
-     */
-    private void append(String str) {
-        output.write(str);
-    }
 
     /**
      * Append a newline if autoNewline is enabled.
      */
     private void autoNewline() {
         if (autoNewline && !suppressWhiteSpace) {
-            append(System.lineSeparator());
+            output.write(System.lineSeparator());
         }
     }
 
@@ -338,7 +327,7 @@ public class Tags {
     private void autoIndent() {
         if (autoIndent && autoNewline && !suppressWhiteSpace) {
             for (int i = 0; i < indent; i++) {
-                append("    ");
+                output.write("    ");
             }
         }
     }
@@ -348,7 +337,7 @@ public class Tags {
      */
     protected void closeTag() {
         if (state == State.ATTR) {
-            append('>');
+            output.write('>');
             autoNewline();
             state = State.EMPTY;
         }
@@ -375,31 +364,33 @@ public class Tags {
                 first = false;
             }
 
+            System.out.println("    private static char[] _" + n + " = \"" + ns + n + "\".toCharArray();");
+            System.out.println();
             System.out.println("    /**");
-            System.out.println("     * Create en empty a @code{" + n + "} tag");
+            System.out.println("     * Create an empty a @code{" + n + "} tag");
             System.out.println("     */");
             System.out.println("    public void " + m +"() {");
-            System.out.println("        tag(\"" + ns + n + "\");");
+            System.out.println("        tag(_" + n + ", null, null, null, null, null);");
             System.out.println("    }");
             System.out.println();
             System.out.println("    /**");
-            System.out.println("     * Create en empty a @code{" + n + "} tag");
+            System.out.println("     * Create an empty a @code{" + n + "} tag");
             System.out.println("     * @param attr name of the attribute.");
             System.out.println("     * @param value value of the attribute.");
             System.out.println("     */");
             System.out.println("    public void " + m +"(String attr, String value) {");
-            System.out.println("        tag(\"" + ns + n + "\", attr, value);");
+            System.out.println("        tag(_" + n + ", attr, value, null, null, null);");
             System.out.println("    }");
             System.out.println();
             System.out.println("    /**");
-            System.out.println("     * Create en empty a @code{" + n + "} tag");
+            System.out.println("     * Create an empty a @code{" + n + "} tag");
             System.out.println("     * @param attr1 name of the attribute.");
             System.out.println("     * @param value1 value of the attribute.");
             System.out.println("     * @param attr2 name of the attribute.");
             System.out.println("     * @param value2 value of the attribute.");
             System.out.println("     */");
             System.out.println("    public void " + m +"(String attr1, String value1, String attr2, String value2) {");
-            System.out.println("        tag(\"" + ns + n + "\", attr1, value1, attr2, value2);");
+            System.out.println("        tag(_" + n + ", attr1, value1, attr2, value2, null);");
             System.out.println("    }");
             System.out.println();
             System.out.println("    /**");
@@ -407,7 +398,7 @@ public class Tags {
             System.out.println("     * @param body the body generator for the tag.");
             System.out.println("     */");
             System.out.println("    public void " +m +"(Generator body) {");
-            System.out.println("        tag(\"" + ns + n + "\", null, null, null, null, body);");
+            System.out.println("        tag(_" + n + ", null, null, null, null, body);");
             System.out.println("    }");
             System.out.println();
             System.out.println("    /**");
@@ -417,7 +408,7 @@ public class Tags {
             System.out.println("     * @param body the body generator for the tag.");
             System.out.println("     */");
             System.out.println("    public void " + m +"(String attr, String value, Generator body) {");
-            System.out.println("        tag(\"" + ns + n + "\", attr, value, null, null, body);");
+            System.out.println("        tag(_" + n + ", attr, value, null, null, body);");
             System.out.println("    }");
             System.out.println();
             System.out.println("    /**");
@@ -429,7 +420,7 @@ public class Tags {
             System.out.println("     * @param body the body generator for the tag.");
             System.out.println("     */");
             System.out.println("    public void " + m +"(String attr1, String value1, String attr2, String value2, Generator body) {");
-            System.out.println("        tag(\"" + ns + n + "\", attr1, value1, attr2, value2, body);");
+            System.out.println("        tag(_" + n + ", attr1, value1, attr2, value2, body);");
             System.out.println("    }");
             System.out.println();
         }

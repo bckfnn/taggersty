@@ -181,31 +181,33 @@ public class HtmlTags extends Tags {
         });
     }
 
+    private static char[] _a = "a".toCharArray();
+
     /**
-     * Create en empty a @code{a} tag
+     * Create an empty a @code{a} tag
      */
     public void a() {
-        tag("a");
+        tag(_a, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{a} tag
+     * Create an empty a @code{a} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void a(String attr, String value) {
-        tag("a", attr, value);
+        tag(_a, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{a} tag
+     * Create an empty a @code{a} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void a(String attr1, String value1, String attr2, String value2) {
-        tag("a", attr1, value1, attr2, value2);
+        tag(_a, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -213,7 +215,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void a(Generator body) {
-        tag("a", null, null, null, null, body);
+        tag(_a, null, null, null, null, body);
     }
 
     /**
@@ -223,7 +225,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void a(String attr, String value, Generator body) {
-        tag("a", attr, value, null, null, body);
+        tag(_a, attr, value, null, null, body);
     }
 
     /**
@@ -235,34 +237,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void a(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("a", attr1, value1, attr2, value2, body);
+        tag(_a, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _abbr = "abbr".toCharArray();
+
     /**
-     * Create en empty a @code{abbr} tag
+     * Create an empty a @code{abbr} tag
      */
     public void abbr() {
-        tag("abbr");
+        tag(_abbr, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{abbr} tag
+     * Create an empty a @code{abbr} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void abbr(String attr, String value) {
-        tag("abbr", attr, value);
+        tag(_abbr, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{abbr} tag
+     * Create an empty a @code{abbr} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void abbr(String attr1, String value1, String attr2, String value2) {
-        tag("abbr", attr1, value1, attr2, value2);
+        tag(_abbr, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -270,7 +274,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void abbr(Generator body) {
-        tag("abbr", null, null, null, null, body);
+        tag(_abbr, null, null, null, null, body);
     }
 
     /**
@@ -280,7 +284,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void abbr(String attr, String value, Generator body) {
-        tag("abbr", attr, value, null, null, body);
+        tag(_abbr, attr, value, null, null, body);
     }
 
     /**
@@ -292,34 +296,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void abbr(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("abbr", attr1, value1, attr2, value2, body);
+        tag(_abbr, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _address = "address".toCharArray();
+
     /**
-     * Create en empty a @code{address} tag
+     * Create an empty a @code{address} tag
      */
     public void address() {
-        tag("address");
+        tag(_address, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{address} tag
+     * Create an empty a @code{address} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void address(String attr, String value) {
-        tag("address", attr, value);
+        tag(_address, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{address} tag
+     * Create an empty a @code{address} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void address(String attr1, String value1, String attr2, String value2) {
-        tag("address", attr1, value1, attr2, value2);
+        tag(_address, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -327,7 +333,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void address(Generator body) {
-        tag("address", null, null, null, null, body);
+        tag(_address, null, null, null, null, body);
     }
 
     /**
@@ -337,7 +343,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void address(String attr, String value, Generator body) {
-        tag("address", attr, value, null, null, body);
+        tag(_address, attr, value, null, null, body);
     }
 
     /**
@@ -349,34 +355,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void address(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("address", attr1, value1, attr2, value2, body);
+        tag(_address, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _area = "area".toCharArray();
+
     /**
-     * Create en empty a @code{area} tag
+     * Create an empty a @code{area} tag
      */
     public void area() {
-        tag("area");
+        tag(_area, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{area} tag
+     * Create an empty a @code{area} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void area(String attr, String value) {
-        tag("area", attr, value);
+        tag(_area, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{area} tag
+     * Create an empty a @code{area} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void area(String attr1, String value1, String attr2, String value2) {
-        tag("area", attr1, value1, attr2, value2);
+        tag(_area, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -384,7 +392,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void area(Generator body) {
-        tag("area", null, null, null, null, body);
+        tag(_area, null, null, null, null, body);
     }
 
     /**
@@ -394,7 +402,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void area(String attr, String value, Generator body) {
-        tag("area", attr, value, null, null, body);
+        tag(_area, attr, value, null, null, body);
     }
 
     /**
@@ -406,34 +414,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void area(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("area", attr1, value1, attr2, value2, body);
+        tag(_area, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _article = "article".toCharArray();
+
     /**
-     * Create en empty a @code{article} tag
+     * Create an empty a @code{article} tag
      */
     public void article() {
-        tag("article");
+        tag(_article, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{article} tag
+     * Create an empty a @code{article} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void article(String attr, String value) {
-        tag("article", attr, value);
+        tag(_article, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{article} tag
+     * Create an empty a @code{article} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void article(String attr1, String value1, String attr2, String value2) {
-        tag("article", attr1, value1, attr2, value2);
+        tag(_article, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -441,7 +451,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void article(Generator body) {
-        tag("article", null, null, null, null, body);
+        tag(_article, null, null, null, null, body);
     }
 
     /**
@@ -451,7 +461,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void article(String attr, String value, Generator body) {
-        tag("article", attr, value, null, null, body);
+        tag(_article, attr, value, null, null, body);
     }
 
     /**
@@ -463,34 +473,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void article(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("article", attr1, value1, attr2, value2, body);
+        tag(_article, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _aside = "aside".toCharArray();
+
     /**
-     * Create en empty a @code{aside} tag
+     * Create an empty a @code{aside} tag
      */
     public void aside() {
-        tag("aside");
+        tag(_aside, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{aside} tag
+     * Create an empty a @code{aside} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void aside(String attr, String value) {
-        tag("aside", attr, value);
+        tag(_aside, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{aside} tag
+     * Create an empty a @code{aside} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void aside(String attr1, String value1, String attr2, String value2) {
-        tag("aside", attr1, value1, attr2, value2);
+        tag(_aside, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -498,7 +510,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void aside(Generator body) {
-        tag("aside", null, null, null, null, body);
+        tag(_aside, null, null, null, null, body);
     }
 
     /**
@@ -508,7 +520,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void aside(String attr, String value, Generator body) {
-        tag("aside", attr, value, null, null, body);
+        tag(_aside, attr, value, null, null, body);
     }
 
     /**
@@ -520,34 +532,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void aside(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("aside", attr1, value1, attr2, value2, body);
+        tag(_aside, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _audio = "audio".toCharArray();
+
     /**
-     * Create en empty a @code{audio} tag
+     * Create an empty a @code{audio} tag
      */
     public void audio() {
-        tag("audio");
+        tag(_audio, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{audio} tag
+     * Create an empty a @code{audio} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void audio(String attr, String value) {
-        tag("audio", attr, value);
+        tag(_audio, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{audio} tag
+     * Create an empty a @code{audio} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void audio(String attr1, String value1, String attr2, String value2) {
-        tag("audio", attr1, value1, attr2, value2);
+        tag(_audio, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -555,7 +569,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void audio(Generator body) {
-        tag("audio", null, null, null, null, body);
+        tag(_audio, null, null, null, null, body);
     }
 
     /**
@@ -565,7 +579,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void audio(String attr, String value, Generator body) {
-        tag("audio", attr, value, null, null, body);
+        tag(_audio, attr, value, null, null, body);
     }
 
     /**
@@ -577,34 +591,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void audio(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("audio", attr1, value1, attr2, value2, body);
+        tag(_audio, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _b = "b".toCharArray();
+
     /**
-     * Create en empty a @code{b} tag
+     * Create an empty a @code{b} tag
      */
     public void b() {
-        tag("b");
+        tag(_b, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{b} tag
+     * Create an empty a @code{b} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void b(String attr, String value) {
-        tag("b", attr, value);
+        tag(_b, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{b} tag
+     * Create an empty a @code{b} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void b(String attr1, String value1, String attr2, String value2) {
-        tag("b", attr1, value1, attr2, value2);
+        tag(_b, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -612,7 +628,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void b(Generator body) {
-        tag("b", null, null, null, null, body);
+        tag(_b, null, null, null, null, body);
     }
 
     /**
@@ -622,7 +638,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void b(String attr, String value, Generator body) {
-        tag("b", attr, value, null, null, body);
+        tag(_b, attr, value, null, null, body);
     }
 
     /**
@@ -634,34 +650,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void b(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("b", attr1, value1, attr2, value2, body);
+        tag(_b, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _base = "base".toCharArray();
+
     /**
-     * Create en empty a @code{base} tag
+     * Create an empty a @code{base} tag
      */
     public void base() {
-        tag("base");
+        tag(_base, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{base} tag
+     * Create an empty a @code{base} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void base(String attr, String value) {
-        tag("base", attr, value);
+        tag(_base, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{base} tag
+     * Create an empty a @code{base} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void base(String attr1, String value1, String attr2, String value2) {
-        tag("base", attr1, value1, attr2, value2);
+        tag(_base, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -669,7 +687,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void base(Generator body) {
-        tag("base", null, null, null, null, body);
+        tag(_base, null, null, null, null, body);
     }
 
     /**
@@ -679,7 +697,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void base(String attr, String value, Generator body) {
-        tag("base", attr, value, null, null, body);
+        tag(_base, attr, value, null, null, body);
     }
 
     /**
@@ -691,34 +709,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void base(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("base", attr1, value1, attr2, value2, body);
+        tag(_base, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _bdi = "bdi".toCharArray();
+
     /**
-     * Create en empty a @code{bdi} tag
+     * Create an empty a @code{bdi} tag
      */
     public void bdi() {
-        tag("bdi");
+        tag(_bdi, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{bdi} tag
+     * Create an empty a @code{bdi} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void bdi(String attr, String value) {
-        tag("bdi", attr, value);
+        tag(_bdi, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{bdi} tag
+     * Create an empty a @code{bdi} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void bdi(String attr1, String value1, String attr2, String value2) {
-        tag("bdi", attr1, value1, attr2, value2);
+        tag(_bdi, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -726,7 +746,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void bdi(Generator body) {
-        tag("bdi", null, null, null, null, body);
+        tag(_bdi, null, null, null, null, body);
     }
 
     /**
@@ -736,7 +756,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void bdi(String attr, String value, Generator body) {
-        tag("bdi", attr, value, null, null, body);
+        tag(_bdi, attr, value, null, null, body);
     }
 
     /**
@@ -748,34 +768,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void bdi(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("bdi", attr1, value1, attr2, value2, body);
+        tag(_bdi, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _bdo = "bdo".toCharArray();
+
     /**
-     * Create en empty a @code{bdo} tag
+     * Create an empty a @code{bdo} tag
      */
     public void bdo() {
-        tag("bdo");
+        tag(_bdo, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{bdo} tag
+     * Create an empty a @code{bdo} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void bdo(String attr, String value) {
-        tag("bdo", attr, value);
+        tag(_bdo, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{bdo} tag
+     * Create an empty a @code{bdo} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void bdo(String attr1, String value1, String attr2, String value2) {
-        tag("bdo", attr1, value1, attr2, value2);
+        tag(_bdo, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -783,7 +805,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void bdo(Generator body) {
-        tag("bdo", null, null, null, null, body);
+        tag(_bdo, null, null, null, null, body);
     }
 
     /**
@@ -793,7 +815,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void bdo(String attr, String value, Generator body) {
-        tag("bdo", attr, value, null, null, body);
+        tag(_bdo, attr, value, null, null, body);
     }
 
     /**
@@ -805,34 +827,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void bdo(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("bdo", attr1, value1, attr2, value2, body);
+        tag(_bdo, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _blockquote = "blockquote".toCharArray();
+
     /**
-     * Create en empty a @code{blockquote} tag
+     * Create an empty a @code{blockquote} tag
      */
     public void blockquote() {
-        tag("blockquote");
+        tag(_blockquote, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{blockquote} tag
+     * Create an empty a @code{blockquote} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void blockquote(String attr, String value) {
-        tag("blockquote", attr, value);
+        tag(_blockquote, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{blockquote} tag
+     * Create an empty a @code{blockquote} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void blockquote(String attr1, String value1, String attr2, String value2) {
-        tag("blockquote", attr1, value1, attr2, value2);
+        tag(_blockquote, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -840,7 +864,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void blockquote(Generator body) {
-        tag("blockquote", null, null, null, null, body);
+        tag(_blockquote, null, null, null, null, body);
     }
 
     /**
@@ -850,7 +874,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void blockquote(String attr, String value, Generator body) {
-        tag("blockquote", attr, value, null, null, body);
+        tag(_blockquote, attr, value, null, null, body);
     }
 
     /**
@@ -862,34 +886,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void blockquote(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("blockquote", attr1, value1, attr2, value2, body);
+        tag(_blockquote, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _body = "body".toCharArray();
+
     /**
-     * Create en empty a @code{body} tag
+     * Create an empty a @code{body} tag
      */
     public void body() {
-        tag("body");
+        tag(_body, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{body} tag
+     * Create an empty a @code{body} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void body(String attr, String value) {
-        tag("body", attr, value);
+        tag(_body, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{body} tag
+     * Create an empty a @code{body} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void body(String attr1, String value1, String attr2, String value2) {
-        tag("body", attr1, value1, attr2, value2);
+        tag(_body, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -897,7 +923,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void body(Generator body) {
-        tag("body", null, null, null, null, body);
+        tag(_body, null, null, null, null, body);
     }
 
     /**
@@ -907,7 +933,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void body(String attr, String value, Generator body) {
-        tag("body", attr, value, null, null, body);
+        tag(_body, attr, value, null, null, body);
     }
 
     /**
@@ -919,34 +945,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void body(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("body", attr1, value1, attr2, value2, body);
+        tag(_body, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _br = "br".toCharArray();
+
     /**
-     * Create en empty a @code{br} tag
+     * Create an empty a @code{br} tag
      */
     public void br() {
-        tag("br");
+        tag(_br, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{br} tag
+     * Create an empty a @code{br} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void br(String attr, String value) {
-        tag("br", attr, value);
+        tag(_br, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{br} tag
+     * Create an empty a @code{br} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void br(String attr1, String value1, String attr2, String value2) {
-        tag("br", attr1, value1, attr2, value2);
+        tag(_br, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -954,7 +982,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void br(Generator body) {
-        tag("br", null, null, null, null, body);
+        tag(_br, null, null, null, null, body);
     }
 
     /**
@@ -964,7 +992,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void br(String attr, String value, Generator body) {
-        tag("br", attr, value, null, null, body);
+        tag(_br, attr, value, null, null, body);
     }
 
     /**
@@ -976,34 +1004,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void br(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("br", attr1, value1, attr2, value2, body);
+        tag(_br, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _button = "button".toCharArray();
+
     /**
-     * Create en empty a @code{button} tag
+     * Create an empty a @code{button} tag
      */
     public void button() {
-        tag("button");
+        tag(_button, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{button} tag
+     * Create an empty a @code{button} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void button(String attr, String value) {
-        tag("button", attr, value);
+        tag(_button, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{button} tag
+     * Create an empty a @code{button} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void button(String attr1, String value1, String attr2, String value2) {
-        tag("button", attr1, value1, attr2, value2);
+        tag(_button, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1011,7 +1041,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void button(Generator body) {
-        tag("button", null, null, null, null, body);
+        tag(_button, null, null, null, null, body);
     }
 
     /**
@@ -1021,7 +1051,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void button(String attr, String value, Generator body) {
-        tag("button", attr, value, null, null, body);
+        tag(_button, attr, value, null, null, body);
     }
 
     /**
@@ -1033,34 +1063,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void button(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("button", attr1, value1, attr2, value2, body);
+        tag(_button, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _canvas = "canvas".toCharArray();
+
     /**
-     * Create en empty a @code{canvas} tag
+     * Create an empty a @code{canvas} tag
      */
     public void canvas() {
-        tag("canvas");
+        tag(_canvas, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{canvas} tag
+     * Create an empty a @code{canvas} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void canvas(String attr, String value) {
-        tag("canvas", attr, value);
+        tag(_canvas, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{canvas} tag
+     * Create an empty a @code{canvas} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void canvas(String attr1, String value1, String attr2, String value2) {
-        tag("canvas", attr1, value1, attr2, value2);
+        tag(_canvas, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1068,7 +1100,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void canvas(Generator body) {
-        tag("canvas", null, null, null, null, body);
+        tag(_canvas, null, null, null, null, body);
     }
 
     /**
@@ -1078,7 +1110,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void canvas(String attr, String value, Generator body) {
-        tag("canvas", attr, value, null, null, body);
+        tag(_canvas, attr, value, null, null, body);
     }
 
     /**
@@ -1090,34 +1122,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void canvas(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("canvas", attr1, value1, attr2, value2, body);
+        tag(_canvas, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _caption = "caption".toCharArray();
+
     /**
-     * Create en empty a @code{caption} tag
+     * Create an empty a @code{caption} tag
      */
     public void caption() {
-        tag("caption");
+        tag(_caption, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{caption} tag
+     * Create an empty a @code{caption} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void caption(String attr, String value) {
-        tag("caption", attr, value);
+        tag(_caption, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{caption} tag
+     * Create an empty a @code{caption} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void caption(String attr1, String value1, String attr2, String value2) {
-        tag("caption", attr1, value1, attr2, value2);
+        tag(_caption, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1125,7 +1159,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void caption(Generator body) {
-        tag("caption", null, null, null, null, body);
+        tag(_caption, null, null, null, null, body);
     }
 
     /**
@@ -1135,7 +1169,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void caption(String attr, String value, Generator body) {
-        tag("caption", attr, value, null, null, body);
+        tag(_caption, attr, value, null, null, body);
     }
 
     /**
@@ -1147,34 +1181,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void caption(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("caption", attr1, value1, attr2, value2, body);
+        tag(_caption, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _cite = "cite".toCharArray();
+
     /**
-     * Create en empty a @code{cite} tag
+     * Create an empty a @code{cite} tag
      */
     public void cite() {
-        tag("cite");
+        tag(_cite, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{cite} tag
+     * Create an empty a @code{cite} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void cite(String attr, String value) {
-        tag("cite", attr, value);
+        tag(_cite, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{cite} tag
+     * Create an empty a @code{cite} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void cite(String attr1, String value1, String attr2, String value2) {
-        tag("cite", attr1, value1, attr2, value2);
+        tag(_cite, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1182,7 +1218,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void cite(Generator body) {
-        tag("cite", null, null, null, null, body);
+        tag(_cite, null, null, null, null, body);
     }
 
     /**
@@ -1192,7 +1228,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void cite(String attr, String value, Generator body) {
-        tag("cite", attr, value, null, null, body);
+        tag(_cite, attr, value, null, null, body);
     }
 
     /**
@@ -1204,34 +1240,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void cite(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("cite", attr1, value1, attr2, value2, body);
+        tag(_cite, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _code = "code".toCharArray();
+
     /**
-     * Create en empty a @code{code} tag
+     * Create an empty a @code{code} tag
      */
     public void code() {
-        tag("code");
+        tag(_code, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{code} tag
+     * Create an empty a @code{code} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void code(String attr, String value) {
-        tag("code", attr, value);
+        tag(_code, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{code} tag
+     * Create an empty a @code{code} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void code(String attr1, String value1, String attr2, String value2) {
-        tag("code", attr1, value1, attr2, value2);
+        tag(_code, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1239,7 +1277,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void code(Generator body) {
-        tag("code", null, null, null, null, body);
+        tag(_code, null, null, null, null, body);
     }
 
     /**
@@ -1249,7 +1287,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void code(String attr, String value, Generator body) {
-        tag("code", attr, value, null, null, body);
+        tag(_code, attr, value, null, null, body);
     }
 
     /**
@@ -1261,34 +1299,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void code(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("code", attr1, value1, attr2, value2, body);
+        tag(_code, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _col = "col".toCharArray();
+
     /**
-     * Create en empty a @code{col} tag
+     * Create an empty a @code{col} tag
      */
     public void col() {
-        tag("col");
+        tag(_col, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{col} tag
+     * Create an empty a @code{col} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void col(String attr, String value) {
-        tag("col", attr, value);
+        tag(_col, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{col} tag
+     * Create an empty a @code{col} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void col(String attr1, String value1, String attr2, String value2) {
-        tag("col", attr1, value1, attr2, value2);
+        tag(_col, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1296,7 +1336,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void col(Generator body) {
-        tag("col", null, null, null, null, body);
+        tag(_col, null, null, null, null, body);
     }
 
     /**
@@ -1306,7 +1346,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void col(String attr, String value, Generator body) {
-        tag("col", attr, value, null, null, body);
+        tag(_col, attr, value, null, null, body);
     }
 
     /**
@@ -1318,34 +1358,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void col(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("col", attr1, value1, attr2, value2, body);
+        tag(_col, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _colgroup = "colgroup".toCharArray();
+
     /**
-     * Create en empty a @code{colgroup} tag
+     * Create an empty a @code{colgroup} tag
      */
     public void colgroup() {
-        tag("colgroup");
+        tag(_colgroup, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{colgroup} tag
+     * Create an empty a @code{colgroup} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void colgroup(String attr, String value) {
-        tag("colgroup", attr, value);
+        tag(_colgroup, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{colgroup} tag
+     * Create an empty a @code{colgroup} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void colgroup(String attr1, String value1, String attr2, String value2) {
-        tag("colgroup", attr1, value1, attr2, value2);
+        tag(_colgroup, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1353,7 +1395,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void colgroup(Generator body) {
-        tag("colgroup", null, null, null, null, body);
+        tag(_colgroup, null, null, null, null, body);
     }
 
     /**
@@ -1363,7 +1405,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void colgroup(String attr, String value, Generator body) {
-        tag("colgroup", attr, value, null, null, body);
+        tag(_colgroup, attr, value, null, null, body);
     }
 
     /**
@@ -1375,34 +1417,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void colgroup(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("colgroup", attr1, value1, attr2, value2, body);
+        tag(_colgroup, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _command = "command".toCharArray();
+
     /**
-     * Create en empty a @code{command} tag
+     * Create an empty a @code{command} tag
      */
     public void command() {
-        tag("command");
+        tag(_command, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{command} tag
+     * Create an empty a @code{command} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void command(String attr, String value) {
-        tag("command", attr, value);
+        tag(_command, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{command} tag
+     * Create an empty a @code{command} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void command(String attr1, String value1, String attr2, String value2) {
-        tag("command", attr1, value1, attr2, value2);
+        tag(_command, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1410,7 +1454,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void command(Generator body) {
-        tag("command", null, null, null, null, body);
+        tag(_command, null, null, null, null, body);
     }
 
     /**
@@ -1420,7 +1464,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void command(String attr, String value, Generator body) {
-        tag("command", attr, value, null, null, body);
+        tag(_command, attr, value, null, null, body);
     }
 
     /**
@@ -1432,34 +1476,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void command(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("command", attr1, value1, attr2, value2, body);
+        tag(_command, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _datalist = "datalist".toCharArray();
+
     /**
-     * Create en empty a @code{datalist} tag
+     * Create an empty a @code{datalist} tag
      */
     public void datalist() {
-        tag("datalist");
+        tag(_datalist, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{datalist} tag
+     * Create an empty a @code{datalist} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void datalist(String attr, String value) {
-        tag("datalist", attr, value);
+        tag(_datalist, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{datalist} tag
+     * Create an empty a @code{datalist} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void datalist(String attr1, String value1, String attr2, String value2) {
-        tag("datalist", attr1, value1, attr2, value2);
+        tag(_datalist, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1467,7 +1513,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void datalist(Generator body) {
-        tag("datalist", null, null, null, null, body);
+        tag(_datalist, null, null, null, null, body);
     }
 
     /**
@@ -1477,7 +1523,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void datalist(String attr, String value, Generator body) {
-        tag("datalist", attr, value, null, null, body);
+        tag(_datalist, attr, value, null, null, body);
     }
 
     /**
@@ -1489,34 +1535,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void datalist(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("datalist", attr1, value1, attr2, value2, body);
+        tag(_datalist, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _dd = "dd".toCharArray();
+
     /**
-     * Create en empty a @code{dd} tag
+     * Create an empty a @code{dd} tag
      */
     public void dd() {
-        tag("dd");
+        tag(_dd, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{dd} tag
+     * Create an empty a @code{dd} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void dd(String attr, String value) {
-        tag("dd", attr, value);
+        tag(_dd, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{dd} tag
+     * Create an empty a @code{dd} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void dd(String attr1, String value1, String attr2, String value2) {
-        tag("dd", attr1, value1, attr2, value2);
+        tag(_dd, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1524,7 +1572,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dd(Generator body) {
-        tag("dd", null, null, null, null, body);
+        tag(_dd, null, null, null, null, body);
     }
 
     /**
@@ -1534,7 +1582,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dd(String attr, String value, Generator body) {
-        tag("dd", attr, value, null, null, body);
+        tag(_dd, attr, value, null, null, body);
     }
 
     /**
@@ -1546,34 +1594,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dd(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("dd", attr1, value1, attr2, value2, body);
+        tag(_dd, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _del = "del".toCharArray();
+
     /**
-     * Create en empty a @code{del} tag
+     * Create an empty a @code{del} tag
      */
     public void del() {
-        tag("del");
+        tag(_del, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{del} tag
+     * Create an empty a @code{del} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void del(String attr, String value) {
-        tag("del", attr, value);
+        tag(_del, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{del} tag
+     * Create an empty a @code{del} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void del(String attr1, String value1, String attr2, String value2) {
-        tag("del", attr1, value1, attr2, value2);
+        tag(_del, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1581,7 +1631,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void del(Generator body) {
-        tag("del", null, null, null, null, body);
+        tag(_del, null, null, null, null, body);
     }
 
     /**
@@ -1591,7 +1641,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void del(String attr, String value, Generator body) {
-        tag("del", attr, value, null, null, body);
+        tag(_del, attr, value, null, null, body);
     }
 
     /**
@@ -1603,34 +1653,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void del(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("del", attr1, value1, attr2, value2, body);
+        tag(_del, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _details = "details".toCharArray();
+
     /**
-     * Create en empty a @code{details} tag
+     * Create an empty a @code{details} tag
      */
     public void details() {
-        tag("details");
+        tag(_details, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{details} tag
+     * Create an empty a @code{details} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void details(String attr, String value) {
-        tag("details", attr, value);
+        tag(_details, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{details} tag
+     * Create an empty a @code{details} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void details(String attr1, String value1, String attr2, String value2) {
-        tag("details", attr1, value1, attr2, value2);
+        tag(_details, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1638,7 +1690,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void details(Generator body) {
-        tag("details", null, null, null, null, body);
+        tag(_details, null, null, null, null, body);
     }
 
     /**
@@ -1648,7 +1700,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void details(String attr, String value, Generator body) {
-        tag("details", attr, value, null, null, body);
+        tag(_details, attr, value, null, null, body);
     }
 
     /**
@@ -1660,34 +1712,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void details(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("details", attr1, value1, attr2, value2, body);
+        tag(_details, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _dfn = "dfn".toCharArray();
+
     /**
-     * Create en empty a @code{dfn} tag
+     * Create an empty a @code{dfn} tag
      */
     public void dfn() {
-        tag("dfn");
+        tag(_dfn, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{dfn} tag
+     * Create an empty a @code{dfn} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void dfn(String attr, String value) {
-        tag("dfn", attr, value);
+        tag(_dfn, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{dfn} tag
+     * Create an empty a @code{dfn} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void dfn(String attr1, String value1, String attr2, String value2) {
-        tag("dfn", attr1, value1, attr2, value2);
+        tag(_dfn, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1695,7 +1749,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dfn(Generator body) {
-        tag("dfn", null, null, null, null, body);
+        tag(_dfn, null, null, null, null, body);
     }
 
     /**
@@ -1705,7 +1759,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dfn(String attr, String value, Generator body) {
-        tag("dfn", attr, value, null, null, body);
+        tag(_dfn, attr, value, null, null, body);
     }
 
     /**
@@ -1717,34 +1771,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dfn(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("dfn", attr1, value1, attr2, value2, body);
+        tag(_dfn, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _div = "div".toCharArray();
+
     /**
-     * Create en empty a @code{div} tag
+     * Create an empty a @code{div} tag
      */
     public void div() {
-        tag("div");
+        tag(_div, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{div} tag
+     * Create an empty a @code{div} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void div(String attr, String value) {
-        tag("div", attr, value);
+        tag(_div, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{div} tag
+     * Create an empty a @code{div} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void div(String attr1, String value1, String attr2, String value2) {
-        tag("div", attr1, value1, attr2, value2);
+        tag(_div, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1752,7 +1808,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void div(Generator body) {
-        tag("div", null, null, null, null, body);
+        tag(_div, null, null, null, null, body);
     }
 
     /**
@@ -1762,7 +1818,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void div(String attr, String value, Generator body) {
-        tag("div", attr, value, null, null, body);
+        tag(_div, attr, value, null, null, body);
     }
 
     /**
@@ -1774,34 +1830,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void div(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("div", attr1, value1, attr2, value2, body);
+        tag(_div, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _dl = "dl".toCharArray();
+
     /**
-     * Create en empty a @code{dl} tag
+     * Create an empty a @code{dl} tag
      */
     public void dl() {
-        tag("dl");
+        tag(_dl, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{dl} tag
+     * Create an empty a @code{dl} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void dl(String attr, String value) {
-        tag("dl", attr, value);
+        tag(_dl, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{dl} tag
+     * Create an empty a @code{dl} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void dl(String attr1, String value1, String attr2, String value2) {
-        tag("dl", attr1, value1, attr2, value2);
+        tag(_dl, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1809,7 +1867,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dl(Generator body) {
-        tag("dl", null, null, null, null, body);
+        tag(_dl, null, null, null, null, body);
     }
 
     /**
@@ -1819,7 +1877,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dl(String attr, String value, Generator body) {
-        tag("dl", attr, value, null, null, body);
+        tag(_dl, attr, value, null, null, body);
     }
 
     /**
@@ -1831,34 +1889,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dl(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("dl", attr1, value1, attr2, value2, body);
+        tag(_dl, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _dt = "dt".toCharArray();
+
     /**
-     * Create en empty a @code{dt} tag
+     * Create an empty a @code{dt} tag
      */
     public void dt() {
-        tag("dt");
+        tag(_dt, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{dt} tag
+     * Create an empty a @code{dt} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void dt(String attr, String value) {
-        tag("dt", attr, value);
+        tag(_dt, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{dt} tag
+     * Create an empty a @code{dt} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void dt(String attr1, String value1, String attr2, String value2) {
-        tag("dt", attr1, value1, attr2, value2);
+        tag(_dt, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1866,7 +1926,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dt(Generator body) {
-        tag("dt", null, null, null, null, body);
+        tag(_dt, null, null, null, null, body);
     }
 
     /**
@@ -1876,7 +1936,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dt(String attr, String value, Generator body) {
-        tag("dt", attr, value, null, null, body);
+        tag(_dt, attr, value, null, null, body);
     }
 
     /**
@@ -1888,34 +1948,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void dt(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("dt", attr1, value1, attr2, value2, body);
+        tag(_dt, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _em = "em".toCharArray();
+
     /**
-     * Create en empty a @code{em} tag
+     * Create an empty a @code{em} tag
      */
     public void em() {
-        tag("em");
+        tag(_em, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{em} tag
+     * Create an empty a @code{em} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void em(String attr, String value) {
-        tag("em", attr, value);
+        tag(_em, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{em} tag
+     * Create an empty a @code{em} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void em(String attr1, String value1, String attr2, String value2) {
-        tag("em", attr1, value1, attr2, value2);
+        tag(_em, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1923,7 +1985,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void em(Generator body) {
-        tag("em", null, null, null, null, body);
+        tag(_em, null, null, null, null, body);
     }
 
     /**
@@ -1933,7 +1995,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void em(String attr, String value, Generator body) {
-        tag("em", attr, value, null, null, body);
+        tag(_em, attr, value, null, null, body);
     }
 
     /**
@@ -1945,34 +2007,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void em(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("em", attr1, value1, attr2, value2, body);
+        tag(_em, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _embed = "embed".toCharArray();
+
     /**
-     * Create en empty a @code{embed} tag
+     * Create an empty a @code{embed} tag
      */
     public void embed() {
-        tag("embed");
+        tag(_embed, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{embed} tag
+     * Create an empty a @code{embed} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void embed(String attr, String value) {
-        tag("embed", attr, value);
+        tag(_embed, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{embed} tag
+     * Create an empty a @code{embed} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void embed(String attr1, String value1, String attr2, String value2) {
-        tag("embed", attr1, value1, attr2, value2);
+        tag(_embed, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -1980,7 +2044,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void embed(Generator body) {
-        tag("embed", null, null, null, null, body);
+        tag(_embed, null, null, null, null, body);
     }
 
     /**
@@ -1990,7 +2054,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void embed(String attr, String value, Generator body) {
-        tag("embed", attr, value, null, null, body);
+        tag(_embed, attr, value, null, null, body);
     }
 
     /**
@@ -2002,34 +2066,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void embed(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("embed", attr1, value1, attr2, value2, body);
+        tag(_embed, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _fieldset = "fieldset".toCharArray();
+
     /**
-     * Create en empty a @code{fieldset} tag
+     * Create an empty a @code{fieldset} tag
      */
     public void fieldset() {
-        tag("fieldset");
+        tag(_fieldset, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{fieldset} tag
+     * Create an empty a @code{fieldset} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void fieldset(String attr, String value) {
-        tag("fieldset", attr, value);
+        tag(_fieldset, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{fieldset} tag
+     * Create an empty a @code{fieldset} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void fieldset(String attr1, String value1, String attr2, String value2) {
-        tag("fieldset", attr1, value1, attr2, value2);
+        tag(_fieldset, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2037,7 +2103,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void fieldset(Generator body) {
-        tag("fieldset", null, null, null, null, body);
+        tag(_fieldset, null, null, null, null, body);
     }
 
     /**
@@ -2047,7 +2113,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void fieldset(String attr, String value, Generator body) {
-        tag("fieldset", attr, value, null, null, body);
+        tag(_fieldset, attr, value, null, null, body);
     }
 
     /**
@@ -2059,34 +2125,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void fieldset(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("fieldset", attr1, value1, attr2, value2, body);
+        tag(_fieldset, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _figcaption = "figcaption".toCharArray();
+
     /**
-     * Create en empty a @code{figcaption} tag
+     * Create an empty a @code{figcaption} tag
      */
     public void figcaption() {
-        tag("figcaption");
+        tag(_figcaption, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{figcaption} tag
+     * Create an empty a @code{figcaption} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void figcaption(String attr, String value) {
-        tag("figcaption", attr, value);
+        tag(_figcaption, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{figcaption} tag
+     * Create an empty a @code{figcaption} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void figcaption(String attr1, String value1, String attr2, String value2) {
-        tag("figcaption", attr1, value1, attr2, value2);
+        tag(_figcaption, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2094,7 +2162,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void figcaption(Generator body) {
-        tag("figcaption", null, null, null, null, body);
+        tag(_figcaption, null, null, null, null, body);
     }
 
     /**
@@ -2104,7 +2172,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void figcaption(String attr, String value, Generator body) {
-        tag("figcaption", attr, value, null, null, body);
+        tag(_figcaption, attr, value, null, null, body);
     }
 
     /**
@@ -2116,34 +2184,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void figcaption(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("figcaption", attr1, value1, attr2, value2, body);
+        tag(_figcaption, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _figure = "figure".toCharArray();
+
     /**
-     * Create en empty a @code{figure} tag
+     * Create an empty a @code{figure} tag
      */
     public void figure() {
-        tag("figure");
+        tag(_figure, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{figure} tag
+     * Create an empty a @code{figure} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void figure(String attr, String value) {
-        tag("figure", attr, value);
+        tag(_figure, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{figure} tag
+     * Create an empty a @code{figure} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void figure(String attr1, String value1, String attr2, String value2) {
-        tag("figure", attr1, value1, attr2, value2);
+        tag(_figure, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2151,7 +2221,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void figure(Generator body) {
-        tag("figure", null, null, null, null, body);
+        tag(_figure, null, null, null, null, body);
     }
 
     /**
@@ -2161,7 +2231,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void figure(String attr, String value, Generator body) {
-        tag("figure", attr, value, null, null, body);
+        tag(_figure, attr, value, null, null, body);
     }
 
     /**
@@ -2173,34 +2243,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void figure(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("figure", attr1, value1, attr2, value2, body);
+        tag(_figure, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _footer = "footer".toCharArray();
+
     /**
-     * Create en empty a @code{footer} tag
+     * Create an empty a @code{footer} tag
      */
     public void footer() {
-        tag("footer");
+        tag(_footer, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{footer} tag
+     * Create an empty a @code{footer} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void footer(String attr, String value) {
-        tag("footer", attr, value);
+        tag(_footer, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{footer} tag
+     * Create an empty a @code{footer} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void footer(String attr1, String value1, String attr2, String value2) {
-        tag("footer", attr1, value1, attr2, value2);
+        tag(_footer, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2208,7 +2280,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void footer(Generator body) {
-        tag("footer", null, null, null, null, body);
+        tag(_footer, null, null, null, null, body);
     }
 
     /**
@@ -2218,7 +2290,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void footer(String attr, String value, Generator body) {
-        tag("footer", attr, value, null, null, body);
+        tag(_footer, attr, value, null, null, body);
     }
 
     /**
@@ -2230,34 +2302,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void footer(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("footer", attr1, value1, attr2, value2, body);
+        tag(_footer, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _form = "form".toCharArray();
+
     /**
-     * Create en empty a @code{form} tag
+     * Create an empty a @code{form} tag
      */
     public void form() {
-        tag("form");
+        tag(_form, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{form} tag
+     * Create an empty a @code{form} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void form(String attr, String value) {
-        tag("form", attr, value);
+        tag(_form, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{form} tag
+     * Create an empty a @code{form} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void form(String attr1, String value1, String attr2, String value2) {
-        tag("form", attr1, value1, attr2, value2);
+        tag(_form, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2265,7 +2339,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void form(Generator body) {
-        tag("form", null, null, null, null, body);
+        tag(_form, null, null, null, null, body);
     }
 
     /**
@@ -2275,7 +2349,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void form(String attr, String value, Generator body) {
-        tag("form", attr, value, null, null, body);
+        tag(_form, attr, value, null, null, body);
     }
 
     /**
@@ -2287,34 +2361,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void form(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("form", attr1, value1, attr2, value2, body);
+        tag(_form, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _h1 = "h1".toCharArray();
+
     /**
-     * Create en empty a @code{h1} tag
+     * Create an empty a @code{h1} tag
      */
     public void h1() {
-        tag("h1");
+        tag(_h1, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h1} tag
+     * Create an empty a @code{h1} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void h1(String attr, String value) {
-        tag("h1", attr, value);
+        tag(_h1, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h1} tag
+     * Create an empty a @code{h1} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void h1(String attr1, String value1, String attr2, String value2) {
-        tag("h1", attr1, value1, attr2, value2);
+        tag(_h1, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2322,7 +2398,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h1(Generator body) {
-        tag("h1", null, null, null, null, body);
+        tag(_h1, null, null, null, null, body);
     }
 
     /**
@@ -2332,7 +2408,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h1(String attr, String value, Generator body) {
-        tag("h1", attr, value, null, null, body);
+        tag(_h1, attr, value, null, null, body);
     }
 
     /**
@@ -2344,34 +2420,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h1(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("h1", attr1, value1, attr2, value2, body);
+        tag(_h1, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _h2 = "h2".toCharArray();
+
     /**
-     * Create en empty a @code{h2} tag
+     * Create an empty a @code{h2} tag
      */
     public void h2() {
-        tag("h2");
+        tag(_h2, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h2} tag
+     * Create an empty a @code{h2} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void h2(String attr, String value) {
-        tag("h2", attr, value);
+        tag(_h2, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h2} tag
+     * Create an empty a @code{h2} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void h2(String attr1, String value1, String attr2, String value2) {
-        tag("h2", attr1, value1, attr2, value2);
+        tag(_h2, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2379,7 +2457,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h2(Generator body) {
-        tag("h2", null, null, null, null, body);
+        tag(_h2, null, null, null, null, body);
     }
 
     /**
@@ -2389,7 +2467,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h2(String attr, String value, Generator body) {
-        tag("h2", attr, value, null, null, body);
+        tag(_h2, attr, value, null, null, body);
     }
 
     /**
@@ -2401,34 +2479,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h2(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("h2", attr1, value1, attr2, value2, body);
+        tag(_h2, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _h3 = "h3".toCharArray();
+
     /**
-     * Create en empty a @code{h3} tag
+     * Create an empty a @code{h3} tag
      */
     public void h3() {
-        tag("h3");
+        tag(_h3, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h3} tag
+     * Create an empty a @code{h3} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void h3(String attr, String value) {
-        tag("h3", attr, value);
+        tag(_h3, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h3} tag
+     * Create an empty a @code{h3} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void h3(String attr1, String value1, String attr2, String value2) {
-        tag("h3", attr1, value1, attr2, value2);
+        tag(_h3, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2436,7 +2516,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h3(Generator body) {
-        tag("h3", null, null, null, null, body);
+        tag(_h3, null, null, null, null, body);
     }
 
     /**
@@ -2446,7 +2526,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h3(String attr, String value, Generator body) {
-        tag("h3", attr, value, null, null, body);
+        tag(_h3, attr, value, null, null, body);
     }
 
     /**
@@ -2458,34 +2538,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h3(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("h3", attr1, value1, attr2, value2, body);
+        tag(_h3, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _h4 = "h4".toCharArray();
+
     /**
-     * Create en empty a @code{h4} tag
+     * Create an empty a @code{h4} tag
      */
     public void h4() {
-        tag("h4");
+        tag(_h4, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h4} tag
+     * Create an empty a @code{h4} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void h4(String attr, String value) {
-        tag("h4", attr, value);
+        tag(_h4, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h4} tag
+     * Create an empty a @code{h4} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void h4(String attr1, String value1, String attr2, String value2) {
-        tag("h4", attr1, value1, attr2, value2);
+        tag(_h4, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2493,7 +2575,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h4(Generator body) {
-        tag("h4", null, null, null, null, body);
+        tag(_h4, null, null, null, null, body);
     }
 
     /**
@@ -2503,7 +2585,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h4(String attr, String value, Generator body) {
-        tag("h4", attr, value, null, null, body);
+        tag(_h4, attr, value, null, null, body);
     }
 
     /**
@@ -2515,34 +2597,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h4(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("h4", attr1, value1, attr2, value2, body);
+        tag(_h4, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _h5 = "h5".toCharArray();
+
     /**
-     * Create en empty a @code{h5} tag
+     * Create an empty a @code{h5} tag
      */
     public void h5() {
-        tag("h5");
+        tag(_h5, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h5} tag
+     * Create an empty a @code{h5} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void h5(String attr, String value) {
-        tag("h5", attr, value);
+        tag(_h5, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h5} tag
+     * Create an empty a @code{h5} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void h5(String attr1, String value1, String attr2, String value2) {
-        tag("h5", attr1, value1, attr2, value2);
+        tag(_h5, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2550,7 +2634,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h5(Generator body) {
-        tag("h5", null, null, null, null, body);
+        tag(_h5, null, null, null, null, body);
     }
 
     /**
@@ -2560,7 +2644,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h5(String attr, String value, Generator body) {
-        tag("h5", attr, value, null, null, body);
+        tag(_h5, attr, value, null, null, body);
     }
 
     /**
@@ -2572,34 +2656,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h5(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("h5", attr1, value1, attr2, value2, body);
+        tag(_h5, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _h6 = "h6".toCharArray();
+
     /**
-     * Create en empty a @code{h6} tag
+     * Create an empty a @code{h6} tag
      */
     public void h6() {
-        tag("h6");
+        tag(_h6, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h6} tag
+     * Create an empty a @code{h6} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void h6(String attr, String value) {
-        tag("h6", attr, value);
+        tag(_h6, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{h6} tag
+     * Create an empty a @code{h6} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void h6(String attr1, String value1, String attr2, String value2) {
-        tag("h6", attr1, value1, attr2, value2);
+        tag(_h6, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2607,7 +2693,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h6(Generator body) {
-        tag("h6", null, null, null, null, body);
+        tag(_h6, null, null, null, null, body);
     }
 
     /**
@@ -2617,7 +2703,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h6(String attr, String value, Generator body) {
-        tag("h6", attr, value, null, null, body);
+        tag(_h6, attr, value, null, null, body);
     }
 
     /**
@@ -2629,34 +2715,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void h6(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("h6", attr1, value1, attr2, value2, body);
+        tag(_h6, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _head = "head".toCharArray();
+
     /**
-     * Create en empty a @code{head} tag
+     * Create an empty a @code{head} tag
      */
     public void head() {
-        tag("head");
+        tag(_head, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{head} tag
+     * Create an empty a @code{head} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void head(String attr, String value) {
-        tag("head", attr, value);
+        tag(_head, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{head} tag
+     * Create an empty a @code{head} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void head(String attr1, String value1, String attr2, String value2) {
-        tag("head", attr1, value1, attr2, value2);
+        tag(_head, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2664,7 +2752,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void head(Generator body) {
-        tag("head", null, null, null, null, body);
+        tag(_head, null, null, null, null, body);
     }
 
     /**
@@ -2674,7 +2762,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void head(String attr, String value, Generator body) {
-        tag("head", attr, value, null, null, body);
+        tag(_head, attr, value, null, null, body);
     }
 
     /**
@@ -2686,34 +2774,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void head(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("head", attr1, value1, attr2, value2, body);
+        tag(_head, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _header = "header".toCharArray();
+
     /**
-     * Create en empty a @code{header} tag
+     * Create an empty a @code{header} tag
      */
     public void header() {
-        tag("header");
+        tag(_header, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{header} tag
+     * Create an empty a @code{header} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void header(String attr, String value) {
-        tag("header", attr, value);
+        tag(_header, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{header} tag
+     * Create an empty a @code{header} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void header(String attr1, String value1, String attr2, String value2) {
-        tag("header", attr1, value1, attr2, value2);
+        tag(_header, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2721,7 +2811,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void header(Generator body) {
-        tag("header", null, null, null, null, body);
+        tag(_header, null, null, null, null, body);
     }
 
     /**
@@ -2731,7 +2821,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void header(String attr, String value, Generator body) {
-        tag("header", attr, value, null, null, body);
+        tag(_header, attr, value, null, null, body);
     }
 
     /**
@@ -2743,34 +2833,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void header(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("header", attr1, value1, attr2, value2, body);
+        tag(_header, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _hgroup = "hgroup".toCharArray();
+
     /**
-     * Create en empty a @code{hgroup} tag
+     * Create an empty a @code{hgroup} tag
      */
     public void hgroup() {
-        tag("hgroup");
+        tag(_hgroup, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{hgroup} tag
+     * Create an empty a @code{hgroup} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void hgroup(String attr, String value) {
-        tag("hgroup", attr, value);
+        tag(_hgroup, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{hgroup} tag
+     * Create an empty a @code{hgroup} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void hgroup(String attr1, String value1, String attr2, String value2) {
-        tag("hgroup", attr1, value1, attr2, value2);
+        tag(_hgroup, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2778,7 +2870,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void hgroup(Generator body) {
-        tag("hgroup", null, null, null, null, body);
+        tag(_hgroup, null, null, null, null, body);
     }
 
     /**
@@ -2788,7 +2880,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void hgroup(String attr, String value, Generator body) {
-        tag("hgroup", attr, value, null, null, body);
+        tag(_hgroup, attr, value, null, null, body);
     }
 
     /**
@@ -2800,34 +2892,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void hgroup(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("hgroup", attr1, value1, attr2, value2, body);
+        tag(_hgroup, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _hr = "hr".toCharArray();
+
     /**
-     * Create en empty a @code{hr} tag
+     * Create an empty a @code{hr} tag
      */
     public void hr() {
-        tag("hr");
+        tag(_hr, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{hr} tag
+     * Create an empty a @code{hr} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void hr(String attr, String value) {
-        tag("hr", attr, value);
+        tag(_hr, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{hr} tag
+     * Create an empty a @code{hr} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void hr(String attr1, String value1, String attr2, String value2) {
-        tag("hr", attr1, value1, attr2, value2);
+        tag(_hr, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2835,7 +2929,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void hr(Generator body) {
-        tag("hr", null, null, null, null, body);
+        tag(_hr, null, null, null, null, body);
     }
 
     /**
@@ -2845,7 +2939,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void hr(String attr, String value, Generator body) {
-        tag("hr", attr, value, null, null, body);
+        tag(_hr, attr, value, null, null, body);
     }
 
     /**
@@ -2857,34 +2951,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void hr(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("hr", attr1, value1, attr2, value2, body);
+        tag(_hr, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _html = "html".toCharArray();
+
     /**
-     * Create en empty a @code{html} tag
+     * Create an empty a @code{html} tag
      */
     public void html() {
-        tag("html");
+        tag(_html, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{html} tag
+     * Create an empty a @code{html} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void html(String attr, String value) {
-        tag("html", attr, value);
+        tag(_html, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{html} tag
+     * Create an empty a @code{html} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void html(String attr1, String value1, String attr2, String value2) {
-        tag("html", attr1, value1, attr2, value2);
+        tag(_html, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2892,7 +2988,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void html(Generator body) {
-        tag("html", null, null, null, null, body);
+        tag(_html, null, null, null, null, body);
     }
 
     /**
@@ -2902,7 +2998,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void html(String attr, String value, Generator body) {
-        tag("html", attr, value, null, null, body);
+        tag(_html, attr, value, null, null, body);
     }
 
     /**
@@ -2914,34 +3010,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void html(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("html", attr1, value1, attr2, value2, body);
+        tag(_html, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _i = "i".toCharArray();
+
     /**
-     * Create en empty a @code{i} tag
+     * Create an empty a @code{i} tag
      */
     public void i() {
-        tag("i");
+        tag(_i, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{i} tag
+     * Create an empty a @code{i} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void i(String attr, String value) {
-        tag("i", attr, value);
+        tag(_i, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{i} tag
+     * Create an empty a @code{i} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void i(String attr1, String value1, String attr2, String value2) {
-        tag("i", attr1, value1, attr2, value2);
+        tag(_i, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -2949,7 +3047,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void i(Generator body) {
-        tag("i", null, null, null, null, body);
+        tag(_i, null, null, null, null, body);
     }
 
     /**
@@ -2959,7 +3057,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void i(String attr, String value, Generator body) {
-        tag("i", attr, value, null, null, body);
+        tag(_i, attr, value, null, null, body);
     }
 
     /**
@@ -2971,34 +3069,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void i(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("i", attr1, value1, attr2, value2, body);
+        tag(_i, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _iframe = "iframe".toCharArray();
+
     /**
-     * Create en empty a @code{iframe} tag
+     * Create an empty a @code{iframe} tag
      */
     public void iframe() {
-        tag("iframe");
+        tag(_iframe, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{iframe} tag
+     * Create an empty a @code{iframe} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void iframe(String attr, String value) {
-        tag("iframe", attr, value);
+        tag(_iframe, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{iframe} tag
+     * Create an empty a @code{iframe} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void iframe(String attr1, String value1, String attr2, String value2) {
-        tag("iframe", attr1, value1, attr2, value2);
+        tag(_iframe, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3006,7 +3106,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void iframe(Generator body) {
-        tag("iframe", null, null, null, null, body);
+        tag(_iframe, null, null, null, null, body);
     }
 
     /**
@@ -3016,7 +3116,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void iframe(String attr, String value, Generator body) {
-        tag("iframe", attr, value, null, null, body);
+        tag(_iframe, attr, value, null, null, body);
     }
 
     /**
@@ -3028,34 +3128,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void iframe(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("iframe", attr1, value1, attr2, value2, body);
+        tag(_iframe, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _img = "img".toCharArray();
+
     /**
-     * Create en empty a @code{img} tag
+     * Create an empty a @code{img} tag
      */
     public void img() {
-        tag("img");
+        tag(_img, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{img} tag
+     * Create an empty a @code{img} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void img(String attr, String value) {
-        tag("img", attr, value);
+        tag(_img, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{img} tag
+     * Create an empty a @code{img} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void img(String attr1, String value1, String attr2, String value2) {
-        tag("img", attr1, value1, attr2, value2);
+        tag(_img, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3063,7 +3165,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void img(Generator body) {
-        tag("img", null, null, null, null, body);
+        tag(_img, null, null, null, null, body);
     }
 
     /**
@@ -3073,7 +3175,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void img(String attr, String value, Generator body) {
-        tag("img", attr, value, null, null, body);
+        tag(_img, attr, value, null, null, body);
     }
 
     /**
@@ -3085,34 +3187,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void img(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("img", attr1, value1, attr2, value2, body);
+        tag(_img, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _input = "input".toCharArray();
+
     /**
-     * Create en empty a @code{input} tag
+     * Create an empty a @code{input} tag
      */
     public void input() {
-        tag("input");
+        tag(_input, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{input} tag
+     * Create an empty a @code{input} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void input(String attr, String value) {
-        tag("input", attr, value);
+        tag(_input, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{input} tag
+     * Create an empty a @code{input} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void input(String attr1, String value1, String attr2, String value2) {
-        tag("input", attr1, value1, attr2, value2);
+        tag(_input, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3120,7 +3224,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void input(Generator body) {
-        tag("input", null, null, null, null, body);
+        tag(_input, null, null, null, null, body);
     }
 
     /**
@@ -3130,7 +3234,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void input(String attr, String value, Generator body) {
-        tag("input", attr, value, null, null, body);
+        tag(_input, attr, value, null, null, body);
     }
 
     /**
@@ -3142,34 +3246,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void input(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("input", attr1, value1, attr2, value2, body);
+        tag(_input, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _ins = "ins".toCharArray();
+
     /**
-     * Create en empty a @code{ins} tag
+     * Create an empty a @code{ins} tag
      */
     public void ins() {
-        tag("ins");
+        tag(_ins, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{ins} tag
+     * Create an empty a @code{ins} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void ins(String attr, String value) {
-        tag("ins", attr, value);
+        tag(_ins, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{ins} tag
+     * Create an empty a @code{ins} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void ins(String attr1, String value1, String attr2, String value2) {
-        tag("ins", attr1, value1, attr2, value2);
+        tag(_ins, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3177,7 +3283,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ins(Generator body) {
-        tag("ins", null, null, null, null, body);
+        tag(_ins, null, null, null, null, body);
     }
 
     /**
@@ -3187,7 +3293,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ins(String attr, String value, Generator body) {
-        tag("ins", attr, value, null, null, body);
+        tag(_ins, attr, value, null, null, body);
     }
 
     /**
@@ -3199,34 +3305,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ins(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("ins", attr1, value1, attr2, value2, body);
+        tag(_ins, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _kbd = "kbd".toCharArray();
+
     /**
-     * Create en empty a @code{kbd} tag
+     * Create an empty a @code{kbd} tag
      */
     public void kbd() {
-        tag("kbd");
+        tag(_kbd, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{kbd} tag
+     * Create an empty a @code{kbd} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void kbd(String attr, String value) {
-        tag("kbd", attr, value);
+        tag(_kbd, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{kbd} tag
+     * Create an empty a @code{kbd} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void kbd(String attr1, String value1, String attr2, String value2) {
-        tag("kbd", attr1, value1, attr2, value2);
+        tag(_kbd, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3234,7 +3342,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void kbd(Generator body) {
-        tag("kbd", null, null, null, null, body);
+        tag(_kbd, null, null, null, null, body);
     }
 
     /**
@@ -3244,7 +3352,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void kbd(String attr, String value, Generator body) {
-        tag("kbd", attr, value, null, null, body);
+        tag(_kbd, attr, value, null, null, body);
     }
 
     /**
@@ -3256,34 +3364,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void kbd(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("kbd", attr1, value1, attr2, value2, body);
+        tag(_kbd, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _keygen = "keygen".toCharArray();
+
     /**
-     * Create en empty a @code{keygen} tag
+     * Create an empty a @code{keygen} tag
      */
     public void keygen() {
-        tag("keygen");
+        tag(_keygen, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{keygen} tag
+     * Create an empty a @code{keygen} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void keygen(String attr, String value) {
-        tag("keygen", attr, value);
+        tag(_keygen, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{keygen} tag
+     * Create an empty a @code{keygen} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void keygen(String attr1, String value1, String attr2, String value2) {
-        tag("keygen", attr1, value1, attr2, value2);
+        tag(_keygen, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3291,7 +3401,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void keygen(Generator body) {
-        tag("keygen", null, null, null, null, body);
+        tag(_keygen, null, null, null, null, body);
     }
 
     /**
@@ -3301,7 +3411,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void keygen(String attr, String value, Generator body) {
-        tag("keygen", attr, value, null, null, body);
+        tag(_keygen, attr, value, null, null, body);
     }
 
     /**
@@ -3313,34 +3423,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void keygen(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("keygen", attr1, value1, attr2, value2, body);
+        tag(_keygen, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _label = "label".toCharArray();
+
     /**
-     * Create en empty a @code{label} tag
+     * Create an empty a @code{label} tag
      */
     public void label() {
-        tag("label");
+        tag(_label, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{label} tag
+     * Create an empty a @code{label} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void label(String attr, String value) {
-        tag("label", attr, value);
+        tag(_label, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{label} tag
+     * Create an empty a @code{label} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void label(String attr1, String value1, String attr2, String value2) {
-        tag("label", attr1, value1, attr2, value2);
+        tag(_label, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3348,7 +3460,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void label(Generator body) {
-        tag("label", null, null, null, null, body);
+        tag(_label, null, null, null, null, body);
     }
 
     /**
@@ -3358,7 +3470,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void label(String attr, String value, Generator body) {
-        tag("label", attr, value, null, null, body);
+        tag(_label, attr, value, null, null, body);
     }
 
     /**
@@ -3370,34 +3482,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void label(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("label", attr1, value1, attr2, value2, body);
+        tag(_label, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _legend = "legend".toCharArray();
+
     /**
-     * Create en empty a @code{legend} tag
+     * Create an empty a @code{legend} tag
      */
     public void legend() {
-        tag("legend");
+        tag(_legend, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{legend} tag
+     * Create an empty a @code{legend} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void legend(String attr, String value) {
-        tag("legend", attr, value);
+        tag(_legend, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{legend} tag
+     * Create an empty a @code{legend} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void legend(String attr1, String value1, String attr2, String value2) {
-        tag("legend", attr1, value1, attr2, value2);
+        tag(_legend, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3405,7 +3519,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void legend(Generator body) {
-        tag("legend", null, null, null, null, body);
+        tag(_legend, null, null, null, null, body);
     }
 
     /**
@@ -3415,7 +3529,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void legend(String attr, String value, Generator body) {
-        tag("legend", attr, value, null, null, body);
+        tag(_legend, attr, value, null, null, body);
     }
 
     /**
@@ -3427,34 +3541,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void legend(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("legend", attr1, value1, attr2, value2, body);
+        tag(_legend, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _li = "li".toCharArray();
+
     /**
-     * Create en empty a @code{li} tag
+     * Create an empty a @code{li} tag
      */
     public void li() {
-        tag("li");
+        tag(_li, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{li} tag
+     * Create an empty a @code{li} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void li(String attr, String value) {
-        tag("li", attr, value);
+        tag(_li, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{li} tag
+     * Create an empty a @code{li} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void li(String attr1, String value1, String attr2, String value2) {
-        tag("li", attr1, value1, attr2, value2);
+        tag(_li, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3462,7 +3578,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void li(Generator body) {
-        tag("li", null, null, null, null, body);
+        tag(_li, null, null, null, null, body);
     }
 
     /**
@@ -3472,7 +3588,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void li(String attr, String value, Generator body) {
-        tag("li", attr, value, null, null, body);
+        tag(_li, attr, value, null, null, body);
     }
 
     /**
@@ -3484,34 +3600,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void li(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("li", attr1, value1, attr2, value2, body);
+        tag(_li, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _link = "link".toCharArray();
+
     /**
-     * Create en empty a @code{link} tag
+     * Create an empty a @code{link} tag
      */
     public void link() {
-        tag("link");
+        tag(_link, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{link} tag
+     * Create an empty a @code{link} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void link(String attr, String value) {
-        tag("link", attr, value);
+        tag(_link, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{link} tag
+     * Create an empty a @code{link} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void link(String attr1, String value1, String attr2, String value2) {
-        tag("link", attr1, value1, attr2, value2);
+        tag(_link, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3519,7 +3637,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void link(Generator body) {
-        tag("link", null, null, null, null, body);
+        tag(_link, null, null, null, null, body);
     }
 
     /**
@@ -3529,7 +3647,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void link(String attr, String value, Generator body) {
-        tag("link", attr, value, null, null, body);
+        tag(_link, attr, value, null, null, body);
     }
 
     /**
@@ -3541,34 +3659,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void link(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("link", attr1, value1, attr2, value2, body);
+        tag(_link, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _map = "map".toCharArray();
+
     /**
-     * Create en empty a @code{map} tag
+     * Create an empty a @code{map} tag
      */
     public void map() {
-        tag("map");
+        tag(_map, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{map} tag
+     * Create an empty a @code{map} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void map(String attr, String value) {
-        tag("map", attr, value);
+        tag(_map, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{map} tag
+     * Create an empty a @code{map} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void map(String attr1, String value1, String attr2, String value2) {
-        tag("map", attr1, value1, attr2, value2);
+        tag(_map, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3576,7 +3696,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void map(Generator body) {
-        tag("map", null, null, null, null, body);
+        tag(_map, null, null, null, null, body);
     }
 
     /**
@@ -3586,7 +3706,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void map(String attr, String value, Generator body) {
-        tag("map", attr, value, null, null, body);
+        tag(_map, attr, value, null, null, body);
     }
 
     /**
@@ -3598,34 +3718,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void map(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("map", attr1, value1, attr2, value2, body);
+        tag(_map, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _mark = "mark".toCharArray();
+
     /**
-     * Create en empty a @code{mark} tag
+     * Create an empty a @code{mark} tag
      */
     public void mark() {
-        tag("mark");
+        tag(_mark, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{mark} tag
+     * Create an empty a @code{mark} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void mark(String attr, String value) {
-        tag("mark", attr, value);
+        tag(_mark, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{mark} tag
+     * Create an empty a @code{mark} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void mark(String attr1, String value1, String attr2, String value2) {
-        tag("mark", attr1, value1, attr2, value2);
+        tag(_mark, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3633,7 +3755,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void mark(Generator body) {
-        tag("mark", null, null, null, null, body);
+        tag(_mark, null, null, null, null, body);
     }
 
     /**
@@ -3643,7 +3765,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void mark(String attr, String value, Generator body) {
-        tag("mark", attr, value, null, null, body);
+        tag(_mark, attr, value, null, null, body);
     }
 
     /**
@@ -3655,34 +3777,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void mark(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("mark", attr1, value1, attr2, value2, body);
+        tag(_mark, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _menu = "menu".toCharArray();
+
     /**
-     * Create en empty a @code{menu} tag
+     * Create an empty a @code{menu} tag
      */
     public void menu() {
-        tag("menu");
+        tag(_menu, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{menu} tag
+     * Create an empty a @code{menu} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void menu(String attr, String value) {
-        tag("menu", attr, value);
+        tag(_menu, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{menu} tag
+     * Create an empty a @code{menu} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void menu(String attr1, String value1, String attr2, String value2) {
-        tag("menu", attr1, value1, attr2, value2);
+        tag(_menu, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3690,7 +3814,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void menu(Generator body) {
-        tag("menu", null, null, null, null, body);
+        tag(_menu, null, null, null, null, body);
     }
 
     /**
@@ -3700,7 +3824,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void menu(String attr, String value, Generator body) {
-        tag("menu", attr, value, null, null, body);
+        tag(_menu, attr, value, null, null, body);
     }
 
     /**
@@ -3712,34 +3836,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void menu(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("menu", attr1, value1, attr2, value2, body);
+        tag(_menu, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _meta = "meta".toCharArray();
+
     /**
-     * Create en empty a @code{meta} tag
+     * Create an empty a @code{meta} tag
      */
     public void meta() {
-        tag("meta");
+        tag(_meta, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{meta} tag
+     * Create an empty a @code{meta} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void meta(String attr, String value) {
-        tag("meta", attr, value);
+        tag(_meta, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{meta} tag
+     * Create an empty a @code{meta} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void meta(String attr1, String value1, String attr2, String value2) {
-        tag("meta", attr1, value1, attr2, value2);
+        tag(_meta, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3747,7 +3873,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void meta(Generator body) {
-        tag("meta", null, null, null, null, body);
+        tag(_meta, null, null, null, null, body);
     }
 
     /**
@@ -3757,7 +3883,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void meta(String attr, String value, Generator body) {
-        tag("meta", attr, value, null, null, body);
+        tag(_meta, attr, value, null, null, body);
     }
 
     /**
@@ -3769,34 +3895,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void meta(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("meta", attr1, value1, attr2, value2, body);
+        tag(_meta, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _meter = "meter".toCharArray();
+
     /**
-     * Create en empty a @code{meter} tag
+     * Create an empty a @code{meter} tag
      */
     public void meter() {
-        tag("meter");
+        tag(_meter, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{meter} tag
+     * Create an empty a @code{meter} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void meter(String attr, String value) {
-        tag("meter", attr, value);
+        tag(_meter, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{meter} tag
+     * Create an empty a @code{meter} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void meter(String attr1, String value1, String attr2, String value2) {
-        tag("meter", attr1, value1, attr2, value2);
+        tag(_meter, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3804,7 +3932,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void meter(Generator body) {
-        tag("meter", null, null, null, null, body);
+        tag(_meter, null, null, null, null, body);
     }
 
     /**
@@ -3814,7 +3942,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void meter(String attr, String value, Generator body) {
-        tag("meter", attr, value, null, null, body);
+        tag(_meter, attr, value, null, null, body);
     }
 
     /**
@@ -3826,34 +3954,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void meter(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("meter", attr1, value1, attr2, value2, body);
+        tag(_meter, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _nav = "nav".toCharArray();
+
     /**
-     * Create en empty a @code{nav} tag
+     * Create an empty a @code{nav} tag
      */
     public void nav() {
-        tag("nav");
+        tag(_nav, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{nav} tag
+     * Create an empty a @code{nav} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void nav(String attr, String value) {
-        tag("nav", attr, value);
+        tag(_nav, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{nav} tag
+     * Create an empty a @code{nav} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void nav(String attr1, String value1, String attr2, String value2) {
-        tag("nav", attr1, value1, attr2, value2);
+        tag(_nav, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3861,7 +3991,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void nav(Generator body) {
-        tag("nav", null, null, null, null, body);
+        tag(_nav, null, null, null, null, body);
     }
 
     /**
@@ -3871,7 +4001,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void nav(String attr, String value, Generator body) {
-        tag("nav", attr, value, null, null, body);
+        tag(_nav, attr, value, null, null, body);
     }
 
     /**
@@ -3883,34 +4013,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void nav(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("nav", attr1, value1, attr2, value2, body);
+        tag(_nav, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _noscript = "noscript".toCharArray();
+
     /**
-     * Create en empty a @code{noscript} tag
+     * Create an empty a @code{noscript} tag
      */
     public void noscript() {
-        tag("noscript");
+        tag(_noscript, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{noscript} tag
+     * Create an empty a @code{noscript} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void noscript(String attr, String value) {
-        tag("noscript", attr, value);
+        tag(_noscript, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{noscript} tag
+     * Create an empty a @code{noscript} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void noscript(String attr1, String value1, String attr2, String value2) {
-        tag("noscript", attr1, value1, attr2, value2);
+        tag(_noscript, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3918,7 +4050,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void noscript(Generator body) {
-        tag("noscript", null, null, null, null, body);
+        tag(_noscript, null, null, null, null, body);
     }
 
     /**
@@ -3928,7 +4060,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void noscript(String attr, String value, Generator body) {
-        tag("noscript", attr, value, null, null, body);
+        tag(_noscript, attr, value, null, null, body);
     }
 
     /**
@@ -3940,34 +4072,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void noscript(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("noscript", attr1, value1, attr2, value2, body);
+        tag(_noscript, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _object = "object".toCharArray();
+
     /**
-     * Create en empty a @code{object} tag
+     * Create an empty a @code{object} tag
      */
     public void object() {
-        tag("object");
+        tag(_object, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{object} tag
+     * Create an empty a @code{object} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void object(String attr, String value) {
-        tag("object", attr, value);
+        tag(_object, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{object} tag
+     * Create an empty a @code{object} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void object(String attr1, String value1, String attr2, String value2) {
-        tag("object", attr1, value1, attr2, value2);
+        tag(_object, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -3975,7 +4109,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void object(Generator body) {
-        tag("object", null, null, null, null, body);
+        tag(_object, null, null, null, null, body);
     }
 
     /**
@@ -3985,7 +4119,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void object(String attr, String value, Generator body) {
-        tag("object", attr, value, null, null, body);
+        tag(_object, attr, value, null, null, body);
     }
 
     /**
@@ -3997,34 +4131,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void object(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("object", attr1, value1, attr2, value2, body);
+        tag(_object, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _ol = "ol".toCharArray();
+
     /**
-     * Create en empty a @code{ol} tag
+     * Create an empty a @code{ol} tag
      */
     public void ol() {
-        tag("ol");
+        tag(_ol, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{ol} tag
+     * Create an empty a @code{ol} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void ol(String attr, String value) {
-        tag("ol", attr, value);
+        tag(_ol, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{ol} tag
+     * Create an empty a @code{ol} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void ol(String attr1, String value1, String attr2, String value2) {
-        tag("ol", attr1, value1, attr2, value2);
+        tag(_ol, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4032,7 +4168,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ol(Generator body) {
-        tag("ol", null, null, null, null, body);
+        tag(_ol, null, null, null, null, body);
     }
 
     /**
@@ -4042,7 +4178,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ol(String attr, String value, Generator body) {
-        tag("ol", attr, value, null, null, body);
+        tag(_ol, attr, value, null, null, body);
     }
 
     /**
@@ -4054,34 +4190,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ol(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("ol", attr1, value1, attr2, value2, body);
+        tag(_ol, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _optgroup = "optgroup".toCharArray();
+
     /**
-     * Create en empty a @code{optgroup} tag
+     * Create an empty a @code{optgroup} tag
      */
     public void optgroup() {
-        tag("optgroup");
+        tag(_optgroup, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{optgroup} tag
+     * Create an empty a @code{optgroup} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void optgroup(String attr, String value) {
-        tag("optgroup", attr, value);
+        tag(_optgroup, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{optgroup} tag
+     * Create an empty a @code{optgroup} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void optgroup(String attr1, String value1, String attr2, String value2) {
-        tag("optgroup", attr1, value1, attr2, value2);
+        tag(_optgroup, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4089,7 +4227,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void optgroup(Generator body) {
-        tag("optgroup", null, null, null, null, body);
+        tag(_optgroup, null, null, null, null, body);
     }
 
     /**
@@ -4099,7 +4237,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void optgroup(String attr, String value, Generator body) {
-        tag("optgroup", attr, value, null, null, body);
+        tag(_optgroup, attr, value, null, null, body);
     }
 
     /**
@@ -4111,34 +4249,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void optgroup(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("optgroup", attr1, value1, attr2, value2, body);
+        tag(_optgroup, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _option = "option".toCharArray();
+
     /**
-     * Create en empty a @code{option} tag
+     * Create an empty a @code{option} tag
      */
     public void option() {
-        tag("option");
+        tag(_option, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{option} tag
+     * Create an empty a @code{option} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void option(String attr, String value) {
-        tag("option", attr, value);
+        tag(_option, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{option} tag
+     * Create an empty a @code{option} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void option(String attr1, String value1, String attr2, String value2) {
-        tag("option", attr1, value1, attr2, value2);
+        tag(_option, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4146,7 +4286,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void option(Generator body) {
-        tag("option", null, null, null, null, body);
+        tag(_option, null, null, null, null, body);
     }
 
     /**
@@ -4156,7 +4296,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void option(String attr, String value, Generator body) {
-        tag("option", attr, value, null, null, body);
+        tag(_option, attr, value, null, null, body);
     }
 
     /**
@@ -4168,34 +4308,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void option(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("option", attr1, value1, attr2, value2, body);
+        tag(_option, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _output = "output".toCharArray();
+
     /**
-     * Create en empty a @code{output} tag
+     * Create an empty a @code{output} tag
      */
     public void output() {
-        tag("output");
+        tag(_output, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{output} tag
+     * Create an empty a @code{output} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void output(String attr, String value) {
-        tag("output", attr, value);
+        tag(_output, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{output} tag
+     * Create an empty a @code{output} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void output(String attr1, String value1, String attr2, String value2) {
-        tag("output", attr1, value1, attr2, value2);
+        tag(_output, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4203,7 +4345,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void output(Generator body) {
-        tag("output", null, null, null, null, body);
+        tag(_output, null, null, null, null, body);
     }
 
     /**
@@ -4213,7 +4355,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void output(String attr, String value, Generator body) {
-        tag("output", attr, value, null, null, body);
+        tag(_output, attr, value, null, null, body);
     }
 
     /**
@@ -4225,34 +4367,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void output(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("output", attr1, value1, attr2, value2, body);
+        tag(_output, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _p = "p".toCharArray();
+
     /**
-     * Create en empty a @code{p} tag
+     * Create an empty a @code{p} tag
      */
     public void p() {
-        tag("p");
+        tag(_p, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{p} tag
+     * Create an empty a @code{p} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void p(String attr, String value) {
-        tag("p", attr, value);
+        tag(_p, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{p} tag
+     * Create an empty a @code{p} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void p(String attr1, String value1, String attr2, String value2) {
-        tag("p", attr1, value1, attr2, value2);
+        tag(_p, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4260,7 +4404,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void p(Generator body) {
-        tag("p", null, null, null, null, body);
+        tag(_p, null, null, null, null, body);
     }
 
     /**
@@ -4270,7 +4414,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void p(String attr, String value, Generator body) {
-        tag("p", attr, value, null, null, body);
+        tag(_p, attr, value, null, null, body);
     }
 
     /**
@@ -4282,34 +4426,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void p(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("p", attr1, value1, attr2, value2, body);
+        tag(_p, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _param = "param".toCharArray();
+
     /**
-     * Create en empty a @code{param} tag
+     * Create an empty a @code{param} tag
      */
     public void param() {
-        tag("param");
+        tag(_param, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{param} tag
+     * Create an empty a @code{param} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void param(String attr, String value) {
-        tag("param", attr, value);
+        tag(_param, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{param} tag
+     * Create an empty a @code{param} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void param(String attr1, String value1, String attr2, String value2) {
-        tag("param", attr1, value1, attr2, value2);
+        tag(_param, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4317,7 +4463,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void param(Generator body) {
-        tag("param", null, null, null, null, body);
+        tag(_param, null, null, null, null, body);
     }
 
     /**
@@ -4327,7 +4473,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void param(String attr, String value, Generator body) {
-        tag("param", attr, value, null, null, body);
+        tag(_param, attr, value, null, null, body);
     }
 
     /**
@@ -4339,34 +4485,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void param(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("param", attr1, value1, attr2, value2, body);
+        tag(_param, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _pre = "pre".toCharArray();
+
     /**
-     * Create en empty a @code{pre} tag
+     * Create an empty a @code{pre} tag
      */
     public void pre() {
-        tag("pre");
+        tag(_pre, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{pre} tag
+     * Create an empty a @code{pre} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void pre(String attr, String value) {
-        tag("pre", attr, value);
+        tag(_pre, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{pre} tag
+     * Create an empty a @code{pre} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void pre(String attr1, String value1, String attr2, String value2) {
-        tag("pre", attr1, value1, attr2, value2);
+        tag(_pre, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4374,7 +4522,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void pre(Generator body) {
-        tag("pre", null, null, null, null, body);
+        tag(_pre, null, null, null, null, body);
     }
 
     /**
@@ -4384,7 +4532,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void pre(String attr, String value, Generator body) {
-        tag("pre", attr, value, null, null, body);
+        tag(_pre, attr, value, null, null, body);
     }
 
     /**
@@ -4396,34 +4544,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void pre(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("pre", attr1, value1, attr2, value2, body);
+        tag(_pre, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _progress = "progress".toCharArray();
+
     /**
-     * Create en empty a @code{progress} tag
+     * Create an empty a @code{progress} tag
      */
     public void progress() {
-        tag("progress");
+        tag(_progress, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{progress} tag
+     * Create an empty a @code{progress} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void progress(String attr, String value) {
-        tag("progress", attr, value);
+        tag(_progress, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{progress} tag
+     * Create an empty a @code{progress} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void progress(String attr1, String value1, String attr2, String value2) {
-        tag("progress", attr1, value1, attr2, value2);
+        tag(_progress, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4431,7 +4581,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void progress(Generator body) {
-        tag("progress", null, null, null, null, body);
+        tag(_progress, null, null, null, null, body);
     }
 
     /**
@@ -4441,7 +4591,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void progress(String attr, String value, Generator body) {
-        tag("progress", attr, value, null, null, body);
+        tag(_progress, attr, value, null, null, body);
     }
 
     /**
@@ -4453,34 +4603,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void progress(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("progress", attr1, value1, attr2, value2, body);
+        tag(_progress, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _q = "q".toCharArray();
+
     /**
-     * Create en empty a @code{q} tag
+     * Create an empty a @code{q} tag
      */
     public void q() {
-        tag("q");
+        tag(_q, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{q} tag
+     * Create an empty a @code{q} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void q(String attr, String value) {
-        tag("q", attr, value);
+        tag(_q, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{q} tag
+     * Create an empty a @code{q} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void q(String attr1, String value1, String attr2, String value2) {
-        tag("q", attr1, value1, attr2, value2);
+        tag(_q, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4488,7 +4640,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void q(Generator body) {
-        tag("q", null, null, null, null, body);
+        tag(_q, null, null, null, null, body);
     }
 
     /**
@@ -4498,7 +4650,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void q(String attr, String value, Generator body) {
-        tag("q", attr, value, null, null, body);
+        tag(_q, attr, value, null, null, body);
     }
 
     /**
@@ -4510,34 +4662,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void q(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("q", attr1, value1, attr2, value2, body);
+        tag(_q, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _rp = "rp".toCharArray();
+
     /**
-     * Create en empty a @code{rp} tag
+     * Create an empty a @code{rp} tag
      */
     public void rp() {
-        tag("rp");
+        tag(_rp, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{rp} tag
+     * Create an empty a @code{rp} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void rp(String attr, String value) {
-        tag("rp", attr, value);
+        tag(_rp, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{rp} tag
+     * Create an empty a @code{rp} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void rp(String attr1, String value1, String attr2, String value2) {
-        tag("rp", attr1, value1, attr2, value2);
+        tag(_rp, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4545,7 +4699,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void rp(Generator body) {
-        tag("rp", null, null, null, null, body);
+        tag(_rp, null, null, null, null, body);
     }
 
     /**
@@ -4555,7 +4709,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void rp(String attr, String value, Generator body) {
-        tag("rp", attr, value, null, null, body);
+        tag(_rp, attr, value, null, null, body);
     }
 
     /**
@@ -4567,34 +4721,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void rp(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("rp", attr1, value1, attr2, value2, body);
+        tag(_rp, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _rt = "rt".toCharArray();
+
     /**
-     * Create en empty a @code{rt} tag
+     * Create an empty a @code{rt} tag
      */
     public void rt() {
-        tag("rt");
+        tag(_rt, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{rt} tag
+     * Create an empty a @code{rt} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void rt(String attr, String value) {
-        tag("rt", attr, value);
+        tag(_rt, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{rt} tag
+     * Create an empty a @code{rt} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void rt(String attr1, String value1, String attr2, String value2) {
-        tag("rt", attr1, value1, attr2, value2);
+        tag(_rt, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4602,7 +4758,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void rt(Generator body) {
-        tag("rt", null, null, null, null, body);
+        tag(_rt, null, null, null, null, body);
     }
 
     /**
@@ -4612,7 +4768,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void rt(String attr, String value, Generator body) {
-        tag("rt", attr, value, null, null, body);
+        tag(_rt, attr, value, null, null, body);
     }
 
     /**
@@ -4624,34 +4780,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void rt(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("rt", attr1, value1, attr2, value2, body);
+        tag(_rt, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _ruby = "ruby".toCharArray();
+
     /**
-     * Create en empty a @code{ruby} tag
+     * Create an empty a @code{ruby} tag
      */
     public void ruby() {
-        tag("ruby");
+        tag(_ruby, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{ruby} tag
+     * Create an empty a @code{ruby} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void ruby(String attr, String value) {
-        tag("ruby", attr, value);
+        tag(_ruby, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{ruby} tag
+     * Create an empty a @code{ruby} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void ruby(String attr1, String value1, String attr2, String value2) {
-        tag("ruby", attr1, value1, attr2, value2);
+        tag(_ruby, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4659,7 +4817,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ruby(Generator body) {
-        tag("ruby", null, null, null, null, body);
+        tag(_ruby, null, null, null, null, body);
     }
 
     /**
@@ -4669,7 +4827,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ruby(String attr, String value, Generator body) {
-        tag("ruby", attr, value, null, null, body);
+        tag(_ruby, attr, value, null, null, body);
     }
 
     /**
@@ -4681,34 +4839,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ruby(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("ruby", attr1, value1, attr2, value2, body);
+        tag(_ruby, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _s = "s".toCharArray();
+
     /**
-     * Create en empty a @code{s} tag
+     * Create an empty a @code{s} tag
      */
     public void s() {
-        tag("s");
+        tag(_s, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{s} tag
+     * Create an empty a @code{s} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void s(String attr, String value) {
-        tag("s", attr, value);
+        tag(_s, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{s} tag
+     * Create an empty a @code{s} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void s(String attr1, String value1, String attr2, String value2) {
-        tag("s", attr1, value1, attr2, value2);
+        tag(_s, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4716,7 +4876,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void s(Generator body) {
-        tag("s", null, null, null, null, body);
+        tag(_s, null, null, null, null, body);
     }
 
     /**
@@ -4726,7 +4886,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void s(String attr, String value, Generator body) {
-        tag("s", attr, value, null, null, body);
+        tag(_s, attr, value, null, null, body);
     }
 
     /**
@@ -4738,34 +4898,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void s(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("s", attr1, value1, attr2, value2, body);
+        tag(_s, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _samp = "samp".toCharArray();
+
     /**
-     * Create en empty a @code{samp} tag
+     * Create an empty a @code{samp} tag
      */
     public void samp() {
-        tag("samp");
+        tag(_samp, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{samp} tag
+     * Create an empty a @code{samp} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void samp(String attr, String value) {
-        tag("samp", attr, value);
+        tag(_samp, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{samp} tag
+     * Create an empty a @code{samp} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void samp(String attr1, String value1, String attr2, String value2) {
-        tag("samp", attr1, value1, attr2, value2);
+        tag(_samp, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4773,7 +4935,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void samp(Generator body) {
-        tag("samp", null, null, null, null, body);
+        tag(_samp, null, null, null, null, body);
     }
 
     /**
@@ -4783,7 +4945,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void samp(String attr, String value, Generator body) {
-        tag("samp", attr, value, null, null, body);
+        tag(_samp, attr, value, null, null, body);
     }
 
     /**
@@ -4795,34 +4957,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void samp(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("samp", attr1, value1, attr2, value2, body);
+        tag(_samp, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _script = "script".toCharArray();
+
     /**
-     * Create en empty a @code{script} tag
+     * Create an empty a @code{script} tag
      */
     public void script() {
-        tag("script");
+        tag(_script, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{script} tag
+     * Create an empty a @code{script} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void script(String attr, String value) {
-        tag("script", attr, value);
+        tag(_script, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{script} tag
+     * Create an empty a @code{script} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void script(String attr1, String value1, String attr2, String value2) {
-        tag("script", attr1, value1, attr2, value2);
+        tag(_script, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4830,7 +4994,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void script(Generator body) {
-        tag("script", null, null, null, null, body);
+        tag(_script, null, null, null, null, body);
     }
 
     /**
@@ -4840,7 +5004,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void script(String attr, String value, Generator body) {
-        tag("script", attr, value, null, null, body);
+        tag(_script, attr, value, null, null, body);
     }
 
     /**
@@ -4852,34 +5016,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void script(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("script", attr1, value1, attr2, value2, body);
+        tag(_script, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _section = "section".toCharArray();
+
     /**
-     * Create en empty a @code{section} tag
+     * Create an empty a @code{section} tag
      */
     public void section() {
-        tag("section");
+        tag(_section, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{section} tag
+     * Create an empty a @code{section} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void section(String attr, String value) {
-        tag("section", attr, value);
+        tag(_section, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{section} tag
+     * Create an empty a @code{section} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void section(String attr1, String value1, String attr2, String value2) {
-        tag("section", attr1, value1, attr2, value2);
+        tag(_section, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4887,7 +5053,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void section(Generator body) {
-        tag("section", null, null, null, null, body);
+        tag(_section, null, null, null, null, body);
     }
 
     /**
@@ -4897,7 +5063,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void section(String attr, String value, Generator body) {
-        tag("section", attr, value, null, null, body);
+        tag(_section, attr, value, null, null, body);
     }
 
     /**
@@ -4909,34 +5075,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void section(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("section", attr1, value1, attr2, value2, body);
+        tag(_section, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _select = "select".toCharArray();
+
     /**
-     * Create en empty a @code{select} tag
+     * Create an empty a @code{select} tag
      */
     public void select() {
-        tag("select");
+        tag(_select, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{select} tag
+     * Create an empty a @code{select} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void select(String attr, String value) {
-        tag("select", attr, value);
+        tag(_select, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{select} tag
+     * Create an empty a @code{select} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void select(String attr1, String value1, String attr2, String value2) {
-        tag("select", attr1, value1, attr2, value2);
+        tag(_select, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -4944,7 +5112,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void select(Generator body) {
-        tag("select", null, null, null, null, body);
+        tag(_select, null, null, null, null, body);
     }
 
     /**
@@ -4954,7 +5122,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void select(String attr, String value, Generator body) {
-        tag("select", attr, value, null, null, body);
+        tag(_select, attr, value, null, null, body);
     }
 
     /**
@@ -4966,34 +5134,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void select(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("select", attr1, value1, attr2, value2, body);
+        tag(_select, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _small = "small".toCharArray();
+
     /**
-     * Create en empty a @code{small} tag
+     * Create an empty a @code{small} tag
      */
     public void small() {
-        tag("small");
+        tag(_small, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{small} tag
+     * Create an empty a @code{small} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void small(String attr, String value) {
-        tag("small", attr, value);
+        tag(_small, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{small} tag
+     * Create an empty a @code{small} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void small(String attr1, String value1, String attr2, String value2) {
-        tag("small", attr1, value1, attr2, value2);
+        tag(_small, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5001,7 +5171,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void small(Generator body) {
-        tag("small", null, null, null, null, body);
+        tag(_small, null, null, null, null, body);
     }
 
     /**
@@ -5011,7 +5181,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void small(String attr, String value, Generator body) {
-        tag("small", attr, value, null, null, body);
+        tag(_small, attr, value, null, null, body);
     }
 
     /**
@@ -5023,34 +5193,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void small(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("small", attr1, value1, attr2, value2, body);
+        tag(_small, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _source = "source".toCharArray();
+
     /**
-     * Create en empty a @code{source} tag
+     * Create an empty a @code{source} tag
      */
     public void source() {
-        tag("source");
+        tag(_source, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{source} tag
+     * Create an empty a @code{source} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void source(String attr, String value) {
-        tag("source", attr, value);
+        tag(_source, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{source} tag
+     * Create an empty a @code{source} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void source(String attr1, String value1, String attr2, String value2) {
-        tag("source", attr1, value1, attr2, value2);
+        tag(_source, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5058,7 +5230,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void source(Generator body) {
-        tag("source", null, null, null, null, body);
+        tag(_source, null, null, null, null, body);
     }
 
     /**
@@ -5068,7 +5240,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void source(String attr, String value, Generator body) {
-        tag("source", attr, value, null, null, body);
+        tag(_source, attr, value, null, null, body);
     }
 
     /**
@@ -5080,34 +5252,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void source(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("source", attr1, value1, attr2, value2, body);
+        tag(_source, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _span = "span".toCharArray();
+
     /**
-     * Create en empty a @code{span} tag
+     * Create an empty a @code{span} tag
      */
     public void span() {
-        tag("span");
+        tag(_span, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{span} tag
+     * Create an empty a @code{span} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void span(String attr, String value) {
-        tag("span", attr, value);
+        tag(_span, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{span} tag
+     * Create an empty a @code{span} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void span(String attr1, String value1, String attr2, String value2) {
-        tag("span", attr1, value1, attr2, value2);
+        tag(_span, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5115,7 +5289,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void span(Generator body) {
-        tag("span", null, null, null, null, body);
+        tag(_span, null, null, null, null, body);
     }
 
     /**
@@ -5125,7 +5299,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void span(String attr, String value, Generator body) {
-        tag("span", attr, value, null, null, body);
+        tag(_span, attr, value, null, null, body);
     }
 
     /**
@@ -5137,34 +5311,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void span(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("span", attr1, value1, attr2, value2, body);
+        tag(_span, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _strong = "strong".toCharArray();
+
     /**
-     * Create en empty a @code{strong} tag
+     * Create an empty a @code{strong} tag
      */
     public void strong() {
-        tag("strong");
+        tag(_strong, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{strong} tag
+     * Create an empty a @code{strong} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void strong(String attr, String value) {
-        tag("strong", attr, value);
+        tag(_strong, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{strong} tag
+     * Create an empty a @code{strong} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void strong(String attr1, String value1, String attr2, String value2) {
-        tag("strong", attr1, value1, attr2, value2);
+        tag(_strong, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5172,7 +5348,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void strong(Generator body) {
-        tag("strong", null, null, null, null, body);
+        tag(_strong, null, null, null, null, body);
     }
 
     /**
@@ -5182,7 +5358,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void strong(String attr, String value, Generator body) {
-        tag("strong", attr, value, null, null, body);
+        tag(_strong, attr, value, null, null, body);
     }
 
     /**
@@ -5194,34 +5370,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void strong(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("strong", attr1, value1, attr2, value2, body);
+        tag(_strong, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _style = "style".toCharArray();
+
     /**
-     * Create en empty a @code{style} tag
+     * Create an empty a @code{style} tag
      */
     public void style() {
-        tag("style");
+        tag(_style, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{style} tag
+     * Create an empty a @code{style} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void style(String attr, String value) {
-        tag("style", attr, value);
+        tag(_style, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{style} tag
+     * Create an empty a @code{style} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void style(String attr1, String value1, String attr2, String value2) {
-        tag("style", attr1, value1, attr2, value2);
+        tag(_style, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5229,7 +5407,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void style(Generator body) {
-        tag("style", null, null, null, null, body);
+        tag(_style, null, null, null, null, body);
     }
 
     /**
@@ -5239,7 +5417,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void style(String attr, String value, Generator body) {
-        tag("style", attr, value, null, null, body);
+        tag(_style, attr, value, null, null, body);
     }
 
     /**
@@ -5251,34 +5429,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void style(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("style", attr1, value1, attr2, value2, body);
+        tag(_style, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _sub = "sub".toCharArray();
+
     /**
-     * Create en empty a @code{sub} tag
+     * Create an empty a @code{sub} tag
      */
     public void sub() {
-        tag("sub");
+        tag(_sub, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{sub} tag
+     * Create an empty a @code{sub} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void sub(String attr, String value) {
-        tag("sub", attr, value);
+        tag(_sub, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{sub} tag
+     * Create an empty a @code{sub} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void sub(String attr1, String value1, String attr2, String value2) {
-        tag("sub", attr1, value1, attr2, value2);
+        tag(_sub, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5286,7 +5466,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void sub(Generator body) {
-        tag("sub", null, null, null, null, body);
+        tag(_sub, null, null, null, null, body);
     }
 
     /**
@@ -5296,7 +5476,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void sub(String attr, String value, Generator body) {
-        tag("sub", attr, value, null, null, body);
+        tag(_sub, attr, value, null, null, body);
     }
 
     /**
@@ -5308,34 +5488,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void sub(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("sub", attr1, value1, attr2, value2, body);
+        tag(_sub, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _summary = "summary".toCharArray();
+
     /**
-     * Create en empty a @code{summary} tag
+     * Create an empty a @code{summary} tag
      */
     public void summary() {
-        tag("summary");
+        tag(_summary, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{summary} tag
+     * Create an empty a @code{summary} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void summary(String attr, String value) {
-        tag("summary", attr, value);
+        tag(_summary, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{summary} tag
+     * Create an empty a @code{summary} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void summary(String attr1, String value1, String attr2, String value2) {
-        tag("summary", attr1, value1, attr2, value2);
+        tag(_summary, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5343,7 +5525,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void summary(Generator body) {
-        tag("summary", null, null, null, null, body);
+        tag(_summary, null, null, null, null, body);
     }
 
     /**
@@ -5353,7 +5535,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void summary(String attr, String value, Generator body) {
-        tag("summary", attr, value, null, null, body);
+        tag(_summary, attr, value, null, null, body);
     }
 
     /**
@@ -5365,34 +5547,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void summary(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("summary", attr1, value1, attr2, value2, body);
+        tag(_summary, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _sup = "sup".toCharArray();
+
     /**
-     * Create en empty a @code{sup} tag
+     * Create an empty a @code{sup} tag
      */
     public void sup() {
-        tag("sup");
+        tag(_sup, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{sup} tag
+     * Create an empty a @code{sup} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void sup(String attr, String value) {
-        tag("sup", attr, value);
+        tag(_sup, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{sup} tag
+     * Create an empty a @code{sup} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void sup(String attr1, String value1, String attr2, String value2) {
-        tag("sup", attr1, value1, attr2, value2);
+        tag(_sup, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5400,7 +5584,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void sup(Generator body) {
-        tag("sup", null, null, null, null, body);
+        tag(_sup, null, null, null, null, body);
     }
 
     /**
@@ -5410,7 +5594,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void sup(String attr, String value, Generator body) {
-        tag("sup", attr, value, null, null, body);
+        tag(_sup, attr, value, null, null, body);
     }
 
     /**
@@ -5422,34 +5606,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void sup(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("sup", attr1, value1, attr2, value2, body);
+        tag(_sup, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _table = "table".toCharArray();
+
     /**
-     * Create en empty a @code{table} tag
+     * Create an empty a @code{table} tag
      */
     public void table() {
-        tag("table");
+        tag(_table, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{table} tag
+     * Create an empty a @code{table} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void table(String attr, String value) {
-        tag("table", attr, value);
+        tag(_table, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{table} tag
+     * Create an empty a @code{table} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void table(String attr1, String value1, String attr2, String value2) {
-        tag("table", attr1, value1, attr2, value2);
+        tag(_table, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5457,7 +5643,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void table(Generator body) {
-        tag("table", null, null, null, null, body);
+        tag(_table, null, null, null, null, body);
     }
 
     /**
@@ -5467,7 +5653,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void table(String attr, String value, Generator body) {
-        tag("table", attr, value, null, null, body);
+        tag(_table, attr, value, null, null, body);
     }
 
     /**
@@ -5479,34 +5665,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void table(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("table", attr1, value1, attr2, value2, body);
+        tag(_table, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _tbody = "tbody".toCharArray();
+
     /**
-     * Create en empty a @code{tbody} tag
+     * Create an empty a @code{tbody} tag
      */
     public void tbody() {
-        tag("tbody");
+        tag(_tbody, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{tbody} tag
+     * Create an empty a @code{tbody} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void tbody(String attr, String value) {
-        tag("tbody", attr, value);
+        tag(_tbody, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{tbody} tag
+     * Create an empty a @code{tbody} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void tbody(String attr1, String value1, String attr2, String value2) {
-        tag("tbody", attr1, value1, attr2, value2);
+        tag(_tbody, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5514,7 +5702,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void tbody(Generator body) {
-        tag("tbody", null, null, null, null, body);
+        tag(_tbody, null, null, null, null, body);
     }
 
     /**
@@ -5524,7 +5712,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void tbody(String attr, String value, Generator body) {
-        tag("tbody", attr, value, null, null, body);
+        tag(_tbody, attr, value, null, null, body);
     }
 
     /**
@@ -5536,34 +5724,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void tbody(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("tbody", attr1, value1, attr2, value2, body);
+        tag(_tbody, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _td = "td".toCharArray();
+
     /**
-     * Create en empty a @code{td} tag
+     * Create an empty a @code{td} tag
      */
     public void td() {
-        tag("td");
+        tag(_td, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{td} tag
+     * Create an empty a @code{td} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void td(String attr, String value) {
-        tag("td", attr, value);
+        tag(_td, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{td} tag
+     * Create an empty a @code{td} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void td(String attr1, String value1, String attr2, String value2) {
-        tag("td", attr1, value1, attr2, value2);
+        tag(_td, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5571,7 +5761,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void td(Generator body) {
-        tag("td", null, null, null, null, body);
+        tag(_td, null, null, null, null, body);
     }
 
     /**
@@ -5581,7 +5771,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void td(String attr, String value, Generator body) {
-        tag("td", attr, value, null, null, body);
+        tag(_td, attr, value, null, null, body);
     }
 
     /**
@@ -5593,34 +5783,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void td(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("td", attr1, value1, attr2, value2, body);
+        tag(_td, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _textarea = "textarea".toCharArray();
+
     /**
-     * Create en empty a @code{textarea} tag
+     * Create an empty a @code{textarea} tag
      */
     public void textarea() {
-        tag("textarea");
+        tag(_textarea, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{textarea} tag
+     * Create an empty a @code{textarea} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void textarea(String attr, String value) {
-        tag("textarea", attr, value);
+        tag(_textarea, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{textarea} tag
+     * Create an empty a @code{textarea} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void textarea(String attr1, String value1, String attr2, String value2) {
-        tag("textarea", attr1, value1, attr2, value2);
+        tag(_textarea, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5628,7 +5820,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void textarea(Generator body) {
-        tag("textarea", null, null, null, null, body);
+        tag(_textarea, null, null, null, null, body);
     }
 
     /**
@@ -5638,7 +5830,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void textarea(String attr, String value, Generator body) {
-        tag("textarea", attr, value, null, null, body);
+        tag(_textarea, attr, value, null, null, body);
     }
 
     /**
@@ -5650,34 +5842,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void textarea(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("textarea", attr1, value1, attr2, value2, body);
+        tag(_textarea, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _tfoot = "tfoot".toCharArray();
+
     /**
-     * Create en empty a @code{tfoot} tag
+     * Create an empty a @code{tfoot} tag
      */
     public void tfoot() {
-        tag("tfoot");
+        tag(_tfoot, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{tfoot} tag
+     * Create an empty a @code{tfoot} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void tfoot(String attr, String value) {
-        tag("tfoot", attr, value);
+        tag(_tfoot, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{tfoot} tag
+     * Create an empty a @code{tfoot} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void tfoot(String attr1, String value1, String attr2, String value2) {
-        tag("tfoot", attr1, value1, attr2, value2);
+        tag(_tfoot, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5685,7 +5879,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void tfoot(Generator body) {
-        tag("tfoot", null, null, null, null, body);
+        tag(_tfoot, null, null, null, null, body);
     }
 
     /**
@@ -5695,7 +5889,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void tfoot(String attr, String value, Generator body) {
-        tag("tfoot", attr, value, null, null, body);
+        tag(_tfoot, attr, value, null, null, body);
     }
 
     /**
@@ -5707,34 +5901,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void tfoot(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("tfoot", attr1, value1, attr2, value2, body);
+        tag(_tfoot, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _th = "th".toCharArray();
+
     /**
-     * Create en empty a @code{th} tag
+     * Create an empty a @code{th} tag
      */
     public void th() {
-        tag("th");
+        tag(_th, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{th} tag
+     * Create an empty a @code{th} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void th(String attr, String value) {
-        tag("th", attr, value);
+        tag(_th, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{th} tag
+     * Create an empty a @code{th} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void th(String attr1, String value1, String attr2, String value2) {
-        tag("th", attr1, value1, attr2, value2);
+        tag(_th, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5742,7 +5938,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void th(Generator body) {
-        tag("th", null, null, null, null, body);
+        tag(_th, null, null, null, null, body);
     }
 
     /**
@@ -5752,7 +5948,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void th(String attr, String value, Generator body) {
-        tag("th", attr, value, null, null, body);
+        tag(_th, attr, value, null, null, body);
     }
 
     /**
@@ -5764,34 +5960,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void th(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("th", attr1, value1, attr2, value2, body);
+        tag(_th, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _thead = "thead".toCharArray();
+
     /**
-     * Create en empty a @code{thead} tag
+     * Create an empty a @code{thead} tag
      */
     public void thead() {
-        tag("thead");
+        tag(_thead, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{thead} tag
+     * Create an empty a @code{thead} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void thead(String attr, String value) {
-        tag("thead", attr, value);
+        tag(_thead, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{thead} tag
+     * Create an empty a @code{thead} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void thead(String attr1, String value1, String attr2, String value2) {
-        tag("thead", attr1, value1, attr2, value2);
+        tag(_thead, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5799,7 +5997,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void thead(Generator body) {
-        tag("thead", null, null, null, null, body);
+        tag(_thead, null, null, null, null, body);
     }
 
     /**
@@ -5809,7 +6007,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void thead(String attr, String value, Generator body) {
-        tag("thead", attr, value, null, null, body);
+        tag(_thead, attr, value, null, null, body);
     }
 
     /**
@@ -5821,34 +6019,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void thead(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("thead", attr1, value1, attr2, value2, body);
+        tag(_thead, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _time = "time".toCharArray();
+
     /**
-     * Create en empty a @code{time} tag
+     * Create an empty a @code{time} tag
      */
     public void time() {
-        tag("time");
+        tag(_time, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{time} tag
+     * Create an empty a @code{time} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void time(String attr, String value) {
-        tag("time", attr, value);
+        tag(_time, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{time} tag
+     * Create an empty a @code{time} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void time(String attr1, String value1, String attr2, String value2) {
-        tag("time", attr1, value1, attr2, value2);
+        tag(_time, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5856,7 +6056,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void time(Generator body) {
-        tag("time", null, null, null, null, body);
+        tag(_time, null, null, null, null, body);
     }
 
     /**
@@ -5866,7 +6066,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void time(String attr, String value, Generator body) {
-        tag("time", attr, value, null, null, body);
+        tag(_time, attr, value, null, null, body);
     }
 
     /**
@@ -5878,34 +6078,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void time(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("time", attr1, value1, attr2, value2, body);
+        tag(_time, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _title = "title".toCharArray();
+
     /**
-     * Create en empty a @code{title} tag
+     * Create an empty a @code{title} tag
      */
     public void title() {
-        tag("title");
+        tag(_title, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{title} tag
+     * Create an empty a @code{title} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void title(String attr, String value) {
-        tag("title", attr, value);
+        tag(_title, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{title} tag
+     * Create an empty a @code{title} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void title(String attr1, String value1, String attr2, String value2) {
-        tag("title", attr1, value1, attr2, value2);
+        tag(_title, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5913,7 +6115,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void title(Generator body) {
-        tag("title", null, null, null, null, body);
+        tag(_title, null, null, null, null, body);
     }
 
     /**
@@ -5923,7 +6125,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void title(String attr, String value, Generator body) {
-        tag("title", attr, value, null, null, body);
+        tag(_title, attr, value, null, null, body);
     }
 
     /**
@@ -5935,34 +6137,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void title(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("title", attr1, value1, attr2, value2, body);
+        tag(_title, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _tr = "tr".toCharArray();
+
     /**
-     * Create en empty a @code{tr} tag
+     * Create an empty a @code{tr} tag
      */
     public void tr() {
-        tag("tr");
+        tag(_tr, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{tr} tag
+     * Create an empty a @code{tr} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void tr(String attr, String value) {
-        tag("tr", attr, value);
+        tag(_tr, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{tr} tag
+     * Create an empty a @code{tr} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void tr(String attr1, String value1, String attr2, String value2) {
-        tag("tr", attr1, value1, attr2, value2);
+        tag(_tr, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -5970,7 +6174,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void tr(Generator body) {
-        tag("tr", null, null, null, null, body);
+        tag(_tr, null, null, null, null, body);
     }
 
     /**
@@ -5980,7 +6184,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void tr(String attr, String value, Generator body) {
-        tag("tr", attr, value, null, null, body);
+        tag(_tr, attr, value, null, null, body);
     }
 
     /**
@@ -5992,34 +6196,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void tr(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("tr", attr1, value1, attr2, value2, body);
+        tag(_tr, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _track = "track".toCharArray();
+
     /**
-     * Create en empty a @code{track} tag
+     * Create an empty a @code{track} tag
      */
     public void track() {
-        tag("track");
+        tag(_track, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{track} tag
+     * Create an empty a @code{track} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void track(String attr, String value) {
-        tag("track", attr, value);
+        tag(_track, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{track} tag
+     * Create an empty a @code{track} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void track(String attr1, String value1, String attr2, String value2) {
-        tag("track", attr1, value1, attr2, value2);
+        tag(_track, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -6027,7 +6233,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void track(Generator body) {
-        tag("track", null, null, null, null, body);
+        tag(_track, null, null, null, null, body);
     }
 
     /**
@@ -6037,7 +6243,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void track(String attr, String value, Generator body) {
-        tag("track", attr, value, null, null, body);
+        tag(_track, attr, value, null, null, body);
     }
 
     /**
@@ -6049,34 +6255,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void track(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("track", attr1, value1, attr2, value2, body);
+        tag(_track, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _u = "u".toCharArray();
+
     /**
-     * Create en empty a @code{u} tag
+     * Create an empty a @code{u} tag
      */
     public void u() {
-        tag("u");
+        tag(_u, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{u} tag
+     * Create an empty a @code{u} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void u(String attr, String value) {
-        tag("u", attr, value);
+        tag(_u, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{u} tag
+     * Create an empty a @code{u} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void u(String attr1, String value1, String attr2, String value2) {
-        tag("u", attr1, value1, attr2, value2);
+        tag(_u, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -6084,7 +6292,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void u(Generator body) {
-        tag("u", null, null, null, null, body);
+        tag(_u, null, null, null, null, body);
     }
 
     /**
@@ -6094,7 +6302,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void u(String attr, String value, Generator body) {
-        tag("u", attr, value, null, null, body);
+        tag(_u, attr, value, null, null, body);
     }
 
     /**
@@ -6106,34 +6314,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void u(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("u", attr1, value1, attr2, value2, body);
+        tag(_u, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _ul = "ul".toCharArray();
+
     /**
-     * Create en empty a @code{ul} tag
+     * Create an empty a @code{ul} tag
      */
     public void ul() {
-        tag("ul");
+        tag(_ul, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{ul} tag
+     * Create an empty a @code{ul} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void ul(String attr, String value) {
-        tag("ul", attr, value);
+        tag(_ul, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{ul} tag
+     * Create an empty a @code{ul} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void ul(String attr1, String value1, String attr2, String value2) {
-        tag("ul", attr1, value1, attr2, value2);
+        tag(_ul, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -6141,7 +6351,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ul(Generator body) {
-        tag("ul", null, null, null, null, body);
+        tag(_ul, null, null, null, null, body);
     }
 
     /**
@@ -6151,7 +6361,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ul(String attr, String value, Generator body) {
-        tag("ul", attr, value, null, null, body);
+        tag(_ul, attr, value, null, null, body);
     }
 
     /**
@@ -6163,34 +6373,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void ul(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("ul", attr1, value1, attr2, value2, body);
+        tag(_ul, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _var = "var".toCharArray();
+
     /**
-     * Create en empty a @code{var} tag
+     * Create an empty a @code{var} tag
      */
     public void var() {
-        tag("var");
+        tag(_var, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{var} tag
+     * Create an empty a @code{var} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void var(String attr, String value) {
-        tag("var", attr, value);
+        tag(_var, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{var} tag
+     * Create an empty a @code{var} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void var(String attr1, String value1, String attr2, String value2) {
-        tag("var", attr1, value1, attr2, value2);
+        tag(_var, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -6198,7 +6410,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void var(Generator body) {
-        tag("var", null, null, null, null, body);
+        tag(_var, null, null, null, null, body);
     }
 
     /**
@@ -6208,7 +6420,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void var(String attr, String value, Generator body) {
-        tag("var", attr, value, null, null, body);
+        tag(_var, attr, value, null, null, body);
     }
 
     /**
@@ -6220,34 +6432,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void var(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("var", attr1, value1, attr2, value2, body);
+        tag(_var, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _video = "video".toCharArray();
+
     /**
-     * Create en empty a @code{video} tag
+     * Create an empty a @code{video} tag
      */
     public void video() {
-        tag("video");
+        tag(_video, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{video} tag
+     * Create an empty a @code{video} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void video(String attr, String value) {
-        tag("video", attr, value);
+        tag(_video, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{video} tag
+     * Create an empty a @code{video} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void video(String attr1, String value1, String attr2, String value2) {
-        tag("video", attr1, value1, attr2, value2);
+        tag(_video, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -6255,7 +6469,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void video(Generator body) {
-        tag("video", null, null, null, null, body);
+        tag(_video, null, null, null, null, body);
     }
 
     /**
@@ -6265,7 +6479,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void video(String attr, String value, Generator body) {
-        tag("video", attr, value, null, null, body);
+        tag(_video, attr, value, null, null, body);
     }
 
     /**
@@ -6277,34 +6491,36 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void video(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("video", attr1, value1, attr2, value2, body);
+        tag(_video, attr1, value1, attr2, value2, body);
     }
 
+    private static char[] _wbr = "wbr".toCharArray();
+
     /**
-     * Create en empty a @code{wbr} tag
+     * Create an empty a @code{wbr} tag
      */
     public void wbr() {
-        tag("wbr");
+        tag(_wbr, null, null, null, null, null);
     }
 
     /**
-     * Create en empty a @code{wbr} tag
+     * Create an empty a @code{wbr} tag
      * @param attr name of the attribute.
      * @param value value of the attribute.
      */
     public void wbr(String attr, String value) {
-        tag("wbr", attr, value);
+        tag(_wbr, attr, value, null, null, null);
     }
 
     /**
-     * Create en empty a @code{wbr} tag
+     * Create an empty a @code{wbr} tag
      * @param attr1 name of the attribute.
      * @param value1 value of the attribute.
      * @param attr2 name of the attribute.
      * @param value2 value of the attribute.
      */
     public void wbr(String attr1, String value1, String attr2, String value2) {
-        tag("wbr", attr1, value1, attr2, value2);
+        tag(_wbr, attr1, value1, attr2, value2, null);
     }
 
     /**
@@ -6312,7 +6528,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void wbr(Generator body) {
-        tag("wbr", null, null, null, null, body);
+        tag(_wbr, null, null, null, null, body);
     }
 
     /**
@@ -6322,7 +6538,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void wbr(String attr, String value, Generator body) {
-        tag("wbr", attr, value, null, null, body);
+        tag(_wbr, attr, value, null, null, body);
     }
 
     /**
@@ -6334,7 +6550,7 @@ public class HtmlTags extends Tags {
      * @param body the body generator for the tag.
      */
     public void wbr(String attr1, String value1, String attr2, String value2, Generator body) {
-        tag("wbr", attr1, value1, attr2, value2, body);
+        tag(_wbr, attr1, value1, attr2, value2, body);
     }
 
 }

@@ -27,6 +27,11 @@ public class StringBuilderOutput implements TagsOutput {
     }
 
     @Override
+    public void write(char[] c) {
+        sb.append(c);
+    }
+
+    @Override
     public void write(char c) {
         sb.append(c);
     }

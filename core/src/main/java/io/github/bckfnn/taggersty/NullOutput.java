@@ -16,32 +16,28 @@
 package io.github.bckfnn.taggersty;
 
 /**
- * Output interface for taggersty.
+ * An <code>TagsOutput</code> implementation that append the output to a StringBuffer.
  */
-public interface TagsOutput {
+public class NullOutput implements TagsOutput {
 
-    /**
-     * Emit a String.
-     * @param s the value
-     */
-    public void write(String s);
+    @Override
+    public void write(String s) {
+    }
 
-    /**
-     * Emit a char array.
-     * @param s the value
-     */
-    public void write(char[] s);
+    @Override
+    public void write(char[] s) {
+    }
 
+    @Override
+    public void write(char c) {
+    }
 
-    /**
-     * Emit a single character.
-     * @param c the value
-     */
-    public void write(char c);
+    @Override
+    public String toString() {
+        return "";
+    }
 
-    /**
-     * Close the output.
-     */
-    public void close();
-
+    @Override
+    public void close() {
+    }
 }
