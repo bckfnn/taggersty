@@ -57,7 +57,12 @@ public class CharArrayOutput implements TagsOutput {
 
     @Override
     public String toString() {
-        return new String(buffer, 0, pos);
+        StringBuilder sb = new StringBuilder();
+        for (char[] b : buffers) {
+            sb.append(b);
+        }
+        sb.append(buffer, 0, pos);
+        return sb.toString();
     }
 
     @Override
