@@ -239,11 +239,54 @@ public class Tags {
      */
     public void textUnescaped(String content) {
         closeTag();
+        state = State.CONTENT;
         autoIndent();
         if (content != null) {
             append(content);
         }
         autoNewline();
+    }
+
+    /**
+     * Emit an CDATA tag.
+     * @param body body of the tag.
+     */
+    public void cdata(Generator body) {
+        closeTag();
+        state = State.CONTENT;
+        suppressWhiteSpace = true;
+        append("<![CDATA[");
+        if (body!= null) {
+            try {
+                body.gen();
+            } catch (Exception exc) {
+                throw new RuntimeException(exc);
+            }
+        }
+        append("]]>");
+        suppressWhiteSpace = false;
+        state = State.CONTENT;
+    }
+
+    /**
+     * Emit an javascript commented CDATA tag.
+     * @param body body of the tag.
+     */
+    public void cdataComment(Generator body) {
+        closeTag();
+        state = State.CONTENT;
+        suppressWhiteSpace = true;
+        append("/*<![CDATA[*/");
+        if (body!= null) {
+            try {
+                body.gen();
+            } catch (Exception exc) {
+                throw new RuntimeException(exc);
+            }
+        }
+        append("/*]]>*/");
+        suppressWhiteSpace = false;
+        state = State.CONTENT;
     }
 
     /**
