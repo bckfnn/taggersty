@@ -16,11 +16,11 @@
 package io.github.bckfnn.taggersty;
 
 /**
- * Implementation class of the tag emiiter system.
+ * Implementation class of the tag writer system.
  */
 public class Tags {
-    /** marker value for signalling that a tag should suppress white space. */
-    
+    /** marker value for signaling that a tag should suppress white space. */
+
     public static final String _suppress = "suppress";
 
     @FunctionalInterface
@@ -32,30 +32,30 @@ public class Tags {
     enum State {
         /** assigned while writing attributes. */
         ATTR,
-        /** assigned after the starttag '>' before emitting any content. */
+        /** assigned after the start tag '>' before writing any content. */
         EMPTY,
-        /** assigned after emitting some content in a tag. */
+        /** assigned after writing some content in a tag. */
         CONTENT,
     }
 
-    /** assigned while supprissing white space for a tag. */
+    /** assigned while suppressing white space for a tag. */
     private boolean suppressWhiteSpace = false;
-    
+
     /** current state **/
     private State state = State.EMPTY;
-    
+
     /** the output */
     private  TagsOutput output;
-    
+
     /** the filter class.*/
     private  Filter filter = new StandardFilter();
 
     /** Current indent */
     private int indent = 0;
-    
-    /*** emit newline bewteen tags */
+
+    /*** emit newline between tags */
     private boolean autoNewline = true;
-    
+
     /*** emit indenting spaces before tags */
     private boolean autoIndent = true;
 
@@ -107,7 +107,7 @@ public class Tags {
     public void tag(String name, Generator body) {
         tag(name, null, null, null, null, body);
     }
-    
+
     /**
      * Emit an empty <code>name</code> tag without attributes and without a body.
      * @param name name the of the tag
@@ -115,7 +115,7 @@ public class Tags {
     public void tag(String name) {
         tag(name, null, null, null, null, null);
     }
-    
+
     /**
      * Emit an empty <code>name</code> tag with a single attribute and no body.
      * @param name name the of the tag
@@ -151,7 +151,7 @@ public class Tags {
         closeTag();
 
         autoIndent();
-        append("<");
+        append('<');
         append(name);
         if (attr1 != null) {
             if (attr1 == Tags._suppress) {
@@ -195,7 +195,7 @@ public class Tags {
     };
 
     /**
-     * Emit an proberly encoded attribute
+     * Emit an properly encoded attribute
      * @param name name of the attribute
      * @param value value of the attribute
      */
@@ -219,8 +219,8 @@ public class Tags {
     }
 
     /**
-     * Emit proberly encoded text content.
-     * @param content value of the content, or null of the content can be empty. 
+     * Emit properly encoded text content.
+     * @param content value of the content, or null of the content can be empty.
      */
     public void text(String content) {
         closeTag();
@@ -233,9 +233,9 @@ public class Tags {
     }
 
     /**
-     * Emit raw unencoded text content.
+     * Emit raw un-encoded text content.
      * @param content value of the content, or null of the content can be empty.
-     * It is very important that the content is safe to emit and that it does not contant user input that can cause XSS attacks. 
+     * It is very important that the content is safe to emit and that it does not contant user input that can cause XSS attacks.
      */
     public void textUnescaped(String content) {
         closeTag();
@@ -264,8 +264,8 @@ public class Tags {
         output.close();
     }
 
-    /** 
-     * Append a single character to the out. 
+    /**
+     * Append a single character to the out.
      * @param ch the character.
      */
     private void append(char ch) {
@@ -273,7 +273,7 @@ public class Tags {
     }
 
     /**
-     * Append a string to the output. 
+     * Append a string to the output.
      * @param str the string.
      */
     private void append(String str) {
@@ -312,8 +312,8 @@ public class Tags {
     }
 
     /**
-     * Generate java source code for the specified tags that can be added to a class and used as dsl for tag generation. 
-     * @param ns thr namespace to use for the tags.
+     * Generate java source code for the specified tags that can be added to a class and used as dsl for tag generation.
+     * @param ns the name space to use for the tags.
      * @param tags the array of tags to generate java source code for.
      */
     public static void generate(String ns, String[] tags) {
