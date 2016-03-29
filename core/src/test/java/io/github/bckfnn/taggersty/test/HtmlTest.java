@@ -21,6 +21,7 @@ import org.junit.Test;
 import io.github.bckfnn.taggersty.CommonsLangFilter;
 import io.github.bckfnn.taggersty.CoverityEscapersFilter;
 import io.github.bckfnn.taggersty.HtmlTags;
+import io.github.bckfnn.taggersty.StandardFilter;
 import io.github.bckfnn.taggersty.StringBuilderOutput;
 import io.github.bckfnn.taggersty.Tags;
 
@@ -32,6 +33,7 @@ public class HtmlTest {
         StringBuilderOutput out = new StringBuilderOutput();
 
         HtmlTags.run(out, g -> {
+            g.filter(new StandardFilter());
             g.html(() -> {
                 g.head();
                 g.body(() -> {
@@ -73,6 +75,7 @@ public class HtmlTest {
                 });
             }
         };
+        g.filter(new StandardFilter());
         g.render(out);
         Assert.assertTrue(out.toString().length()  > 0);
     }

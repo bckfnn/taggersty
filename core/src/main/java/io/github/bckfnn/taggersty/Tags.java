@@ -48,7 +48,7 @@ public class Tags {
     private  TagsOutput output;
 
     /** the filter class.*/
-    private  Filter filter = new StandardFilter();
+    private  Filter filter; // = new StandardFilter();
 
     /** Current indent */
     private int indent = 0;
@@ -317,17 +317,17 @@ public class Tags {
      */
     private void autoNewline() {
         if (autoNewline && !suppressWhiteSpace) {
-            output.write(System.lineSeparator());
+            output.write('\n');
         }
     }
 
     /**
-     * Indent the nes tag if autoIndent and autoNewline is enabled.
+     * Indent the next tag if autoIndent and autoNewline is enabled.
      */
     private void autoIndent() {
         if (autoIndent && autoNewline && !suppressWhiteSpace) {
             for (int i = 0; i < indent; i++) {
-                output.write("    ");
+                output.write('\t');
             }
         }
     }
@@ -364,7 +364,7 @@ public class Tags {
                 first = false;
             }
 
-            System.out.println("    private static char[] _" + n + " = \"" + ns + n + "\".toCharArray();");
+            System.out.println("    private static final char[] _" + n + " = \"" + ns + n + "\".toCharArray();");
             System.out.println();
             System.out.println("    /**");
             System.out.println("     * Create an empty a @code{" + n + "} tag");
