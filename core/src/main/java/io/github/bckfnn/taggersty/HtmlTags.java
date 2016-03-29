@@ -25,6 +25,12 @@ public class HtmlTags extends Tags {
     public static final String _class = "class";
     public final String $class = _class;
 
+    public HtmlTags(boolean development) {
+        super(null);
+        setAutoIndent(development);
+        setAutoNewline(development);
+    }
+
     public HtmlTags() {
         super(null);
     }
@@ -181,7 +187,7 @@ public class HtmlTags extends Tags {
         });
     }
 
-    private static char[] _a = "a".toCharArray();
+    private static final char[] _a = "a".toCharArray();
 
     /**
      * Create an empty a @code{a} tag
@@ -240,7 +246,7 @@ public class HtmlTags extends Tags {
         tag(_a, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _abbr = "abbr".toCharArray();
+    private static final char[] _abbr = "abbr".toCharArray();
 
     /**
      * Create an empty a @code{abbr} tag
@@ -299,7 +305,7 @@ public class HtmlTags extends Tags {
         tag(_abbr, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _address = "address".toCharArray();
+    private static final char[] _address = "address".toCharArray();
 
     /**
      * Create an empty a @code{address} tag
@@ -358,7 +364,7 @@ public class HtmlTags extends Tags {
         tag(_address, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _area = "area".toCharArray();
+    private static final char[] _area = "area".toCharArray();
 
     /**
      * Create an empty a @code{area} tag
@@ -417,7 +423,7 @@ public class HtmlTags extends Tags {
         tag(_area, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _article = "article".toCharArray();
+    private static final char[] _article = "article".toCharArray();
 
     /**
      * Create an empty a @code{article} tag
@@ -476,7 +482,7 @@ public class HtmlTags extends Tags {
         tag(_article, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _aside = "aside".toCharArray();
+    private static final char[] _aside = "aside".toCharArray();
 
     /**
      * Create an empty a @code{aside} tag
@@ -535,7 +541,7 @@ public class HtmlTags extends Tags {
         tag(_aside, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _audio = "audio".toCharArray();
+    private static final char[] _audio = "audio".toCharArray();
 
     /**
      * Create an empty a @code{audio} tag
@@ -594,7 +600,7 @@ public class HtmlTags extends Tags {
         tag(_audio, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _b = "b".toCharArray();
+    private static final char[] _b = "b".toCharArray();
 
     /**
      * Create an empty a @code{b} tag
@@ -653,7 +659,7 @@ public class HtmlTags extends Tags {
         tag(_b, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _base = "base".toCharArray();
+    private static final char[] _base = "base".toCharArray();
 
     /**
      * Create an empty a @code{base} tag
@@ -712,7 +718,7 @@ public class HtmlTags extends Tags {
         tag(_base, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _bdi = "bdi".toCharArray();
+    private static final char[] _bdi = "bdi".toCharArray();
 
     /**
      * Create an empty a @code{bdi} tag
@@ -771,7 +777,7 @@ public class HtmlTags extends Tags {
         tag(_bdi, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _bdo = "bdo".toCharArray();
+    private static final char[] _bdo = "bdo".toCharArray();
 
     /**
      * Create an empty a @code{bdo} tag
@@ -830,7 +836,7 @@ public class HtmlTags extends Tags {
         tag(_bdo, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _blockquote = "blockquote".toCharArray();
+    private static final char[] _blockquote = "blockquote".toCharArray();
 
     /**
      * Create an empty a @code{blockquote} tag
@@ -889,7 +895,7 @@ public class HtmlTags extends Tags {
         tag(_blockquote, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _body = "body".toCharArray();
+    private static final char[] _body = "body".toCharArray();
 
     /**
      * Create an empty a @code{body} tag
@@ -948,7 +954,7 @@ public class HtmlTags extends Tags {
         tag(_body, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _br = "br".toCharArray();
+    private static final char[] _br = "br".toCharArray();
 
     /**
      * Create an empty a @code{br} tag
@@ -1007,7 +1013,7 @@ public class HtmlTags extends Tags {
         tag(_br, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _button = "button".toCharArray();
+    private static final char[] _button = "button".toCharArray();
 
     /**
      * Create an empty a @code{button} tag
@@ -1066,7 +1072,7 @@ public class HtmlTags extends Tags {
         tag(_button, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _canvas = "canvas".toCharArray();
+    private static final char[] _canvas = "canvas".toCharArray();
 
     /**
      * Create an empty a @code{canvas} tag
@@ -1125,7 +1131,7 @@ public class HtmlTags extends Tags {
         tag(_canvas, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _caption = "caption".toCharArray();
+    private static final char[] _caption = "caption".toCharArray();
 
     /**
      * Create an empty a @code{caption} tag
@@ -1184,7 +1190,7 @@ public class HtmlTags extends Tags {
         tag(_caption, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _cite = "cite".toCharArray();
+    private static final char[] _cite = "cite".toCharArray();
 
     /**
      * Create an empty a @code{cite} tag
@@ -1243,7 +1249,7 @@ public class HtmlTags extends Tags {
         tag(_cite, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _code = "code".toCharArray();
+    private static final char[] _code = "code".toCharArray();
 
     /**
      * Create an empty a @code{code} tag
@@ -1302,7 +1308,7 @@ public class HtmlTags extends Tags {
         tag(_code, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _col = "col".toCharArray();
+    private static final char[] _col = "col".toCharArray();
 
     /**
      * Create an empty a @code{col} tag
@@ -1361,7 +1367,7 @@ public class HtmlTags extends Tags {
         tag(_col, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _colgroup = "colgroup".toCharArray();
+    private static final char[] _colgroup = "colgroup".toCharArray();
 
     /**
      * Create an empty a @code{colgroup} tag
@@ -1420,7 +1426,7 @@ public class HtmlTags extends Tags {
         tag(_colgroup, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _command = "command".toCharArray();
+    private static final char[] _command = "command".toCharArray();
 
     /**
      * Create an empty a @code{command} tag
@@ -1479,7 +1485,7 @@ public class HtmlTags extends Tags {
         tag(_command, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _datalist = "datalist".toCharArray();
+    private static final char[] _datalist = "datalist".toCharArray();
 
     /**
      * Create an empty a @code{datalist} tag
@@ -1538,7 +1544,7 @@ public class HtmlTags extends Tags {
         tag(_datalist, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _dd = "dd".toCharArray();
+    private static final char[] _dd = "dd".toCharArray();
 
     /**
      * Create an empty a @code{dd} tag
@@ -1597,7 +1603,7 @@ public class HtmlTags extends Tags {
         tag(_dd, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _del = "del".toCharArray();
+    private static final char[] _del = "del".toCharArray();
 
     /**
      * Create an empty a @code{del} tag
@@ -1656,7 +1662,7 @@ public class HtmlTags extends Tags {
         tag(_del, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _details = "details".toCharArray();
+    private static final char[] _details = "details".toCharArray();
 
     /**
      * Create an empty a @code{details} tag
@@ -1715,7 +1721,7 @@ public class HtmlTags extends Tags {
         tag(_details, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _dfn = "dfn".toCharArray();
+    private static final char[] _dfn = "dfn".toCharArray();
 
     /**
      * Create an empty a @code{dfn} tag
@@ -1774,7 +1780,7 @@ public class HtmlTags extends Tags {
         tag(_dfn, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _div = "div".toCharArray();
+    private static final char[] _div = "div".toCharArray();
 
     /**
      * Create an empty a @code{div} tag
@@ -1833,7 +1839,7 @@ public class HtmlTags extends Tags {
         tag(_div, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _dl = "dl".toCharArray();
+    private static final char[] _dl = "dl".toCharArray();
 
     /**
      * Create an empty a @code{dl} tag
@@ -1892,7 +1898,7 @@ public class HtmlTags extends Tags {
         tag(_dl, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _dt = "dt".toCharArray();
+    private static final char[] _dt = "dt".toCharArray();
 
     /**
      * Create an empty a @code{dt} tag
@@ -1951,7 +1957,7 @@ public class HtmlTags extends Tags {
         tag(_dt, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _em = "em".toCharArray();
+    private static final char[] _em = "em".toCharArray();
 
     /**
      * Create an empty a @code{em} tag
@@ -2010,7 +2016,7 @@ public class HtmlTags extends Tags {
         tag(_em, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _embed = "embed".toCharArray();
+    private static final char[] _embed = "embed".toCharArray();
 
     /**
      * Create an empty a @code{embed} tag
@@ -2069,7 +2075,7 @@ public class HtmlTags extends Tags {
         tag(_embed, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _fieldset = "fieldset".toCharArray();
+    private static final char[] _fieldset = "fieldset".toCharArray();
 
     /**
      * Create an empty a @code{fieldset} tag
@@ -2128,7 +2134,7 @@ public class HtmlTags extends Tags {
         tag(_fieldset, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _figcaption = "figcaption".toCharArray();
+    private static final char[] _figcaption = "figcaption".toCharArray();
 
     /**
      * Create an empty a @code{figcaption} tag
@@ -2187,7 +2193,7 @@ public class HtmlTags extends Tags {
         tag(_figcaption, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _figure = "figure".toCharArray();
+    private static final char[] _figure = "figure".toCharArray();
 
     /**
      * Create an empty a @code{figure} tag
@@ -2246,7 +2252,7 @@ public class HtmlTags extends Tags {
         tag(_figure, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _footer = "footer".toCharArray();
+    private static final char[] _footer = "footer".toCharArray();
 
     /**
      * Create an empty a @code{footer} tag
@@ -2305,7 +2311,7 @@ public class HtmlTags extends Tags {
         tag(_footer, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _form = "form".toCharArray();
+    private static final char[] _form = "form".toCharArray();
 
     /**
      * Create an empty a @code{form} tag
@@ -2364,7 +2370,7 @@ public class HtmlTags extends Tags {
         tag(_form, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _h1 = "h1".toCharArray();
+    private static final char[] _h1 = "h1".toCharArray();
 
     /**
      * Create an empty a @code{h1} tag
@@ -2423,7 +2429,7 @@ public class HtmlTags extends Tags {
         tag(_h1, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _h2 = "h2".toCharArray();
+    private static final char[] _h2 = "h2".toCharArray();
 
     /**
      * Create an empty a @code{h2} tag
@@ -2482,7 +2488,7 @@ public class HtmlTags extends Tags {
         tag(_h2, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _h3 = "h3".toCharArray();
+    private static final char[] _h3 = "h3".toCharArray();
 
     /**
      * Create an empty a @code{h3} tag
@@ -2541,7 +2547,7 @@ public class HtmlTags extends Tags {
         tag(_h3, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _h4 = "h4".toCharArray();
+    private static final char[] _h4 = "h4".toCharArray();
 
     /**
      * Create an empty a @code{h4} tag
@@ -2600,7 +2606,7 @@ public class HtmlTags extends Tags {
         tag(_h4, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _h5 = "h5".toCharArray();
+    private static final char[] _h5 = "h5".toCharArray();
 
     /**
      * Create an empty a @code{h5} tag
@@ -2659,7 +2665,7 @@ public class HtmlTags extends Tags {
         tag(_h5, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _h6 = "h6".toCharArray();
+    private static final char[] _h6 = "h6".toCharArray();
 
     /**
      * Create an empty a @code{h6} tag
@@ -2718,7 +2724,7 @@ public class HtmlTags extends Tags {
         tag(_h6, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _head = "head".toCharArray();
+    private static final char[] _head = "head".toCharArray();
 
     /**
      * Create an empty a @code{head} tag
@@ -2777,7 +2783,7 @@ public class HtmlTags extends Tags {
         tag(_head, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _header = "header".toCharArray();
+    private static final char[] _header = "header".toCharArray();
 
     /**
      * Create an empty a @code{header} tag
@@ -2836,7 +2842,7 @@ public class HtmlTags extends Tags {
         tag(_header, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _hgroup = "hgroup".toCharArray();
+    private static final char[] _hgroup = "hgroup".toCharArray();
 
     /**
      * Create an empty a @code{hgroup} tag
@@ -2895,7 +2901,7 @@ public class HtmlTags extends Tags {
         tag(_hgroup, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _hr = "hr".toCharArray();
+    private static final char[] _hr = "hr".toCharArray();
 
     /**
      * Create an empty a @code{hr} tag
@@ -2954,7 +2960,7 @@ public class HtmlTags extends Tags {
         tag(_hr, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _html = "html".toCharArray();
+    private static final char[] _html = "html".toCharArray();
 
     /**
      * Create an empty a @code{html} tag
@@ -3013,7 +3019,7 @@ public class HtmlTags extends Tags {
         tag(_html, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _i = "i".toCharArray();
+    private static final char[] _i = "i".toCharArray();
 
     /**
      * Create an empty a @code{i} tag
@@ -3072,7 +3078,7 @@ public class HtmlTags extends Tags {
         tag(_i, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _iframe = "iframe".toCharArray();
+    private static final char[] _iframe = "iframe".toCharArray();
 
     /**
      * Create an empty a @code{iframe} tag
@@ -3131,7 +3137,7 @@ public class HtmlTags extends Tags {
         tag(_iframe, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _img = "img".toCharArray();
+    private static final char[] _img = "img".toCharArray();
 
     /**
      * Create an empty a @code{img} tag
@@ -3190,7 +3196,7 @@ public class HtmlTags extends Tags {
         tag(_img, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _input = "input".toCharArray();
+    private static final char[] _input = "input".toCharArray();
 
     /**
      * Create an empty a @code{input} tag
@@ -3249,7 +3255,7 @@ public class HtmlTags extends Tags {
         tag(_input, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _ins = "ins".toCharArray();
+    private static final char[] _ins = "ins".toCharArray();
 
     /**
      * Create an empty a @code{ins} tag
@@ -3308,7 +3314,7 @@ public class HtmlTags extends Tags {
         tag(_ins, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _kbd = "kbd".toCharArray();
+    private static final char[] _kbd = "kbd".toCharArray();
 
     /**
      * Create an empty a @code{kbd} tag
@@ -3367,7 +3373,7 @@ public class HtmlTags extends Tags {
         tag(_kbd, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _keygen = "keygen".toCharArray();
+    private static final char[] _keygen = "keygen".toCharArray();
 
     /**
      * Create an empty a @code{keygen} tag
@@ -3426,7 +3432,7 @@ public class HtmlTags extends Tags {
         tag(_keygen, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _label = "label".toCharArray();
+    private static final char[] _label = "label".toCharArray();
 
     /**
      * Create an empty a @code{label} tag
@@ -3485,7 +3491,7 @@ public class HtmlTags extends Tags {
         tag(_label, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _legend = "legend".toCharArray();
+    private static final char[] _legend = "legend".toCharArray();
 
     /**
      * Create an empty a @code{legend} tag
@@ -3544,7 +3550,7 @@ public class HtmlTags extends Tags {
         tag(_legend, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _li = "li".toCharArray();
+    private static final char[] _li = "li".toCharArray();
 
     /**
      * Create an empty a @code{li} tag
@@ -3603,7 +3609,7 @@ public class HtmlTags extends Tags {
         tag(_li, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _link = "link".toCharArray();
+    private static final char[] _link = "link".toCharArray();
 
     /**
      * Create an empty a @code{link} tag
@@ -3662,7 +3668,7 @@ public class HtmlTags extends Tags {
         tag(_link, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _map = "map".toCharArray();
+    private static final char[] _map = "map".toCharArray();
 
     /**
      * Create an empty a @code{map} tag
@@ -3721,7 +3727,7 @@ public class HtmlTags extends Tags {
         tag(_map, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _mark = "mark".toCharArray();
+    private static final char[] _mark = "mark".toCharArray();
 
     /**
      * Create an empty a @code{mark} tag
@@ -3780,7 +3786,7 @@ public class HtmlTags extends Tags {
         tag(_mark, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _menu = "menu".toCharArray();
+    private static final char[] _menu = "menu".toCharArray();
 
     /**
      * Create an empty a @code{menu} tag
@@ -3839,7 +3845,7 @@ public class HtmlTags extends Tags {
         tag(_menu, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _meta = "meta".toCharArray();
+    private static final char[] _meta = "meta".toCharArray();
 
     /**
      * Create an empty a @code{meta} tag
@@ -3898,7 +3904,7 @@ public class HtmlTags extends Tags {
         tag(_meta, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _meter = "meter".toCharArray();
+    private static final char[] _meter = "meter".toCharArray();
 
     /**
      * Create an empty a @code{meter} tag
@@ -3957,7 +3963,7 @@ public class HtmlTags extends Tags {
         tag(_meter, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _nav = "nav".toCharArray();
+    private static final char[] _nav = "nav".toCharArray();
 
     /**
      * Create an empty a @code{nav} tag
@@ -4016,7 +4022,7 @@ public class HtmlTags extends Tags {
         tag(_nav, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _noscript = "noscript".toCharArray();
+    private static final char[] _noscript = "noscript".toCharArray();
 
     /**
      * Create an empty a @code{noscript} tag
@@ -4075,7 +4081,7 @@ public class HtmlTags extends Tags {
         tag(_noscript, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _object = "object".toCharArray();
+    private static final char[] _object = "object".toCharArray();
 
     /**
      * Create an empty a @code{object} tag
@@ -4134,7 +4140,7 @@ public class HtmlTags extends Tags {
         tag(_object, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _ol = "ol".toCharArray();
+    private static final char[] _ol = "ol".toCharArray();
 
     /**
      * Create an empty a @code{ol} tag
@@ -4193,7 +4199,7 @@ public class HtmlTags extends Tags {
         tag(_ol, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _optgroup = "optgroup".toCharArray();
+    private static final char[] _optgroup = "optgroup".toCharArray();
 
     /**
      * Create an empty a @code{optgroup} tag
@@ -4252,7 +4258,7 @@ public class HtmlTags extends Tags {
         tag(_optgroup, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _option = "option".toCharArray();
+    private static final char[] _option = "option".toCharArray();
 
     /**
      * Create an empty a @code{option} tag
@@ -4311,7 +4317,7 @@ public class HtmlTags extends Tags {
         tag(_option, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _output = "output".toCharArray();
+    private static final char[] _output = "output".toCharArray();
 
     /**
      * Create an empty a @code{output} tag
@@ -4370,7 +4376,7 @@ public class HtmlTags extends Tags {
         tag(_output, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _p = "p".toCharArray();
+    private static final char[] _p = "p".toCharArray();
 
     /**
      * Create an empty a @code{p} tag
@@ -4429,7 +4435,7 @@ public class HtmlTags extends Tags {
         tag(_p, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _param = "param".toCharArray();
+    private static final char[] _param = "param".toCharArray();
 
     /**
      * Create an empty a @code{param} tag
@@ -4488,7 +4494,7 @@ public class HtmlTags extends Tags {
         tag(_param, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _pre = "pre".toCharArray();
+    private static final char[] _pre = "pre".toCharArray();
 
     /**
      * Create an empty a @code{pre} tag
@@ -4547,7 +4553,7 @@ public class HtmlTags extends Tags {
         tag(_pre, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _progress = "progress".toCharArray();
+    private static final char[] _progress = "progress".toCharArray();
 
     /**
      * Create an empty a @code{progress} tag
@@ -4606,7 +4612,7 @@ public class HtmlTags extends Tags {
         tag(_progress, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _q = "q".toCharArray();
+    private static final char[] _q = "q".toCharArray();
 
     /**
      * Create an empty a @code{q} tag
@@ -4665,7 +4671,7 @@ public class HtmlTags extends Tags {
         tag(_q, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _rp = "rp".toCharArray();
+    private static final char[] _rp = "rp".toCharArray();
 
     /**
      * Create an empty a @code{rp} tag
@@ -4724,7 +4730,7 @@ public class HtmlTags extends Tags {
         tag(_rp, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _rt = "rt".toCharArray();
+    private static final char[] _rt = "rt".toCharArray();
 
     /**
      * Create an empty a @code{rt} tag
@@ -4783,7 +4789,7 @@ public class HtmlTags extends Tags {
         tag(_rt, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _ruby = "ruby".toCharArray();
+    private static final char[] _ruby = "ruby".toCharArray();
 
     /**
      * Create an empty a @code{ruby} tag
@@ -4842,7 +4848,7 @@ public class HtmlTags extends Tags {
         tag(_ruby, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _s = "s".toCharArray();
+    private static final char[] _s = "s".toCharArray();
 
     /**
      * Create an empty a @code{s} tag
@@ -4901,7 +4907,7 @@ public class HtmlTags extends Tags {
         tag(_s, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _samp = "samp".toCharArray();
+    private static final char[] _samp = "samp".toCharArray();
 
     /**
      * Create an empty a @code{samp} tag
@@ -4960,7 +4966,7 @@ public class HtmlTags extends Tags {
         tag(_samp, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _script = "script".toCharArray();
+    private static final char[] _script = "script".toCharArray();
 
     /**
      * Create an empty a @code{script} tag
@@ -5019,7 +5025,7 @@ public class HtmlTags extends Tags {
         tag(_script, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _section = "section".toCharArray();
+    private static final char[] _section = "section".toCharArray();
 
     /**
      * Create an empty a @code{section} tag
@@ -5078,7 +5084,7 @@ public class HtmlTags extends Tags {
         tag(_section, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _select = "select".toCharArray();
+    private static final char[] _select = "select".toCharArray();
 
     /**
      * Create an empty a @code{select} tag
@@ -5137,7 +5143,7 @@ public class HtmlTags extends Tags {
         tag(_select, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _small = "small".toCharArray();
+    private static final char[] _small = "small".toCharArray();
 
     /**
      * Create an empty a @code{small} tag
@@ -5196,7 +5202,7 @@ public class HtmlTags extends Tags {
         tag(_small, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _source = "source".toCharArray();
+    private static final char[] _source = "source".toCharArray();
 
     /**
      * Create an empty a @code{source} tag
@@ -5255,7 +5261,7 @@ public class HtmlTags extends Tags {
         tag(_source, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _span = "span".toCharArray();
+    private static final char[] _span = "span".toCharArray();
 
     /**
      * Create an empty a @code{span} tag
@@ -5314,7 +5320,7 @@ public class HtmlTags extends Tags {
         tag(_span, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _strong = "strong".toCharArray();
+    private static final char[] _strong = "strong".toCharArray();
 
     /**
      * Create an empty a @code{strong} tag
@@ -5373,7 +5379,7 @@ public class HtmlTags extends Tags {
         tag(_strong, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _style = "style".toCharArray();
+    private static final char[] _style = "style".toCharArray();
 
     /**
      * Create an empty a @code{style} tag
@@ -5432,7 +5438,7 @@ public class HtmlTags extends Tags {
         tag(_style, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _sub = "sub".toCharArray();
+    private static final char[] _sub = "sub".toCharArray();
 
     /**
      * Create an empty a @code{sub} tag
@@ -5491,7 +5497,7 @@ public class HtmlTags extends Tags {
         tag(_sub, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _summary = "summary".toCharArray();
+    private static final char[] _summary = "summary".toCharArray();
 
     /**
      * Create an empty a @code{summary} tag
@@ -5550,7 +5556,7 @@ public class HtmlTags extends Tags {
         tag(_summary, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _sup = "sup".toCharArray();
+    private static final char[] _sup = "sup".toCharArray();
 
     /**
      * Create an empty a @code{sup} tag
@@ -5609,7 +5615,7 @@ public class HtmlTags extends Tags {
         tag(_sup, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _table = "table".toCharArray();
+    private static final char[] _table = "table".toCharArray();
 
     /**
      * Create an empty a @code{table} tag
@@ -5668,7 +5674,7 @@ public class HtmlTags extends Tags {
         tag(_table, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _tbody = "tbody".toCharArray();
+    private static final char[] _tbody = "tbody".toCharArray();
 
     /**
      * Create an empty a @code{tbody} tag
@@ -5727,7 +5733,7 @@ public class HtmlTags extends Tags {
         tag(_tbody, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _td = "td".toCharArray();
+    private static final char[] _td = "td".toCharArray();
 
     /**
      * Create an empty a @code{td} tag
@@ -5786,7 +5792,7 @@ public class HtmlTags extends Tags {
         tag(_td, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _textarea = "textarea".toCharArray();
+    private static final char[] _textarea = "textarea".toCharArray();
 
     /**
      * Create an empty a @code{textarea} tag
@@ -5845,7 +5851,7 @@ public class HtmlTags extends Tags {
         tag(_textarea, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _tfoot = "tfoot".toCharArray();
+    private static final char[] _tfoot = "tfoot".toCharArray();
 
     /**
      * Create an empty a @code{tfoot} tag
@@ -5904,7 +5910,7 @@ public class HtmlTags extends Tags {
         tag(_tfoot, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _th = "th".toCharArray();
+    private static final char[] _th = "th".toCharArray();
 
     /**
      * Create an empty a @code{th} tag
@@ -5963,7 +5969,7 @@ public class HtmlTags extends Tags {
         tag(_th, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _thead = "thead".toCharArray();
+    private static final char[] _thead = "thead".toCharArray();
 
     /**
      * Create an empty a @code{thead} tag
@@ -6022,7 +6028,7 @@ public class HtmlTags extends Tags {
         tag(_thead, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _time = "time".toCharArray();
+    private static final char[] _time = "time".toCharArray();
 
     /**
      * Create an empty a @code{time} tag
@@ -6081,7 +6087,7 @@ public class HtmlTags extends Tags {
         tag(_time, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _title = "title".toCharArray();
+    private static final char[] _title = "title".toCharArray();
 
     /**
      * Create an empty a @code{title} tag
@@ -6140,7 +6146,7 @@ public class HtmlTags extends Tags {
         tag(_title, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _tr = "tr".toCharArray();
+    private static final char[] _tr = "tr".toCharArray();
 
     /**
      * Create an empty a @code{tr} tag
@@ -6199,7 +6205,7 @@ public class HtmlTags extends Tags {
         tag(_tr, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _track = "track".toCharArray();
+    private static final char[] _track = "track".toCharArray();
 
     /**
      * Create an empty a @code{track} tag
@@ -6258,7 +6264,7 @@ public class HtmlTags extends Tags {
         tag(_track, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _u = "u".toCharArray();
+    private static final char[] _u = "u".toCharArray();
 
     /**
      * Create an empty a @code{u} tag
@@ -6317,7 +6323,7 @@ public class HtmlTags extends Tags {
         tag(_u, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _ul = "ul".toCharArray();
+    private static final char[] _ul = "ul".toCharArray();
 
     /**
      * Create an empty a @code{ul} tag
@@ -6376,7 +6382,7 @@ public class HtmlTags extends Tags {
         tag(_ul, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _var = "var".toCharArray();
+    private static final char[] _var = "var".toCharArray();
 
     /**
      * Create an empty a @code{var} tag
@@ -6435,7 +6441,7 @@ public class HtmlTags extends Tags {
         tag(_var, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _video = "video".toCharArray();
+    private static final char[] _video = "video".toCharArray();
 
     /**
      * Create an empty a @code{video} tag
@@ -6494,7 +6500,7 @@ public class HtmlTags extends Tags {
         tag(_video, attr1, value1, attr2, value2, body);
     }
 
-    private static char[] _wbr = "wbr".toCharArray();
+    private static final char[] _wbr = "wbr".toCharArray();
 
     /**
      * Create an empty a @code{wbr} tag
