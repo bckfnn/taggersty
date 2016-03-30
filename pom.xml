@@ -104,10 +104,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                     <tagNameFormat>v@{project.version}</tagNameFormat>
             </configuration>
             <dependencies>
-                <dependency>
+               <dependency>
                     <groupId>org.apache.maven.scm</groupId>
-                    <artifactId>maven-scm-provider-gitexe</artifactId>
-                    <version>1.9</version>
+                    <artifactId>maven-scm-provider-jgit</artifactId>
+                    <version>1.9.4</version>
                 </dependency>
             </dependencies>                        
             </plugin>
