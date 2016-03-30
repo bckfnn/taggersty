@@ -30,6 +30,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <modules>
         <module>core</module>
         <module>vertx</module>
+        <module>performance</module>
     </modules>
 
     <build>
