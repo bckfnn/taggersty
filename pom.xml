@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--  Copyright 2016 Finn Bock -->
+<!-- Copyright 2016 Finn Bock -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.bckfnn</groupId>
     <artifactId>taggersty</artifactId>
     <packaging>pom</packaging>
-    
+
     <name>java tag generator template library</name>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -20,7 +20,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 
     <scm>
         <developerConnection>scm:git:https://github.com/bckfnn/taggersty.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>v0.0.1</tag>
     </scm>
 
     <dependencyManagement>
@@ -44,7 +44,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <build>
         <pluginManagement>
             <plugins>
-                
+
                 <!-- Other plugins required by the build -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -55,7 +55,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                         <target>1.8</target>
                     </configuration>
                 </plugin>
-     
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
@@ -89,7 +89,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                 </plugin>
             </plugins>
         </pluginManagement>
-        
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -97,19 +97,23 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                 <version>2.5.3</version>
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <!-- Keep changes in the local repo, push will be done afterwards -->
+                    <!-- Keep changes in the local repo, push will be done 
+                        afterwards -->
                     <pushChanges>false</pushChanges>
-                    <localCheckout>true</localCheckout>
+                    <!-- localCheckout>true</localCheckout -->
                     <!-- Use a better name for the tag -->
                     <tagNameFormat>v@{project.version}</tagNameFormat>
-            </configuration>
-            <dependencies>
-               <dependency>
-                    <groupId>org.apache.maven.scm</groupId>
-                    <artifactId>maven-scm-provider-jgit</artifactId>
-                    <version>1.9.4</version>
-                </dependency>
-            </dependencies>                        
+                    <providerImplementations>
+                        <git>jgit</git>
+                    </providerImplementations>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-jgit</artifactId>
+                        <version>1.9.4</version>
+                    </dependency>
+                </dependencies>
             </plugin>
 
         </plugins>
