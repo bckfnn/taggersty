@@ -38,6 +38,10 @@ public class NullOutput implements TagsOutput {
     }
 
     @Override
+    public void flush() {
+    }
+
+    @Override
     public void close() {
     }
 }

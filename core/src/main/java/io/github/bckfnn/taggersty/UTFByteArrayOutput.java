@@ -99,7 +99,19 @@ public class UTFByteArrayOutput implements TagsOutput {
     }
 
     @Override
-    public void close() {
+    public void flush() {
+        // Empty
     }
 
+    @Override
+    public void close() {
+        // Empty
+    }
+
+    /**
+     * @return number of byte of accumulated output.
+     */
+    public int length() {
+        return BUF_SIZE * buffers.size() + pos;
+    }
 }

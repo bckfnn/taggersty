@@ -40,8 +40,14 @@ public interface TagsOutput {
     public void write(char c);
 
     /**
+     * Flush the accumulated output.
+     */
+    public void flush();
+
+    /**
      * Close the output.
      */
     public void close();
+
 
 }

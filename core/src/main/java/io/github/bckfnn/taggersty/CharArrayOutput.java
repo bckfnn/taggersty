@@ -83,7 +83,13 @@ public class CharArrayOutput implements TagsOutput {
     }
 
     @Override
+    public void flush() {
+        // Empty
+    }
+
+    @Override
     public void close() {
+        // Empty
     }
 
 }
