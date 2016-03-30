@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <name>java tag generator template library</name>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
