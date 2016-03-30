@@ -41,8 +41,7 @@ public class CharArrayOutput implements TagsOutput {
                 buffer[pos++] = s.charAt(i);
             }
         }
-        //s.getChars(0, l, buffer, pos);
-        //pos += l;
+
     }
 
 
@@ -75,7 +74,7 @@ public class CharArrayOutput implements TagsOutput {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(BUF_SIZE * buffers.size() + pos);
         for (char[] b : buffers) {
             sb.append(b);
         }
