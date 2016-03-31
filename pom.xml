@@ -22,6 +22,14 @@
         <tag>v0.0.1</tag>
     </scm>
 
+    <distributionManagement>
+        <repository>
+            <id>bintray-bckfnn-maven</id>
+            <name>bckfnn-maven</name>
+            <url>https://api.bintray.com/maven/bckfnn/maven/taggersty/;publish=1</url>
+        </repository>
+    </distributionManagement>
+                
     <dependencyManagement>
         <dependencies>
             <!--Test dependencies -->
