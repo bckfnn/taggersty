@@ -370,7 +370,7 @@ public class Tags {
             System.out.println("     * Create an empty a @code{" + n + "} tag");
             System.out.println("     */");
             System.out.println("    public void " + m +"() {");
-            System.out.println("        tag(_" + n + ", null, null, null, null, null);");
+            System.out.println("        t.tag(_" + n + ", null, null, null, null, null);");
             System.out.println("    }");
             System.out.println();
             System.out.println("    /**");
@@ -379,7 +379,7 @@ public class Tags {
             System.out.println("     * @param value value of the attribute.");
             System.out.println("     */");
             System.out.println("    public void " + m +"(String attr, String value) {");
-            System.out.println("        tag(_" + n + ", attr, value, null, null, null);");
+            System.out.println("        t.tag(_" + n + ", attr, value, null, null, null);");
             System.out.println("    }");
             System.out.println();
             System.out.println("    /**");
@@ -390,15 +390,15 @@ public class Tags {
             System.out.println("     * @param value2 value of the attribute.");
             System.out.println("     */");
             System.out.println("    public void " + m +"(String attr1, String value1, String attr2, String value2) {");
-            System.out.println("        tag(_" + n + ", attr1, value1, attr2, value2, null);");
+            System.out.println("        t.tag(_" + n + ", attr1, value1, attr2, value2, null);");
             System.out.println("    }");
             System.out.println();
             System.out.println("    /**");
             System.out.println("     * Create a @code{" + n + "} tag with zero attribute");
             System.out.println("     * @param body the body generator for the tag.");
             System.out.println("     */");
-            System.out.println("    public void " +m +"(Generator body) {");
-            System.out.println("        tag(_" + n + ", null, null, null, null, body);");
+            System.out.println("    public void " +m +"(Tags.Generator body) {");
+            System.out.println("        t.tag(_" + n + ", null, null, null, null, body);");
             System.out.println("    }");
             System.out.println();
             System.out.println("    /**");
@@ -407,8 +407,8 @@ public class Tags {
             System.out.println("     * @param value value of the attribute.");
             System.out.println("     * @param body the body generator for the tag.");
             System.out.println("     */");
-            System.out.println("    public void " + m +"(String attr, String value, Generator body) {");
-            System.out.println("        tag(_" + n + ", attr, value, null, null, body);");
+            System.out.println("    public void " + m +"(String attr, String value, Tags.Generator body) {");
+            System.out.println("        t.tag(_" + n + ", attr, value, null, null, body);");
             System.out.println("    }");
             System.out.println();
             System.out.println("    /**");
@@ -419,8 +419,8 @@ public class Tags {
             System.out.println("     * @param value2 value of the second attribute.");
             System.out.println("     * @param body the body generator for the tag.");
             System.out.println("     */");
-            System.out.println("    public void " + m +"(String attr1, String value1, String attr2, String value2, Generator body) {");
-            System.out.println("        tag(_" + n + ", attr1, value1, attr2, value2, body);");
+            System.out.println("    public void " + m +"(String attr1, String value1, String attr2, String value2, Tags.Generator body) {");
+            System.out.println("        t.tag(_" + n + ", attr1, value1, attr2, value2, body);");
             System.out.println("    }");
             System.out.println();
         }
