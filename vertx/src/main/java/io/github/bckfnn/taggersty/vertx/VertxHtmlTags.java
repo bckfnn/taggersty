@@ -32,11 +32,13 @@ public class VertxHtmlTags extends HtmlTags {
     }
 
     public <T> Handler<T> delay(BiConsumer<VertxHtmlTags, T> body) {
+        VertxOutput subOut = output.addSubOutput();
         return new Handler<T>() {
             @Override
             public void handle(T event) {
-                VertxOutput subOut = output.addSubOutput();
                 VertxHtmlTags next = new VertxHtmlTags(subOut);
+                next.setAutoNewline(isAutoNewline());
+                next.setFilter(getFilter());
                 body.accept(next, event);
                 subOut.close();
             }
@@ -110,6 +112,15 @@ public class VertxHtmlTags extends HtmlTags {
         public Appendable append(char c) throws IOException {
             buffers.getLast().append(c);
             return this;
+        }
+        
+        @Override
+        public String toString() {
+            StringBuilder sb = new StringBuilder();
+            for (Appendable a : buffers) {
+                sb.append(a);
+            }
+            return sb.toString();
         }
     }
 }
