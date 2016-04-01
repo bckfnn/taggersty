@@ -46,6 +46,7 @@
         <module>core</module>
         <module>vertx</module>
         <module>performance</module>
+        <module>xslfo</module>
     </modules>
 
     <build>
