@@ -124,5 +124,46 @@ public class HtmlTest {
         Assert.assertEquals("<div attr=\"&lt;script&gt;alert(1);&lt;/script&gt;\"/>", out.toString());
     }
 
+    /**
+     * The example from https://github.com/fizzed/rocker/blob/master/docs/SYNTAX.md#building-complex-templates
+     */
+    @Test
+    public void testComplexTemplates() {
+        StringBuilderOutput out = new StringBuilderOutput();
 
+        HtmlTags g = new HtmlTags(out).filter(new StandardFilter());
+        
+        Tags.Generator extracss = () -> {
+            g.link("rel", "stylesheet", "href", "/assets/css/main.css");
+        };
+        main(g, "Home", extracss, () -> {}, () -> {
+            g.h1(() -> g.text("Hello!"));
+        });
+        
+        System.out.println(out);
+    }
+
+    
+    /**
+     * The common page
+     * @param g the tags generator
+     * @param title page title
+     * @param extracss extra css.
+     * @param extrajs extra js.
+     * @param content the page content.
+     */
+    private void main(HtmlTags g, String title, Tags.Generator extracss, Tags.Generator extrajs, Tags.Generator content) {
+        g.html(() -> {
+            g.head(() -> {
+                g.title(() -> g.text(title));
+                g.link("rel", "stylesheet", "href", "/assets/css/bootstrap.min.css");
+                extracss.gen();
+            });
+            g.body(() -> {
+                content.gen();
+                g.script("type", "text/javascript", "src", "/assets/js/jquery-1.10.2.min.js", () -> {});
+                extrajs.gen();
+            });
+        });
+    }
 }
