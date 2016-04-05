@@ -22,6 +22,9 @@ import java.util.function.BiConsumer;
 import io.github.bckfnn.taggersty.HtmlTags;
 import io.github.bckfnn.taggersty.TagsOutput;
 import io.vertx.core.Handler;
+import io.vertx.core.buffer.Buffer;
+import io.vertx.core.streams.ReadStream;
+import io.vertx.core.streams.WriteStream;
 
 public class VertxHtmlTags extends HtmlTags {
     private VertxOutput output;
@@ -31,7 +34,7 @@ public class VertxHtmlTags extends HtmlTags {
         this.output = output;
     }
 
-    public <T> Handler<T> delay(BiConsumer<VertxHtmlTags, T> body) {
+    public <T> Handler<T> async(BiConsumer<VertxHtmlTags, T> body) {
         VertxOutput subOut = output.addSubOutput();
         return new Handler<T>() {
             @Override
@@ -45,17 +48,62 @@ public class VertxHtmlTags extends HtmlTags {
         };
     }
 
-    public static class VertxOutput implements TagsOutput, Appendable {
-        LinkedList<Appendable> buffers = new LinkedList<>();
+    public <T> void forEach(ReadStream<T> list, BiConsumer<VertxHtmlTags, T> body) {
+        closeTag();
 
-        public VertxOutput() {
+        VertxOutput subOut = output.addSubOutput();
+        VertxHtmlTags next = new VertxHtmlTags(subOut);
+        subOut.drainHandler($ -> {
+            list.resume();
+        });
+        list.endHandler($ -> {
+            //cnt.decrementAndGet();
+            subOut.close();
+        });
+        list.handler(item -> {
+            //log.trace("item readstream {}, {}", list, item);
+            //System.out.println("list item");
+            body.accept(next, item);
+            if (subOut.writeQueueFull()) {
+                list.pause();
+            }
+        });
+    }
+
+    public static class VertxOutput implements TagsOutput, Appendable {
+        private LinkedList<Appendable> buffers = new LinkedList<>();
+
+        private VertxOutput parent;
+        private WriteStream<Buffer> writeStream;
+        private int pending;
+        private boolean closed = false;
+        private Handler<Void> drainHandler = $ -> {};
+
+        public VertxOutput(WriteStream<Buffer> writeStream) {
+            this.writeStream = writeStream;
             buffers.add(new StringBuilder());
         }
 
+        public VertxOutput(VertxOutput parent) {
+            this.parent = parent;
+            this.writeStream = parent.writeStream;
+            buffers.add(new StringBuilder());
+        }
+
+        public boolean writeQueueFull() {
+            return writeStream.writeQueueFull();
+        }
+
+        public void drainHandler(Handler<Void> drainHandler) {
+            this.drainHandler = drainHandler;
+            this.writeStream.drainHandler(drainHandler);
+        }
+
         public VertxOutput addSubOutput() {
-            VertxOutput sub = new VertxOutput();
+            VertxOutput sub = new VertxOutput(this);
             buffers.add(sub);
             buffers.add(new StringBuilder());
+            pending++;
             return sub;
         }
 
@@ -94,6 +142,21 @@ public class VertxHtmlTags extends HtmlTags {
 
         @Override
         public void close() {
+            System.out.println("close:" + pending + " " + toString());
+            closed = true;
+            if (pending == 0) {
+                for (Appendable a : buffers) {
+                    writeStream.write(Buffer.buffer(a.toString(), "UTF-8"));
+                }
+                buffers.clear();
+            }
+            if (parent != null) {
+                parent.pending--;
+                if (parent.pending == 0 && parent.closed) {
+                    parent.close();
+                }
+                parent.drainHandler(parent.drainHandler);
+            }
         }
 
         @Override
@@ -113,7 +176,7 @@ public class VertxHtmlTags extends HtmlTags {
             buffers.getLast().append(c);
             return this;
         }
-        
+
         @Override
         public String toString() {
             StringBuilder sb = new StringBuilder();

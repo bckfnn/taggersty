@@ -98,7 +98,7 @@ public class Tags {
         this.filter = filter;
     }
 
-    
+
     /**
      * @return the filter
      */
@@ -115,6 +115,41 @@ public class Tags {
         this.output = output;
     }
 
+    /**
+     * Emit <code>name</code> tag without attributes and with the specified body.
+     * @param name name the of the tag
+     * @param body body of the tag.
+     */
+    public void tag(String name, Generator body) {
+        tag(name.toCharArray(), null, null, null, null, body);
+    }
+
+    /**
+     * Emit a <code>name</code> tag with up to two attributes and body.
+     * @param name name the of the tag
+     * @param attr1 name of the first attribute
+     * @param value1 value of the first attribute
+     * @param attr2 name of the second attribute
+     * @param value2 value of the second attribute
+     * @param body body of the tag.
+     */
+    public void tag(String name, String attr1, String value1, Generator body) {
+        tag(name.toCharArray(), attr1, value1, null, null, body);
+    }
+
+    /**
+     * Emit a <code>name</code> tag with up to two attributes and body.
+     * @param name name the of the tag
+     * @param attr1 name of the first attribute
+     * @param value1 value of the first attribute
+     * @param attr2 name of the second attribute
+     * @param value2 value of the second attribute
+     * @param body body of the tag.
+     */
+
+    public void tag(String name, String attr1, String value1, String attr2, String value2, Generator body) {
+        tag(name.toCharArray(), attr1, value1, attr2, value2, body);
+    }
     /**
      * Emit <code>name</code> tag without attributes and with the specified body.
      * @param name name the of the tag
