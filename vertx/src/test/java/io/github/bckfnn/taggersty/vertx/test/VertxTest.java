@@ -58,16 +58,19 @@ public class VertxTest {
             g.head(() -> {
                 g.title(() -> g.text("title"));
             });
-            vertx.setTimer(100, g.async((n, id) -> {
+            vertx.setTimer(500, g.async((n, id) -> {
                 n.body(() -> {
                     n.p(() -> n.text("content"));
                 });
-                latch.countDown();
             }));
         });
         out.close();
+        out.endHandler($ -> {
+            Assert.assertEquals("<html><head><title>title</title></head><body><p>content</p></body></html>", ws.toString());
+            latch.countDown();
+        });
+
         latch.await();
-        Assert.assertEquals("<html><head><title>title</title></head><body><p>content</p></body></html>", ws.toString());
     }
 
     private VertxHtmlTags make(VertxHtmlTags.VertxOutput out) {
@@ -89,6 +92,7 @@ public class VertxTest {
             @Override
             public WriteStream<Buffer> write(Buffer data) {
                 sb.appendBuffer(data);
+                //System.out.println("write:" + data);
                 return this;
             }
 
