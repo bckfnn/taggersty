@@ -129,8 +129,6 @@ public class Tags {
      * @param name name the of the tag
      * @param attr1 name of the first attribute
      * @param value1 value of the first attribute
-     * @param attr2 name of the second attribute
-     * @param value2 value of the second attribute
      * @param body body of the tag.
      */
     public void tag(String name, String attr1, String value1, Generator body) {
