@@ -115,6 +115,13 @@ public class Tags {
         this.output = output;
     }
 
+    public Generator $empty() {
+        return () -> {
+            closeTag();
+            state = State.CONTENT;
+        };
+    }
+
     /**
      * Emit <code>name</code> tag without attributes and with the specified body.
      * @param name name the of the tag
