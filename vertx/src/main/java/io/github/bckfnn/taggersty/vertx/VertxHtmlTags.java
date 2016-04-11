@@ -158,6 +158,7 @@ public class VertxHtmlTags extends HtmlTags {
             //System.out.println("flushAll " + this);
             for (Iterator<Appendable> it = buffers.iterator(); it.hasNext(); ) {
                 Appendable a = it.next();
+                /*
                 if (a instanceof VertxOutput) {
                     VertxOutput out = (VertxOutput) a;
                     if (!out.closed) {
@@ -169,6 +170,8 @@ public class VertxHtmlTags extends HtmlTags {
                 } else {
                     writeStream.write(Buffer.buffer(a.toString(), "UTF-8"));
                 }
+                */
+                writeStream.write(Buffer.buffer(a.toString(), "UTF-8"));
                 it.remove();
             }
             return true;
@@ -178,15 +181,16 @@ public class VertxHtmlTags extends HtmlTags {
         public void close() {
             //System.out.println("close:pending" + pending + " " + toString());
             closed = true;
-            flush();
+            //flush();
 
             if (parent != null) {
                 parent.pending--;
                 if (parent.pending == 0 && parent.closed) {
                     parent.close();
                 }
-                parent.drainHandler(parent.drainHandler);
+                //parent.drainHandler(parent.drainHandler);
             } else {
+                flush();
                 if (pending == 0 & endHandler != null) {
                     endHandler.handle(null);
                 }
