@@ -373,7 +373,7 @@ public class Tags {
      */
     private void autoNewline() {
         if (autoNewline && !suppressWhiteSpace) {
-            output.write('\n');
+            output.write(System.lineSeparator());
         }
     }
 
