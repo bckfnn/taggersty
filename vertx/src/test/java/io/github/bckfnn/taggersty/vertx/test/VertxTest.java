@@ -29,7 +29,9 @@ import io.vertx.core.streams.WriteStream;
 
 public class VertxTest {
     @Test
-    public void testSimple() {
+    public void testSimple() throws Exception {
+        CountDownLatch latch = new CountDownLatch(1);
+        
         WriteStream<Buffer> ws = makeWs();
         VertxHtmlTags.VertxOutput out = new VertxHtmlTags.VertxOutput(ws);
         VertxHtmlTags g = make(out);
@@ -41,8 +43,13 @@ public class VertxTest {
                 g.p(() -> g.text("content"));
             });
         });
+       
+        out.endHandler($ -> {
+            Assert.assertEquals("<html><head><title>title</title></head><body><p>content</p></body></html>", ws.toString());
+            latch.countDown();
+        });
         out.close();
-        Assert.assertEquals("<html><head><title>title</title></head><body><p>content</p></body></html>", ws.toString());
+        latch.await();
     }
 
     @Test
