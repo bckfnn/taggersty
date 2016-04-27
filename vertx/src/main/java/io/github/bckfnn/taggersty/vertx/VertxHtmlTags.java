@@ -54,6 +54,8 @@ public class VertxHtmlTags extends HtmlTags {
 
         VertxOutput subOut = output.addSubOutput();
         VertxHtmlTags next = new VertxHtmlTags(subOut);
+        next.setAutoNewline(isAutoNewline());
+        next.setFilter(getFilter());
         subOut.drainHandler($ -> {
             list.resume();
         });
