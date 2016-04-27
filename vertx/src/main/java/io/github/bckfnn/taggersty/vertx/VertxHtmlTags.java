@@ -148,7 +148,7 @@ public class VertxHtmlTags extends HtmlTags {
 
         @Override
         public void flush() {
-            System.out.println("flush " + this + " " + parent);
+            //System.out.println("flush " + this + " " + parent);
             if (parent != null) {
                 parent.flush();
             } else {
@@ -157,7 +157,7 @@ public class VertxHtmlTags extends HtmlTags {
         }
 
         public boolean flushAll() {
-            System.out.println("flushAll " + this);
+            //System.out.println("flushAll " + this);
             for (Iterator<Appendable> it = buffers.iterator(); it.hasNext(); ) {
                 Appendable a = it.next();
                 /*
@@ -181,7 +181,7 @@ public class VertxHtmlTags extends HtmlTags {
 
         @Override
         public void close() {
-            System.out.println("close:pending" + pending + " " + toString());
+            //System.out.println("close:pending" + pending + " " + toString());
             closed = true;
             //flush();
 
