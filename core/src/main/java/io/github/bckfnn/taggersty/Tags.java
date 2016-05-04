@@ -389,7 +389,7 @@ public class Tags {
     }
 
     /**
-     * Emit a close '>' is needed.
+     * Emit a close '{@code >}' is needed.
      */
     protected void closeTag() {
         if (state == State.ATTR) {
