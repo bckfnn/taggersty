@@ -226,6 +226,8 @@ public class Tags {
                 indent++;
                 body.gen();
                 indent--;
+            } catch (RuntimeException exc) {
+                throw exc;
             } catch (Exception exc) {
                 throw new RuntimeException(exc);
             }
@@ -319,6 +321,8 @@ public class Tags {
         if (body!= null) {
             try {
                 body.gen();
+            } catch (RuntimeException exc) {
+                throw exc;
             } catch (Exception exc) {
                 throw new RuntimeException(exc);
             }
@@ -340,6 +344,8 @@ public class Tags {
         if (body!= null) {
             try {
                 body.gen();
+            } catch (RuntimeException exc) {
+                throw exc;
             } catch (Exception exc) {
                 throw new RuntimeException(exc);
             }
