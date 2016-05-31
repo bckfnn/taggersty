@@ -80,6 +80,7 @@ public class VertxHtmlTags extends HtmlTags {
         private WriteStream<Buffer> writeStream;
         private int pending;
         private boolean closed = false;
+        @SuppressWarnings("unused")
         private Handler<Void> drainHandler = $ -> {};
         private Handler<Void> endHandler ;
 

@@ -6,7 +6,8 @@ A native java 8 library for generating xml & html output.
 
 Main focus is speed and XSS security
 
-[ ![Download](https://api.bintray.com/packages/bckfnn/maven/taggersty/images/download.svg) ](https://bintray.com/bckfnn/maven/taggersty/_latestVersion)
+[![Download](https://api.bintray.com/packages/bckfnn/maven/taggersty/images/download.svg)](https://bintray.com/bckfnn/maven/taggersty/_latestVersion)
+[![Build Status](https://travis-ci.org/bckfnn/taggersty.svg?branch=master)](https://travis-ci.org/bckfnn/taggersty)
 
 ## Installation
 
