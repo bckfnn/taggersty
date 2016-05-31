@@ -14,7 +14,7 @@ Main focus is speed and XSS security
     <dependency>
         <groupId>io.github.bckfnn</groupId>
         <artifactId>taggersty-core</artifactId>
-        <version>0.0.6</version>
+        <version>0.0.7</version>
     </dependency>
 
 
@@ -45,7 +45,7 @@ Main focus is speed and XSS security
 2. The templating is speedy.
 3. Content and html attributes are correctly escaped.
 4. The whole java language is available in your templates.
-5. Alsways perfectly matched html tags.
+5. Always perfectly matched html tags.
 6. Support indented as well as 'minified' putput. 
 
 Cons:
